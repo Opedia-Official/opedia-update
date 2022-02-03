@@ -2,17 +2,8 @@ import { Card } from 'react-bootstrap';
 import { BiRightArrowAlt} from "react-icons/bi";
 import { SiSimpleanalytics} from "react-icons/si";
 
-import { FaCloud, FaDatabase, FaRegHeart, FaHeart,FaRegSmileBeam,FaFacebookF, 
-  FaRegPaperPlane,
-  FaRegLightbulb,
-  FaPlaneDeparture,
-  FaAngleDoubleRight,
-  FaInstagram,FaTwitter,FaGithub, FaHeadphonesAlt} from "react-icons/fa";
+import { FaCloud, FaDatabase} from "react-icons/fa";
 import { MdOutlineDesignServices} from "react-icons/md";
-import { FiShare2} from "react-icons/Fi";
-import { GiHelicopter} from "react-icons/Gi";
-import { BsChatSquare} from "react-icons/Bs";
-import { GiSofa} from "react-icons/Gi";
 
 
 import HomeStyle from "../../styles/Home.module.css";
@@ -43,10 +34,10 @@ export default function ViewService() {
 
                 </div>
               </div>
-              <div className="col-md-6 ">
+              <div className="col-lg-6 mt-5 mt-lg-0 ">
                   <div className= {HomeStyle.viewServiceBg + " " +  "view-service-right-wrapper"}  >
                       <div className="row">
-                        <div className="col-md-6 col-sm-6">
+                        <div className="col-lg-6 col-sm-6">
                         <Card >
                           <Card.Body>
                           <FaCloud/>
@@ -62,7 +53,7 @@ export default function ViewService() {
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-md-6 col-sm-6 mt-5">
+                        <div className="col-lg-6 col-sm-6 mt-5">
                         <Card >
                           <Card.Body>
                             <SiSimpleanalytics/>
@@ -78,7 +69,7 @@ export default function ViewService() {
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-md-6 col-sm-6 mt--35">
+                        <div className="col-lg-6 col-sm-6 mt--35">
                         <Card >
                           <Card.Body>
                             <MdOutlineDesignServices/>
@@ -94,7 +85,7 @@ export default function ViewService() {
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-md-6 col-sm-6 mt-5">
+                        <div className="col-lg-6 col-sm-6 mt-5">
                         <Card >
                           <Card.Body>
                             <FaDatabase/>

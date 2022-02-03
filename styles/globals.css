@@ -15,9 +15,9 @@ html {
 
 :root {
     --clr-primary: #2f6eb5;
-    --clr-secondary: #27348b;
+    --clr-secondary: #f49735;
     --clr-accent: #F7F7FF;
-    --clr-sub: #f7a53b;
+    --clr-sub: #f49735;
     --clr-gradient: linear-gradient(-90deg, var(--clr-primary), var(--clr-secondary));
 }
 
@@ -593,7 +593,7 @@ button.btn-reset {
 }
 
 .icons svg {
-    color: var(--clr-primary);
+    color: #fff;
     font-size: 40px;
 }
 
@@ -612,7 +612,7 @@ button.btn-reset {
 }
 
 .swiper-slide.swiper-slide-active .hero-bottom-items {
-    border-bottom: 2px solid red;
+    border-bottom: 4px solid var(--clr-sub)
 }
 
 .hero-bottom-section {
@@ -620,7 +620,7 @@ button.btn-reset {
 }
 
 .icons {
-    background: #F9DFE3;
+    background: var(--clr-sub);
     border-radius: 50%;
     padding: 16px;
 }

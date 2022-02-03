@@ -56,10 +56,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-import Xyz from "../components/xyz";
-
-import Progressbar from "../components/Progressbar";
-import Testimonial from "../components/Testimonial";
+import WorkingProcess from "../components/WorkingProcess";
 
 export default function Home() {
   const [isReact, setIsReact] = useState(false);
@@ -77,8 +74,9 @@ export default function Home() {
       <ShowCaseCounter />
 
       <Update />
-
-      <ExpartWorkers />
+  
+      {/* <ExpartWorkers /> */}
+      <WorkingProcess/>
 
       <Specialist />
 
@@ -86,7 +84,7 @@ export default function Home() {
 
       <Testemonial />
 
-      <Blog />
+
     </>
   );
 }
