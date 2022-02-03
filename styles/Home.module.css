@@ -1,0 +1,14 @@
+.heroBackground {
+  background-image: url("../public/hero/banner.png");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.viewServiceBg {
+  background-image: url("../public/ViewService/pic-1.png");
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
