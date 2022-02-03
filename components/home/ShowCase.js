@@ -12,6 +12,8 @@ import { FiShare2} from "react-icons/Fi";
 
 // Import Swiper styles
 import 'swiper/css';
+import { sliderData } from '../../Utils/fakeData';
+
 
 export default function ShowCase() {
   const [isReact, setIsReact] = useState(false);
@@ -20,6 +22,8 @@ export default function ShowCase() {
      <>
 
        {/* SHOWCASE GALLARY AREA */}
+
+
 
         <div className="showCase-area">
           <div className="container">

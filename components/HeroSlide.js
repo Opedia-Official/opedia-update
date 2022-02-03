@@ -1,6 +1,5 @@
 import HomeStyle from "../styles/Home.module.css";
 
-import { FaRegLightbulb } from "react-icons/fa";
 
 import React, { useState } from "react";
 // Import Swiper React components
@@ -11,6 +10,9 @@ import SwiperCore, { Pagination, Controller, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { dataSlider, dataSliderTop } from "../Utils/fakeData";
+import BottomSlider from "./BottomSlider";
+import TopSlider from "./TopSlider";
 
 // install Swiper modules
 SwiperCore.use([Pagination, Controller, Autoplay]);
@@ -27,13 +29,18 @@ export default function heroSlide() {
               onSwiper={setControlledSwiper}
               controller={{ control: controlledHero }}
               pagination={true}
+              
+              loop= {true}
               className="mySwiper"
               autoplay={{
                 delay: 2500,
                 disableOnInteraction: false,
               }}
             >
-              <SwiperSlide>
+              {dataSliderTop.map(item => <SwiperSlide>
+                <TopSlider item={item}/>
+              </SwiperSlide>) }
+              {/* <SwiperSlide>
                 <div className="row align-items-center">
                   <div className="col-md-7">
                     <div className="hero-left">
@@ -167,34 +174,7 @@ export default function heroSlide() {
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="row align-items-center">
-                  <div className="col-md-7">
-                    <div className="hero-left">
-                      <h4>Optimized It System</h4>
-                      <h2>
-                        It & Tech Solution <br />
-                        Your Business
-                      </h2>
-                      <div className="hero-action">
-                        <a className="btn-brand" href="#">
-                          Get A Quate
-                        </a>
-                        <a className="btn-two" href="#">
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-5">
-                    <div className="hero-right pb-50 pt-50">
-                      <img src="./hero/lady.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
@@ -205,7 +185,7 @@ export default function heroSlide() {
               id="controller"
               slidesPerView={3}
               spaceBetween={15}
-              centeredSlides={true}
+              // centeredSlides={true}
               onSwiper={setControlledHeroSwiper}
               controller={{ control: controlleds }}
               breakpoints={{
@@ -224,18 +204,11 @@ export default function heroSlide() {
               }}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-                  <div className="icons">
-                    <FaRegLightbulb />
-                  </div>
-                  <div className="hero-bottom-info">
-                    <h4>AUGMENTED REALITY</h4>
-                    <p>Get Regular Support From Our Team</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
+              {
+                dataSlider.map(item => <SwiperSlide>
+                  <BottomSlider item={item}/>
+                </SwiperSlide>)}
+              {/* <SwiperSlide>
                 <div className="hero-bottom-items d-flex align-items-center justify-content-center">
                   <div className="icons">
                     <FaRegLightbulb />
@@ -289,7 +262,7 @@ export default function heroSlide() {
                     <p>Get Regular Support From Our Team</p>
                   </div>
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
             </Swiper>
           </div>
         </div>
@@ -297,3 +270,4 @@ export default function heroSlide() {
     </>
   );
 }
+
