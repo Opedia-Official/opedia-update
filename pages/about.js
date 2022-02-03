@@ -5,8 +5,8 @@ import Meta from "../components/Meta";
 import { useState } from "react";
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
   
-  import { BiRightArrowAlt} from "react-icons/bi";
-  import { FaStar} from "react-icons/Fa";
+import { BiRightArrowAlt} from "react-icons/bi";
+import { FaStar} from "react-icons/Fa";
 import { SiSimpleanalytics} from "react-icons/si";
 import { FaCloud, FaDatabase} from "react-icons/fa";
 import { MdOutlineDesignServices} from "react-icons/md";
@@ -18,6 +18,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import ExpertWorker from "../components/ExpertWorker";
+import { expertWorker } from "../Utils/fakeData";
 
 
 
@@ -89,7 +91,13 @@ export default function portfolio() {
               <div className="col-md-12">
                   <div className= {"view-service-right-wrapper service"}  >
                       <div className="row">
-                        <div className="col-lg-4 col-sm-6 mb-5">
+
+                           {
+                             expertWorker.map(item => <ExpertWorker item={item}/>)
+                           }
+
+                        
+                        {/* <div className="col-lg-4 col-sm-6 mb-5">
                         <Card >
                           <Card.Body>
                           <FaCloud/>
@@ -124,7 +132,7 @@ export default function portfolio() {
                         <div className="col-lg-4 col-md-6 col-sm-6 mb-5 ">
                         <Card >
                           <Card.Body>
-                            <MdOutlineDesignServices/>
+                            
                             <Card.Title>product & Design</Card.Title>
                             <Card.Text>
                                     Construction is a general term
@@ -184,7 +192,7 @@ export default function portfolio() {
                           
                           </Card.Body>
                         </Card>
-                        </div>
+                        </div> */}
                       </div>
                   </div>
 

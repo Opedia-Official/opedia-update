@@ -57,7 +57,7 @@ export default function Navbar() {
               <ul className="social-info text-center text-md-start">
                 <li>
                   <a className={styles.socialIconItem} href="#">
-                    {" "}
+                 
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
@@ -66,7 +66,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <a className={styles.socialIconItem} href="#">
-                    {" "}
+                
                     <span className="s-icon">
                       <FaRegEnvelope />
                     </span>
@@ -79,26 +79,26 @@ export default function Navbar() {
               <ul className="social text-center text-md-end">
                 <li>
                   <a className="social-item" href="#">
-                    {" "}
-                    <FaFacebookF />{" "}
+                 
+                    <FaFacebookF />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
-                    {" "}
-                    <FaTwitter />{" "}
+                
+                    <FaTwitter />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
-                    {" "}
-                    <FaLinkedinIn />{" "}
+                  
+                    <FaLinkedinIn />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
-                    {" "}
-                    <FaInstagram />{" "}
+              
+                    <FaInstagram />
                   </a>
                 </li>
               </ul>
@@ -112,8 +112,8 @@ export default function Navbar() {
           <nav className={styles.navbar}>
             <Link href="/">
               <a className={styles.navlogo}>
-                {" "}
-                <img src={logo.src} alt="" />{" "}
+             
+                <img src={logo.src} alt="" />
               </a>
             </Link>
             <ul

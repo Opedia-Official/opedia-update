@@ -11,6 +11,8 @@ import "swiper/css/pagination"
 import SwiperCore, {
     Navigation,  Pagination
   } from 'swiper';
+import TestimonialSlider from './TestimonialSlider';
+import { TestimonialSliderData } from '../Utils/fakeData';
   
   // install Swiper modules
   SwiperCore.use([Navigation,Pagination]);
@@ -21,26 +23,19 @@ export default function Testimonial() {
   return <>
 
 <Swiper pagination={true}  navigation={true} className="mySwiper">
-  <SwiperSlide> 
-  <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    
-    </SwiperSlide>
+  {/* <SwiperSlide> 
+      <TestimonialSlider/>
+  </SwiperSlide> */}
+
+  {
+    TestimonialSliderData.map(itam =><SwiperSlide> 
+      <TestimonialSlider itam={itam} />
+  </SwiperSlide> )
+  }
     
     
     
-    <SwiperSlide>
+    {/* <SwiperSlide>
     <div className="testimonial-wrapper text-center">
                               <div className="testimonial-img">
                                   <img src="./testimonial/pic-1.png" alt="" />
@@ -65,8 +60,8 @@ haggle young delinquent say so I said bite your arm off easy peasy.</p>
                                   <IoIosArrowRoundDown/>
                               </div>
                               <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
+                                good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
+                                haggle young delinquent say so I said bite your arm off easy peasy.</p>
                             <div className="testimonial-author-info text-center">
                                 <h5>Lurch Schpellchek</h5>
                                   <p>UI/UX designer</p>
@@ -91,22 +86,6 @@ haggle young delinquent say so I said bite your arm off easy peasy.</p>
                           </div>
     </SwiperSlide>
     
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
     
     <SwiperSlide>
     <div className="testimonial-wrapper text-center">
@@ -171,6 +150,22 @@ haggle young delinquent say so I said bite your arm off easy peasy.</p>
                             </div>
                           </div>
     </SwiperSlide>
+    
+    <SwiperSlide>
+    <div className="testimonial-wrapper text-center">
+                              <div className="testimonial-img">
+                                  <img src="./testimonial/pic-1.png" alt="" />
+                                  <IoIosArrowRoundDown/>
+                              </div>
+                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
+haggle young delinquent say so I said bite your arm off easy peasy.</p>
+                            <div className="testimonial-author-info text-center">
+                                <h5>Lurch Schpellchek</h5>
+                                  <p>UI/UX designer</p>
+                            </div>
+                          </div>
+    </SwiperSlide> */}
   </Swiper>
   
   

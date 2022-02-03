@@ -19,6 +19,8 @@ import { GiHelicopter } from "react-icons/Gi";
 
 // Import Swiper styles
 import "swiper/css";
+import { dataPricing } from "../../Utils/fakeData";
+import PricingCard from "../PricingCard";
 
 export default function Pricing() {
   return (
@@ -33,96 +35,9 @@ export default function Pricing() {
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-md-4 col-sm-6 ">
-            <div className="our-pricing-wrap text-center">
-              <Card>
-                <div className="pricing-level">
-                  <p>Silver</p>
-                </div>
-                <Card.Body>
-                  <span>
-                    <FaRegPaperPlane />
-                  </span>
-                  <Card.Title>
-                    <h4>$49.00</h4> <span>/mon</span>
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="pricing-items">
-                      <li>Only 2 Operators</li>
-                      <li>Abandoned Cart</li>
-                      <li>Facebook & Instagram Ads</li>
-                      <li>Order Notifications</li>
-                      <li>Landing Pages</li>
-                    </ul>
-                  </Card.Text>
-
-                  <a href="#" className="btn-two mt-20">
-                    Start Today
-                  </a>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6 mt-5 mt-sm-0">
-            <div className="our-pricing-wrap text-center">
-              <Card>
-                <div className="pricing-level">
-                  <p>Gold</p>
-                </div>
-                <Card.Body>
-                  <span>
-                    <GiHelicopter />
-                  </span>
-                  <Card.Title>
-                    <h4>$49.00</h4> <span>/mon</span>
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="pricing-items">
-                      <li>Only 2 Operators</li>
-                      <li>Abandoned Cart</li>
-                      <li>Facebook & Instagram Ads</li>
-                      <li>Order Notifications</li>
-                      <li>Landing Pages</li>
-                    </ul>
-                  </Card.Text>
-
-                  <a href="#" className="btn-two mt-20">
-                    Start Today
-                  </a>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
-          <div className="col-md-4 col-sm-6 mt-5 mt-md-0">
-            <div className="our-pricing-wrap text-center">
-              <Card>
-                <div className="pricing-level">
-                  <p>Platinum</p>
-                </div>
-                <Card.Body>
-                  <span>
-                    <FaPlaneDeparture />
-                  </span>
-                  <Card.Title>
-                    <h4>$49.00</h4> <span>/mon</span>
-                  </Card.Title>
-                  <Card.Text>
-                    <ul className="pricing-items">
-                      <li>Only 2 Operators</li>
-                      <li>Abandoned Cart</li>
-                      <li>Facebook & Instagram Ads</li>
-                      <li>Order Notifications</li>
-                      <li>Landing Pages</li>
-                    </ul>
-                  </Card.Text>
-
-                  <a href="#" className="btn-two mt-20">
-                    Start Today
-                  </a>
-                </Card.Body>
-              </Card>
-            </div>
-          </div>
+          {
+            dataPricing.map(item =>   <PricingCard item={item}/>) 
+          }
         </div>
       </div>
     </div>
