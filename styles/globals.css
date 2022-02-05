@@ -225,7 +225,7 @@ label {
 }
 
 .btn-two {
-    background: #14212B none repeat scroll 0 0;
+    background: var(--clr-secondary) none repeat scroll 0 0;
     border: none;
     border-radius: 0;
     font-family: 'Nunito', sans-serif;
