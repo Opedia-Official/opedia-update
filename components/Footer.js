@@ -13,6 +13,8 @@ import { GoLocation} from "react-icons/Go";
 import 'swiper/css';
 
 
+
+
 export default function Footer() {
   return <>
     <footer>

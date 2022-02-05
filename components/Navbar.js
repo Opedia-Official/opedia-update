@@ -238,7 +238,7 @@ export default function Navbar() {
                             }
                           </ul>
                         </div>
-                            <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "" :  'More'}</p>
+                            <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p>
                       </div>
                       <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
