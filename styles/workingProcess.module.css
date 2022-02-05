@@ -21,8 +21,8 @@
     color: #949494;
 }
 
-.wpItem h2 span {
-    font-size: 27px;
+.wpItem h2 span.wpPlus {
+    font-size: 27px !important;
     font-weight: 400 !important;
 }
 
@@ -76,17 +76,17 @@
     transition: .3s;
 }
 
-.workingProgressItems span.wp-arrow svg {
+.workingProgressItems span.wpArrow svg {
     color: var(--clr-primary);
     font-size: 18px;
     transition: .3s;
 }
 
-.workingProgressItems span.wp-arrow:hover {
+.workingProgressItems span.wpArrow:hover {
     background: var(--clr-primary);
 }
 
-.workingProgressItems span.wp-arrow:hover svg {
+.workingProgressItems span.wpArrow:hover svg {
     color: #Fff;
 }
 

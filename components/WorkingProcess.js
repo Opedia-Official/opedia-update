@@ -3,6 +3,7 @@ import { FaPlus } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/Bs";
 import style from "../styles/workingProcess.module.css"
+import CountUp from 'react-countup';
 
 export default function WorkingProcess() {
     return <>
@@ -19,11 +20,11 @@ export default function WorkingProcess() {
                 <div className="col-lg-5">
                         <div className={`${style.workingProcessWrap} mt-4 mt-lg-0`} >
                                 <div className={style.wpItem}>
-                                        <h2>365 <span><FaPlus/></span></h2> 
+                                        <h2><CountUp end={365}  duration={5} /> <span className='wpPlus'><FaPlus/></span></h2> 
                                         <p>Succed Project</p>
                                 </div>
                                 <div className={style.wpItem}>
-                                <h2>365 <span><FaPlus/></span></h2> 
+                                <h2> <CountUp end={365}  duration={5} /> <span className='wpPlus'><FaPlus/></span></h2> 
                                         <p>Succed Project</p>
                                 </div>
                                        

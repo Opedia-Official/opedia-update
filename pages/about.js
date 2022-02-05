@@ -76,7 +76,7 @@ export default function portfolio() {
         </div>
         {/* Youtube section */}
            {/* VIEW SERVICE AREA */}
-           <div className="view-service-page mb-100 mt-50">
+           <div className="view-service-page mb-100 mt-120">
           <div className="container">
           <div className="row justify-content-center">
                       <div className="col-md-6">

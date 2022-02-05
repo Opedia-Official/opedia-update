@@ -969,8 +969,7 @@ button.btn-reset {
 }
 
 .show-case-text h4 a:hover {
-    opacity: .8;
-    color: #fff;
+    color: var(--clr-secondary)
 }
 
 .s-img-wrap {
@@ -1948,7 +1947,7 @@ ul.link-items li svg {
 
 .ptflo-button span {
     position: relative;
-    background: var(--clr-primary);
+    background: #dd0404;
     height: 78px;
     width: 78px;
     display: flex;
@@ -2275,7 +2274,7 @@ img.ge-reactangle {
 span.youtube-play {
     width: 80px;
     height: 77px;
-    background: var(--clr-primary);
+    background: #dd0404;
     display: flex;
     justify-content: center;
     align-items: center;

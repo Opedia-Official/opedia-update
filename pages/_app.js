@@ -1,8 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-import '../styles/globals.css'
 import '../styles/default.css'
+import '../styles/globals.css'
 
 import '../styles/responsive.css'
 import Layout from '../components/Layout';
