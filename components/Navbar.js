@@ -16,7 +16,9 @@ import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event"
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isActive, setActive] = useState(true);
+  const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
+  const [isMore, setIsMore] = useState(false);
   const textInput = useRef(null);
 
   const openMenu = (e) => {
@@ -129,9 +131,10 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'Home' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    onClick={() =>{openMenu; setActiveNav("Home")}}
                   >
                     Home
                   </a>
@@ -144,9 +147,10 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'About' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    onClick={() =>{openMenu; setActiveNav("About")}}
                   >
                     About
                   </a>
@@ -159,9 +163,10 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'Service' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    onClick={() =>{openMenu; setActiveNav("Service")}}
                   >
                     Service
                   </a>
@@ -201,8 +206,38 @@ export default function Navbar() {
                                 Web Development
                               </a>
                             </li>
+                            {
+                              isMore  && <ul>
+                                <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Digital Marketing
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Affiliate Marketing
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Graphic Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Logo Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Web Development
+                              </a>
+                            </li>
+                              </ul>
+                            }
                           </ul>
                         </div>
+                            <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "" :  'More'}</p>
                       </div>
                       <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
@@ -356,11 +391,14 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'Team' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    
+                    onClick={() =>{openMenu; setActiveNav("Team")}}
+                    
                   >
-                    Team{" "}
+                    Team
                   </a>
                 </Link>
               </li>
@@ -371,11 +409,12 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'Blog' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    onClick={() =>{openMenu; setActiveNav("Blog")}}
                   >
-                    Blog{" "}
+                    Blog
                   </a>
                 </Link>
               </li>
@@ -386,11 +425,12 @@ export default function Navbar() {
                     className={
                       isOpen === false
                         ? styles.navlink
-                        : styles.navlink + " " + styles.active
+                        : styles.navlink + " " + styles.active,
+                        isActiveNav === 'Portfolio' ? styles.activenav: styles.navlink
                     }
-                    onClick={openMenu}
+                    onClick={() =>{openMenu; setActiveNav("Portfolio")}}
                   >
-                    Portfolio{" "}
+                    Portfolio
                   </a>
                 </Link>
               </li>

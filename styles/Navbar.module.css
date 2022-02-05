@@ -43,8 +43,13 @@
     position: relative;
 }
 
-.navlink:hover {
-    color: #d00a2b;
+.navlink:hover, .activenav, .activenav:hover {
+    font-size: 18px;
+    font-weight: 700;
+    color: #f49735;;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
 }
 
 .navlogo {
@@ -55,7 +60,7 @@
 /* *******************************MEGAMENU AREA START********************************** */
 
 .dropdown {
-    background: #2a2c30;
+    background: #ffffff;;
     position: absolute;
     left: -56rem;
     z-index: 9999;
@@ -69,7 +74,7 @@
 }
 
 .dropdown__inner {
-    border-right: 1px solid red;
+    border-right: 1px solid #2f6eb5;
 }
 
 .dropdown__last {
@@ -82,7 +87,7 @@
 }
 
 .dropdown__title {
-    color: #d00a2b;
+    color: var(--clr-primary);
     font-size: 1.6rem;
     text-transform: uppercase;
     cursor: pointer;
@@ -97,13 +102,13 @@
 
 .dropdown__link {
     font-size: 1.2rem;
-    color: #fff;
+    color: #818181e8;
     padding: 1rem 0;
     cursor: pointer;
 }
 
 .dropdown__link:hover {
-    color: #d00a2b;
+    color: #2f6eb5;
 }
 
 

@@ -14,6 +14,17 @@ import { dataSlider, dataSliderTop } from "../Utils/fakeData";
 import BottomSlider from "./BottomSlider";
 import TopSlider from "./TopSlider";
 
+
+
+import { FaRegLightbulb } from "react-icons/fa";
+import { IoIosArrowRoundDown} from "react-icons/Io";
+
+import { GiHelicopter } from "react-icons/Gi";
+import { BiRightArrowAlt} from "react-icons/bi";
+import { FaCloud, FaDatabase} from "react-icons/fa";
+import { MdOutlineDesignServices} from "react-icons/md";
+
+
 // install Swiper modules
 SwiperCore.use([Pagination, Controller, Autoplay]);
 
@@ -37,36 +48,9 @@ export default function heroSlide() {
                 disableOnInteraction: false,
               }}
             >
-              {dataSliderTop.map(item => <SwiperSlide>
+              {/* {dataSliderTop.map(item => <SwiperSlide>
                 <TopSlider item={item}/>
-              </SwiperSlide>) }
-              {/* <SwiperSlide>
-                <div className="row align-items-center">
-                  <div className="col-md-7">
-                    <div className="hero-left">
-                      <h4>Optimized It System</h4>
-                      <h2>
-                        It & Tech Solution <br />
-                        Your Business
-                      </h2>
-                      <div className="hero-action">
-                        <a className="btn-brand" href="#">
-                          Get A Quate
-                        </a>
-                        <a className="btn-two" href="#">
-                          Learn More
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="col-md-5">
-                    <div className="hero-right pb-50 pt-50">
-                      <img src="./hero/lady.png" alt="" />
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
+              </SwiperSlide>) } */}
               <SwiperSlide>
                 <div className="row align-items-center">
                   <div className="col-md-7">
@@ -174,7 +158,34 @@ export default function heroSlide() {
                     </div>
                   </div>
                 </div>
-              </SwiperSlide> */}
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="row align-items-center">
+                  <div className="col-md-7">
+                    <div className="hero-left">
+                      <h4>Optimized It System</h4>
+                      <h2>
+                        It & Tech Solution <br />
+                        Your Business
+                      </h2>
+                      <div className="hero-action">
+                        <a className="btn-brand" href="#">
+                          Get A Quate
+                        </a>
+                        <a className="btn-two" href="#">
+                          Learn More
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="col-md-5">
+                    <div className="hero-right pb-50 pt-50">
+                      <img src="./hero/lady.png" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
@@ -204,11 +215,11 @@ export default function heroSlide() {
               }}
               className="mySwiper"
             >
-              {
+              {/* {
                 dataSlider.map(item => <SwiperSlide>
                   <BottomSlider item={item}/>
-                </SwiperSlide>)}
-              {/* <SwiperSlide>
+                </SwiperSlide>)} */}
+              <SwiperSlide>
                 <div className="hero-bottom-items d-flex align-items-center justify-content-center">
                   <div className="icons">
                     <FaRegLightbulb />
@@ -262,7 +273,7 @@ export default function heroSlide() {
                     <p>Get Regular Support From Our Team</p>
                   </div>
                 </div>
-              </SwiperSlide> */}
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
