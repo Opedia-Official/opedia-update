@@ -29,7 +29,9 @@ export default function heroSlide() {
       <div className={" Hero-top-section"+" " +HomeStyle.heroBackground} >
       <div className="container">
 
-      <Swiper onSwiper={setControlledSwiper} autoplay={true} controller={{control: controlledHero}} pagination={true} className="mySwiper"
+      <Swiper onSwiper={setControlledSwiper} autoplay={true} controller={{control: controlledHero}} modules={[Pagination]} pagination={{
+          clickable: true,
+        }} className="mySwiper"
       
       
       
@@ -138,6 +140,13 @@ export default function heroSlide() {
       <div className="hero-bottom-section">
           <div className="container">
           <Swiper id="controller"  slidesPerView={3} spaceBetween={15} centeredSlides={true} onSwiper={setControlledHeroSwiper} controller={{control: controlleds}} 
+            slidesPerView={3}
+            spaceBetween={30}
+            modules={[Pagination]}
+           
+            
+            className="mySwiper"
+
                  breakpoints={{
                         992: {
                             slidesPerView: 3,
