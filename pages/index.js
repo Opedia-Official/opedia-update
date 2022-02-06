@@ -2,9 +2,6 @@ import { useState } from "react";
 import Head from "next/head";
 import HeroSlide from "../components/HeroSlide";
 import ExpTeam from "../components/ExpTeam";
-import { Card } from "react-bootstrap";
-import { BiRightArrowAlt } from "react-icons/bi";
-import { SiSimpleanalytics } from "react-icons/si";
 
 // Import View Service Section
 import ViewService from "../components/home/ViewService";
@@ -23,55 +20,32 @@ import Pricing from "../components/home/Pricing";
 // Import Testemonial Section
 import Testemonial from "../components/home/Testemonial";
 // Import Blog Section
-import Blog from "../components/home/Blog";
 
-import "swiper/css";
-import {
-  FaCloud,
-  FaDatabase,
-  FaRegHeart,
-  FaHeart,
-  FaRegSmileBeam,
-  FaFacebookF,
-  FaRegPaperPlane,
-  FaRegLightbulb,
-  FaPlaneDeparture,
-  FaAngleDoubleRight,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-  FaHeadphonesAlt,
-} from "react-icons/fa";
-import { MdOutlineDesignServices } from "react-icons/md";
-import { FiShare2 } from "react-icons/Fi";
-import { GiHelicopter } from "react-icons/Gi";
-import { BsChatSquare } from "react-icons/Bs";
-import { GiSofa } from "react-icons/Gi";
 
-import CountUp from "react-countup";
-import HomeStyle from "../styles/Home.module.css";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
 
 import WorkingProcess from "../components/WorkingProcess";
+import { useEffect } from "react";
+import {server} from '../config/index'
 
-export default function Home() {
+
+export default function Home({expertTeams,ViewServices,Gallaries,projects}) {
   const [isReact, setIsReact] = useState(false);
+  useEffect(()=>{
+    console.log(projects)
+  })
 
   return (
     <>
       <HeroSlide />
 
-      <ExpTeam />
+      <ExpTeam expertTeams = {expertTeams}/>
 
-      <ViewService />
+      <ViewService ViewServices={ViewServices}/>
 
-      <ShowCase />
+      <ShowCase Gallaries ={Gallaries} />
 
-      <ShowCaseCounter />
+      <ShowCaseCounter projectsAll ={projects} />
 
       <Update />
   
@@ -87,6 +61,22 @@ export default function Home() {
 
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  let response = await fetch(`${server}/api`)
+  let data =  await response.json();
+
+
+  return {
+    props: {
+        expertTeams:data.ExpertTeam,
+        ViewServices: data.ViewService,
+        Gallaries: data.Gallary,
+        projects: data.ProjectCount,
+    }, 
+    revalidate: 10, // In seconds
+  }
 }
 
 

@@ -1,26 +1,6 @@
 import HomeStyle from "../styles/Home.module.css";
 
-import { FaRegLightbulb } from "react-icons/fa";
-
-import React, { useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide} from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination"
-import Slider from 'react-slick';
-
-
-import Asd from './asd';
-
-// import Swiper core and required modules
-import SwiperCore, {
-  Pagination,Controller,Autoplay
-} from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([Pagination,Controller]);
-
+import HeroItems from './HeroItems';
 
 export default function heroSlide() {
   
@@ -31,9 +11,7 @@ export default function heroSlide() {
 
       <div className={" Hero-top-section"+" " +HomeStyle.heroBackground} >
       <div className="container">
-      <Asd/>
-              
-           
+        <HeroItems/>
         </div>
       </div>
 

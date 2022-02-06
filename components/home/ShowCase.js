@@ -9,14 +9,16 @@ import { FaCloud, FaDatabase, FaRegHeart, FaHeart,FaRegSmileBeam,FaFacebookF,
 import { MdOutlineDesignServices} from "react-icons/md";
 import { FiShare2} from "react-icons/Fi";
 
-
+import SectionTitle from '../SectionTitle';
 // Import Swiper styles
 import 'swiper/css';
 import { sliderData } from '../../Utils/fakeData';
 
 
-export default function ShowCase() {
+export default function ShowCase({Gallaries}) {
   const [isReact, setIsReact] = useState(false);
+  const {Section,featured,gallaries}= Gallaries
+  const {sectionHead,title, description}  = Section;
 
   return (
      <>
@@ -29,27 +31,18 @@ export default function ShowCase() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6">
-              <div className="section-title">
-                            <h5>// About Company</h5>
-                            <h3>Our Recent Projects
-                                    Showcase Gallery.</h3>
-                           
-                        </div>
+              <SectionTitle section={sectionHead} title={title}/>
+                
               </div>
               <div className="col-md-6">
-              <div className="section-title ">
-                                <p>25+Contrary to popular belief, Lorem Ipsum is not simply random text
-roots in a piece of classical Latin literature from 45 BC.Lorem ipsum
-lipsum as it is sometimes known, is dummy text used in laying
-out print, graphic or web designs. The passage is </p>
-                        </div>
+                 <SectionTitle description={description} />
               </div>
             </div>
             <div className="row mt-50 justify-content-center">
               <div className="col-md-5 col-sm-8"> 
                   <div className="showCase-wrap mb-4 mb-md-0">
                       <div className="show-case-features  s-img-wrap">
-                          <img src="./ShowCase-gallary/pic-1.png" alt="" />
+                          <img src={featured.img} alt="" />
                       </div>
                       <div className="show-case-info">
                           <div className="s-action">
@@ -57,8 +50,8 @@ out print, graphic or web designs. The passage is </p>
                               <span><FiShare2/></span>
                           </div>
                           <div className="show-case-text">
-                              <h4><a href="#" > Data Research Analysis </a></h4>
-                                <p>Cloud Computing</p>
+                              <h4><a href="#" > {featured.title} </a></h4>
+                                <p>{featured.subTitle}</p>
                           </div>
                       </div>
                   </div>
@@ -66,74 +59,30 @@ out print, graphic or web designs. The passage is </p>
               </div>
               <div className="col-md-7">
                 <div className="row justify-content-center">
-                  <div className="col-md-6 col-sm-6">
-                    <div className="showCase-wrap mb-4 mb-md-0">
-                        <div className="show-case-child s-img-wrap">
-                            <img src="./ShowCase-gallary/pic-2.png" alt="" />
+
+                  {
+                    gallaries.map(gallary=>{
+                      return (
+                        <div className="col-md-6 col-sm-6" key={gallary.id}>
+                        <div className="showCase-wrap mb-4 ">
+                            <div className="show-case-child s-img-wrap">
+                                <img src={gallary.img} alt={gallary.title} />
+                            </div>
+                            <div className="show-case-info">
+                              <div className="s-action">
+                              {isReact ?  <span onClick={()=>setIsReact(!isReact)} ><FaHeart/></span> : <span onClick={()=>setIsReact(!isReact)}><FaRegHeart/></span>}
+                                  <span><FiShare2/></span>
+                              </div>
+                              <div className="show-case-text">
+                                  <h4><a href="#" > {gallary.title} </a></h4>
+                                    <p>{gallary.subTitle}</p>
+                              </div>
+                          </div>
                         </div>
-                        <div className="show-case-info">
-                          <div className="s-action">
-                          {isReact ?  <span onClick={()=>setIsReact(!isReact)} ><FaHeart/></span> : <span onClick={()=>setIsReact(!isReact)}><FaRegHeart/></span>}
-                              <span><FiShare2/></span>
-                          </div>
-                          <div className="show-case-text">
-                              <h4><a href="#" > Data Research Analysis </a></h4>
-                                <p>Cloud Computing</p>
-                          </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-sm-6">
-                    <div className="showCase-wrap">
-                        <div className="show-case-child s-img-wrap">
-                            <img src="./ShowCase-gallary/pic-2.png" alt="" />
-                        </div>
-                        <div className="show-case-info">
-                          <div className="s-action">
-                          {isReact ?  <span onClick={()=>setIsReact(!isReact)} ><FaHeart/></span> : <span onClick={()=>setIsReact(!isReact)}><FaRegHeart/></span>}
-                              <span><FiShare2/></span>
-                          </div>
-                          <div className="show-case-text">
-                              <h4><a href="#" > Data Research Analysis </a></h4>
-                                <p>Cloud Computing</p>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-sm-6">
-                    <div className="showCase-wrap mt-4">
-                        <div className="show-case-child s-img-wrap">
-                            <img src="./ShowCase-gallary/pic-2.png" alt="" />
-                        </div>
-                        <div className="show-case-info">
-                          <div className="s-action">
-                          {isReact ?  <span onClick={()=>setIsReact(!isReact)} ><FaHeart/></span> : <span onClick={()=>setIsReact(!isReact)}><FaRegHeart/></span>}
-                              <span><FiShare2/></span>
-                          </div>
-                          <div className="show-case-text">
-                              <h4><a href="#" > Data Research Analysis </a></h4>
-                                <p>Cloud Computing</p>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6 col-sm-6">
-                    <div className="showCase-wrap mt-4">
-                        <div className="show-case-child s-img-wrap">
-                            <img src="./ShowCase-gallary/pic-2.png" alt="" />
-                        </div>
-                        <div className="show-case-info">
-                          <div className="s-action">
-                          {isReact ?  <span onClick={()=>setIsReact(!isReact)} ><FaHeart/></span> : <span onClick={()=>setIsReact(!isReact)}><FaRegHeart/></span>}
-                              <span><FiShare2/></span>
-                          </div>
-                          <div className="show-case-text">
-                              <h4><a href="#" > Data Research Analysis </a></h4>
-                                <p>Cloud Computing</p>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+                      )
+                    })
+                  }
                 </div>
               </div>
             </div>

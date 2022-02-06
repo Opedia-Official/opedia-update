@@ -677,6 +677,7 @@ button.btn-reset {
     text-align: left;
     line-height: 20px;
     margin-left: 14px;
+    max-width: 135px;
 }
 
 .exp-left-wrap {

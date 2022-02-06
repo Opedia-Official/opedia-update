@@ -4,12 +4,19 @@ import { useState } from "react";
 
 
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
-export default function ExpTeam() {
+
+
+
+export default function ExpTeam({expertTeams}) {
     const [modalShow, setModalShow] = useState(false);
+
 
   const isChecked = (e)=>{
       e.target.checked ? e.target.parentElement.nextSibling.className = 'checked' : e.target.parentElement.nextSibling.className = ''
   }
+
+
+  
 
   return <>
     <div className="expTeam-section ">
@@ -17,26 +24,25 @@ export default function ExpTeam() {
             <div className="row align-items-center">
                 <div className="col-md-6">
                         <div className="expTeam-left ">
-                                <img className="parent-pic" src="./experienceTeam/pic-1.png" alt="" />
+                                <img className="parent-pic" src={expertTeams.imageInfo.feature} alt="" />
                              <div className="child d-none d-xl-block">
-                             <img  src="./experienceTeam/pic-2.png" alt="" />
+                             <img  src={expertTeams.imageInfo.child} alt="" />
                              </div>
                                 <img className="exp-dots" src="./experienceTeam/dot_shapes.png" alt="" />
 
                                 <div className="exp-left-text ">
                                       <div className="exp-left-wrap d-flex align-items-center">
-                                      <h3>25 <span>+</span></h3>
-                                        <h4>Years of experience <br />
-                                        we just achived</h4>
+                                      <h3> {expertTeams.imageInfo.age} <span>+</span></h3>
+                                        <h4>{expertTeams.imageInfo.experiance}</h4>
                                       </div>
                                 </div>
                         </div>
                 </div>
                 <div className="col-md-6">
                     <div className="expTeam-right">
-                        <SectionTitle/>
+                        <SectionTitle section ={expertTeams.section.sectionHead} title ={expertTeams.section.title}  description ={expertTeams.section.description}/>
                         <div className="expTeam-youtube-section">
-                                <ul>
+                                {/* <ul>
                                   
                                     <li> 
                                         <div> <input onChange={isChecked} class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value2"  />
@@ -81,7 +87,7 @@ export default function ExpTeam() {
                
                     
 
-                                </ul>
+                                </ul> */}
                         </div>
                     </div>
 
@@ -93,3 +99,5 @@ export default function ExpTeam() {
 
   </>;
 }       
+
+

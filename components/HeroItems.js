@@ -24,11 +24,14 @@ export default class AsNavFor extends Component {
 
   render() {
     const settings = {
-        dots: false,
         infinite: true,
         speed: 500,
         autoplay: true,
         arrows: false,
+        dots: true,
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
       };
     const settings2 = {
         dots: true,
@@ -78,7 +81,7 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-7">
                         <div className="hero-left">
-                         <h4>Optimized It System</h4>
+                         <h4>Optimized It System1</h4>
                        <h2>It & Tech Solution <br />
                          Your Business</h2>
                         <div className="hero-action">
@@ -103,7 +106,7 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-7">
                         <div className="hero-left">
-                         <h4>Optimized It System</h4>
+                         <h4>Optimized It System2</h4>
                        <h2>It & Tech Solution <br />
                          Your Business</h2>
                         <div className="hero-action">
@@ -128,7 +131,7 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-7">
                         <div className="hero-left">
-                         <h4>Optimized It System</h4>
+                         <h4>Optimized It System3</h4>
                        <h2>It & Tech Solution <br />
                          Your Business</h2>
                         <div className="hero-action">
@@ -153,7 +156,7 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-7">
                         <div className="hero-left">
-                         <h4>Optimized It System</h4>
+                         <h4>Optimized It System4</h4>
                        <h2>It & Tech Solution <br />
                          Your Business</h2>
                         <div className="hero-action">
