@@ -26,7 +26,7 @@ export default class AsNavFor extends Component {
     const settings = {
         infinite: true,
         speed: 500,
-        autoplay: true,
+        // autoplay: true,
         arrows: false,
         dots: true,
         fade: true,
@@ -35,14 +35,23 @@ export default class AsNavFor extends Component {
       };
     const settings2 = {
         dots: true,
-        infinite: true,
+        // infinite: true,
         speed: 500,
         arrows: false,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
               slidesToScroll: 3,
               infinite: true,
               dots: true

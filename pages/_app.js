@@ -11,7 +11,7 @@ import Loader from '../components/home/Loader';
 
 
 function MyApp({ Component, pageProps }) {
-  const [loading,setLoading]= useState(true);
+  const [loading,setLoading]= useState(false);
   useEffect(()=>{
     window.addEventListener('load', ()=>{
       setLoading(false)
