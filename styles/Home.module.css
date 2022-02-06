@@ -1,14 +1,17 @@
 .heroBackground {
-  background-image: url("../public/hero/banner.png");
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("../public/hero/banner.png");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 715px;
+    max-height: 715px;
 }
+
 .viewServiceBg {
-  background-image: url("../public/ViewService/pic-1.png");
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url("../public/ViewService/pic-1.png");
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
