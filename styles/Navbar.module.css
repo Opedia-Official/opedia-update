@@ -72,9 +72,29 @@
     visibility: hidden;
     transition: 0.5s;
 }
+.dropdown1 {
+    background: #ffffff;;
+    position: absolute;
+    left: 0rem;
+    z-index: 9999;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 20rem;
+    top: 5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
 
 .dropdown__inner {
     border-right: 1px solid #2f6eb5;
+}
+.dropdown__inner2 {
+    border-right: 1px solid #2f6eb500!important;
+}
+
+.trainingNav .Navbar_dropdown__inner__RBhXi {
+    border-right: 1px solid #c31f51!important;
 }
 
 .dropdown__last {
@@ -82,6 +102,10 @@
 }
 
 .navitem:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+.navitem:hover .dropdown1 {
     opacity: 1;
     visibility: visible;
 }

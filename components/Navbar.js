@@ -399,9 +399,80 @@ export default function Navbar() {
                     onClick={() =>{openMenu; setActiveNav("Team")}}
                     
                   >
-                    Team
+                    Training
                   </a>
                 </Link>
+                <div className={styles.dropdown1}>
+                  <div className="containerr trainingNav">
+                    <div className="row justify-content-center">
+                      <div className="col-12">
+                        <div className={styles.dropdown__inner2}>
+                          
+                          <ul className={styles.dropdown__list}>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                              Training
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Affiliate Marketing
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Graphic Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Logo Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Web Development
+                              </a>
+                            </li>
+                            {
+                              isMore  && <ul>
+                                <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Digital Marketing
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Affiliate Marketing
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Graphic Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Logo Design
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Web Development
+                              </a>
+                            </li>
+                              </ul>
+                            }
+                          </ul>
+                        </div>
+                            {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
+                      </div>
+                     
+
+                      
+                    </div>
+                  </div>
+                </div>
               </li>
               <li className={styles.navitem}>
                 <Link href="/contact">

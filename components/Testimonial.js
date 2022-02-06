@@ -22,7 +22,7 @@ export default function Testimonial() {
    
   return <>
 
-<Swiper pagination={true}  navigation={true} className="mySwiper">
+<Swiper pagination={true} loop={true} navigation={true} className="mySwiper">
   {/* <SwiperSlide> 
       <TestimonialSlider/>
   </SwiperSlide> */}

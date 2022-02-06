@@ -15,9 +15,15 @@
   .icons svg {
     font-size: 35px;
   }
-  .hero-bottom-items {
-    padding: 30px 20px 30px;
-  }
+
+
+  .hero-bottom-section {
+    width: 305px !important;
+    margin: 3px;
+}
+
+
+
   .hero-left h2 {
     font-size: 75px;
   }

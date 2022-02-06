@@ -42,9 +42,9 @@ export default function WorkingProcess() {
                                                 <FiSettings/>                                                                                  
                                             </span>
                                             <h3>Choose Service</h3>     
-                                            <span className={style.wpArrow}>
+                                            {/* <span className={style.wpArrow}>
                                             <BsArrowRight/>
-                                            </span>
+                                            </span> */}
                                     </div>
                                 </div>
                         </div>
