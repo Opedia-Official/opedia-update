@@ -4,8 +4,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 715px;
-    max-height: 715px;
+    height: 643px;
+    max-height: 643px;
 }
 
 .viewServiceBg {
@@ -14,4 +14,32 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .heroBackground {
+        height: 650px;
+        max-height: 650px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .heroBackground {
+        height: 510px;
+        max-height: 510px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .heroBackground {
+        height: 830px;
+        max-height: 830px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .heroBackground {
+        height: 830px;
+        max-height: 830px;
+    }
 }
