@@ -12,13 +12,16 @@ import SwiperCore, {
     Navigation,  Pagination
   } from 'swiper';
 import TestimonialSlider from './TestimonialSlider';
-import { TestimonialSliderData } from '../Utils/fakeData';
+// import { TestimonialSliderData } from '../Utils/fakeData';
   
   // install Swiper modules
   SwiperCore.use([Navigation,Pagination]);
 
 
-export default function Testimonial() {
+export default function Testimonial(props) {
+  console.log('TestimonialSlider compo', typeof(TestimonialSliderData));
+
+  // var jsonData = JSON.parse(TestimonialSliderData)
    
   return <>
 
@@ -28,7 +31,7 @@ export default function Testimonial() {
   </SwiperSlide> */}
 
   {
-    TestimonialSliderData.map(itam =><SwiperSlide> 
+    props.TestimonialSliderData.map(itam =><SwiperSlide> 
       <TestimonialSlider itam={itam} />
   </SwiperSlide> )
   }

@@ -3,7 +3,8 @@ import "swiper/css";
 
 import Testimonial from "../../components/Testimonial";
 
-export default function () {
+export default function ({TestimonialSlider}) {
+  console.log('TestimonialSlider', TestimonialSlider);
   return (
     <div className="testimonial-area bg-brand ">
       <div className="container">
@@ -15,7 +16,7 @@ export default function () {
             </div>
           </div>
           <div className="col-md-12">
-            <Testimonial />
+            <Testimonial TestimonialSliderData={TestimonialSlider} />
           </div>
         </div>
       </div>

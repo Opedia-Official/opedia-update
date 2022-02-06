@@ -29,11 +29,12 @@ import { useEffect } from "react";
 import {server} from '../config/index'
 
 
-export default function Home({expertTeams,ViewServices,Gallaries,projects}) {
+export default function Home({expertTeams,ViewServices,Gallaries,projects, pricing, TestimonialSlider}) {
   const [isReact, setIsReact] = useState(false);
   useEffect(()=>{
-    console.log(projects)
+    // console.log('index TestimonialSlider ',TestimonialSlider)
   })
+
 
   return (
     <>
@@ -54,9 +55,9 @@ export default function Home({expertTeams,ViewServices,Gallaries,projects}) {
 
       <Specialist />
 
-      <Pricing />
+      <Pricing  />
 
-      <Testemonial />
+      {/* <Testemonial TestimonialSlider={TestimonialSlider} /> */}
 
 
     </>
@@ -66,6 +67,8 @@ export default function Home({expertTeams,ViewServices,Gallaries,projects}) {
 export async function getStaticProps(context) {
   let response = await fetch(`${server}/api`)
   let data =  await response.json();
+  // console.log(data.TestimonialSliderData)
+  
 
 
   return {
@@ -74,6 +77,8 @@ export async function getStaticProps(context) {
         ViewServices: data.ViewService,
         Gallaries: data.Gallary,
         projects: data.ProjectCount,
+        pricing: data.dataPricing,
+        TestimonialSlider: data.TestimonialSliderData,
     }, 
     revalidate: 10, // In seconds
   }

@@ -17,9 +17,16 @@ function MyApp({ Component, pageProps }) {
       setLoading(false)
     });
   })
+  const handleScroll = e => {
+    let element = e.target
+    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+      // do something at end of scroll
+    }
+    console.log(element);
+  }
   
   return  (
-    <>
+    <div onScroll={() => handleScroll()}>
     {
       loading ? <Loader/> :  <Layout>
       <Component {...pageProps} />
@@ -27,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     }
   
      
-    </>
+    </div>
   )
   
 

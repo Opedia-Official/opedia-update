@@ -27,7 +27,7 @@ export default function ShowCase({Gallaries}) {
 
 
 
-        <div className="showCase-area">
+        <div id='portfolio' className="showCase-area">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6">

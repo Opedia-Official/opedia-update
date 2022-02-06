@@ -12,6 +12,7 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 
+
 import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 
 export default function Navbar() {
@@ -20,6 +21,7 @@ export default function Navbar() {
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
+  const [navChange, setNavChange] = useState(false);
   const textInput = useRef(null);
 
   const openMenu = (e) => {
@@ -49,11 +51,19 @@ export default function Navbar() {
     }
     window.addEventListener("mousedown", handleClick);
     return () => window.removeEventListener("mousedown", handleClick);
+
+    console.log(window.scrollY());
+    
   }, [isSearch]);
+
+
+  
+
+
 
   return (
     <>
-      <div className="top-header">
+      <div  className="top-header">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-md-8">
@@ -110,8 +120,8 @@ export default function Navbar() {
         </div>
       </div>
 
+        <header className={navChange?  "active" : 'header' }>
       <div className="container">
-        <header>
           <nav className={styles.navbar}>
             <Link href="/">
               <a className={styles.navlogo}>
@@ -491,9 +501,10 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className={styles.navitem}>
-                <Link href="/portfolio">
+                {/* <Link href="/portfolio"> */}
                   <a
-                    id=""
+                    // id="#portfolio"
+                    href="#portfolio"
                     className={
                       isOpen === false
                         ? styles.navlink
@@ -504,7 +515,7 @@ export default function Navbar() {
                   >
                     Portfolio
                   </a>
-                </Link>
+                {/* </Link> */}
               </li>
               <li className={styles.navitem}>
                 <div className="sample fourteen">
@@ -556,8 +567,8 @@ export default function Navbar() {
               <span className={styles.bar}></span>
             </button>
           </nav>
-        </header>
       </div>
+        </header>
     </>
   );
 }

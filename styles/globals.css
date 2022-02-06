@@ -525,6 +525,22 @@ button.btn-reset {
 }
 
 
+/* ***************************Header SECTION STARTS********************************* */
+.header{
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0)
+}
+ .active{
+    width: 100%;
+    background-color:rgba(246, 209, 121, 0.959);
+    position: fixed;
+}
+
+
+
+
+
+/* ***************************Header SECTION STARTS********************************* */
 /* ***************************BANNER SECTION STARTS********************************* */
 .slick-dots li button:before {
     font-size: 8px;
