@@ -821,7 +821,7 @@ button.btn-reset {
 }
 
 .view-service-right-wrapper .card-body {
-    box-shadow: 0 3px 8px #14294e;
+    box-shadow: -6px 6px 6px 4px rgb(223 223 223 / 61%);
     padding: 50px 40px;
     transition: .3s;
 }
