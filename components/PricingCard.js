@@ -11,25 +11,26 @@ import {
 
 function PricingCard({item}) {
 
-const {type,icons, pricing, duratin,feature } = item 
+// const {type,icons, pricing, duratin,feature } = item 
+// console.log('item', item);
 
   return <div className="col-md-4 col-sm-6 ">
   <div className="our-pricing-wrap text-center">
     <Card>
       <div className="pricing-level">
-        <p>{type}</p>
+        <p>{item.type}</p>
       </div>
       <Card.Body>
         <span>
-            {icons}
+            {item.icons}
         </span>
         <Card.Title>
-          <h4>${pricing}</h4> <span>/{duratin}</span>
+          <h4>${item.pricing}</h4> <span>/{item.duratin}</span>
         </Card.Title>
         <Card.Text>
           <ul className="pricing-items">
               {
-                  feature.map(liItem => <li>{liItem}</li> )
+                  item.feature.map(liItem => <li>{liItem}</li> )
               }
           </ul>
         </Card.Text>

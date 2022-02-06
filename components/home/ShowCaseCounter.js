@@ -11,7 +11,7 @@ export default function Home({projectsAll}) {
   return (
      <>
 
-      <div className="project-counter-area">
+      <div  className="project-counter-area">
         <div className="container">
           <div className="row">
             {
