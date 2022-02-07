@@ -20,6 +20,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import ExpertWorker from "../components/ExpertWorker";
 import { expertWorker } from "../Utils/fakeData";
+import TeamExpert from "../components/TeamExpert";
 
 
 
@@ -219,7 +220,7 @@ export default function portfolio() {
     </div>
 
     {/* CLIENTS FEEDBACK */}
-        <div className="about-client-feedback-area mb-120">
+        <div style={{display:'none'}} className="about-client-feedback-area mb-120">
             <div className="container">
             <div className="row justify-content-center">
                       <div className="col-md-6">
@@ -389,6 +390,9 @@ export default function portfolio() {
                 </div> */}
             </div>
         </div>
+
+
+        <TeamExpert/>
     {/* CLIENTS FEEDBACK */}
 
         

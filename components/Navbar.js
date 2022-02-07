@@ -122,7 +122,7 @@ export default function Navbar() {
         </div>
       </div>
 
-        <header className={navChange?  "active" : 'header' }>
+        <header className={navChange?  "activeNav" : 'header' }>
       <div className="container">
           <nav className={styles.navbar}>
             <Link href="/">

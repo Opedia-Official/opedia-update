@@ -25,12 +25,13 @@ import Testemonial from "../components/home/Testemonial";
 
 
 import WorkingProcess from "../components/WorkingProcess";
-import { useEffect } from "React";
+import { useEffect } from "react";
 import {server} from '../config/index'
 
 
 export default function Home({expertTeams,ViewServices,Gallaries,projects, pricing, TestimonialSlider}) {
   const [isReact, setIsReact] = useState(false);
+
   useEffect(()=>{
     // console.log('index TestimonialSlider ',TestimonialSlider)
   })
