@@ -4,6 +4,7 @@
     font-size: 55px;
     color: #000000;
     font-weight: 700;
+    width: 85px;
 }
 
 .wpItem {
@@ -21,9 +22,15 @@
     color: #949494;
 }
 
-.wpItem h2 span.wpPlus {
-    font-size: 27px !important;
-    font-weight: 400 !important;
+.wpCountWrap {
+    display: flex;
+    align-items: center;
+}
+
+span.wpPlus {
+    font-size: 18px;
+    display: inline-block;
+    margin-left: 4px;
 }
 
 .workingProgressItems {

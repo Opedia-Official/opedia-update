@@ -67,12 +67,7 @@ export default function Footer() {
                                         <div className="col-md-4 col-sm-6">
                                                 <div className="footer-widget">
                                                         <h4 className='footer-title'>About Us.</h4>
-                                                        <p>orporate clients and leisure travelers has
-                                                        been relying on Groundlink for dependable
-                                                        safe, and professional chauffeured car
-                                                        service in major cities across World. Indeed
-                                                        it has been more than one decade and five
-                                                        years that Groundlink</p>
+                                                        <p className='pr-20'>Opedia Technologies Ltd is a growing software and IT solutions company. We create value for your business by providing professional IT services through interaction and integration. </p>
                                                         <div className="social">
                                                                 <ul className="f-social">
                                                                     <li><a href="#"><FaFacebookF/></a></li>

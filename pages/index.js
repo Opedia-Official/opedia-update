@@ -25,7 +25,7 @@ import Testemonial from "../components/home/Testemonial";
 
 
 import WorkingProcess from "../components/WorkingProcess";
-import { useEffect } from "react";
+import { useEffect } from "React";
 import {server} from '../config/index'
 
 
@@ -80,7 +80,7 @@ export async function getStaticProps(context) {
         pricing: data.dataPricing,
         TestimonialSlider: data.TestimonialSliderData,
     }, 
-    revalidate: 10, // In seconds
+    revalidate: 5, // In seconds
   }
 }
 

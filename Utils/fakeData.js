@@ -104,7 +104,7 @@ export const ExpertTeam = {
         experiance: "Years of experience we just achived "
     },
     section: {
-        sectionHead: "// About Company",
+        sectionHead: " About Company",
         title: 'We team of experience It Specialties.',
         description: "25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC",
     }
@@ -116,11 +116,11 @@ export const ExpertTeam = {
 { /* View Service section */ }
 export const ViewService = {
     Section: {
-        sectionHead: "// About Company",
-        title: 'Provide It & Technol Service For You   ',
-        description: `Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is a organizations, and comes from Latin construction and Old
+        sectionHead: "About Company",
+        title: 'Software & IT services   ',
+        description: `Our professional services include Web & Software Solutions, E-commerce Development, User Experience (UI/UX) Design, Digital Marketing, Multimedia and Printing. Using our experienced professionals, we help businesses grow and prosper.  
         `,
-        moreText: "Construction is a general term meaning the art and science to form systems organizations, and comes from Latin Construction is"
+        moreText: "We help businesses to boost performance technically and work on initiatives to enhance brand presence on the market, develop a digital platform that fits your exact needs in terms of real-time solutions, and define a clear roadmap for improvement."
     },
     Services: [{
             id: 1,
@@ -158,10 +158,9 @@ export const ViewService = {
 { /* View Service section */ }
 export const Gallary = {
     Section: {
-        sectionHead: "// About Company",
+        sectionHead: " About Company",
         title: 'Our Recent Projects Showcase Gallery.  ',
-        description: `25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC.Lorem ipsum lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is
-        `
+        description: `230+ clients are already growing their businesses. With our quality service, they are able to stand out from the crowd.`
     },
 
     featured: {

@@ -90,6 +90,8 @@ export default function Navbar() {
             </div>
             <div className="col-md-4">
               <ul className="social text-center text-md-end">
+           
+                
                 <li>
                   <a className="social-item" href="#">
                  
@@ -189,32 +191,32 @@ export default function Navbar() {
                       <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
-                            Dropdown Title
+                            Web & Software
                           </h2>
                           <ul className={styles.dropdown__list}>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Digital Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Affiliate Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Graphic Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Logo Design
+                                Web design
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
                                 Web Development
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Apps Development
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Mern Service
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Api create and integration
                               </a>
                             </li>
                             {
@@ -226,22 +228,22 @@ export default function Navbar() {
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Affiliate Marketing
+                                Dashboard Design
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Graphic Design
+                                Single Page Application
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Logo Design
+                                React Application
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Web Development
+                                Wordpress Design and Development
                               </a>
                             </li>
                               </ul>
@@ -253,32 +255,32 @@ export default function Navbar() {
                       <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
-                            Dropdown Title
+                            Digital Marketing
                           </h2>
                           <ul className={styles.dropdown__list}>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Digital Marketing
+                                SEO Service
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Affiliate Marketing
+                                SMM Service
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Graphic Design
+                                Email Marketing
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Logo Design
+                                F-Commerce Service
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Web Development
+                               Google Ads
                               </a>
                             </li>
                           </ul>
@@ -287,32 +289,32 @@ export default function Navbar() {
                       <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
-                            Dropdown Title
+                            Multimedia & Printing
                           </h2>
                           <ul className={styles.dropdown__list}>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Digital Marketing
+                                Corporate Brand Guideline
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Affiliate Marketing
+                                2D & 3D Video Creation
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Graphic Design
+                                  Promotional Video Creation
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Logo Design
+                                Video Editing Service
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Web Development
+                                Corporate Printing <br /> Service & Delivery
                               </a>
                             </li>
                           </ul>
@@ -360,32 +362,32 @@ export default function Navbar() {
                           }
                         >
                           <h2 className={styles.dropdown__title}>
-                            Dropdown Title
+                            Product Design
                           </h2>
                           <ul className={styles.dropdown__list}>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Digital Marketing
+                                UI, UX Design
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Affiliate Marketing
+                                Web App Design
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Graphic Design
+                                Mobile App Design
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Logo Design
+                                Product Redesign
                               </a>
                             </li>
                             <li className={styles.dropdown__item}>
                               <a className={styles.dropdown__link}>
-                                Web Development
+                                Application Solution
                               </a>
                             </li>
                           </ul>

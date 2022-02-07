@@ -526,21 +526,22 @@ button.btn-reset {
 
 
 /* ***************************Header SECTION STARTS********************************* */
-.header{
+
+.header {
     width: 100%;
-    background-color:rgba(255, 255, 255, 0)
+    background-color: rgba(255, 255, 255, 0)
 }
- .active{
+
+.activeNav {
     width: 100%;
-    background-color:rgba(246, 209, 121, 0.959);
+    background-color: rgba(246, 209, 121, 0.959);
     position: fixed;
 }
 
 
-
-
-
 /* ***************************Header SECTION STARTS********************************* */
+
+
 /* ***************************BANNER SECTION STARTS********************************* */
 
 .slick-dots li button:before {
@@ -656,6 +657,10 @@ button.btn-reset {
     margin-top: 0px;
 }
 
+.hero-bottom-section:hover .icons {
+    background: var(--clr-primary);
+}
+
 .slick-dots {
     right: 0;
     width: 40px;
@@ -701,6 +706,7 @@ button.btn-reset {
     background: var(--clr-sub);
     border-radius: 50%;
     padding: 16px;
+    transition: .3s;
 }
 
 
@@ -733,8 +739,8 @@ button.btn-reset {
 
 .expTeam-left .exp-dots {
     position: absolute;
-    left: -5px;
-    top: -26px;
+    left: -15px;
+    top: -33px;
     width: 150px;
     z-index: -1;
 }
@@ -904,11 +910,10 @@ button.btn-reset {
     box-shadow: -6px 6px 6px 4px rgb(223 223 223 / 61%);
     padding: 40px 40px;
     transition: .3s;
-    max-height: 283px;
 }
 
 .view-service-right-wrapper .card-title.h5 {
-    font-size: 23px;
+    font-size: 22px;
     color: #0B1E33;
     font-weight: 700;
     text-transform: capitalize;
@@ -1109,6 +1114,14 @@ button.btn-reset {
     align-items: center;
 }
 
+.pCounterWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .counter-up-wrap>span {
     font-size: 50px;
     color: var(--clr-primary);
@@ -1138,6 +1151,7 @@ button.btn-reset {
 
 .counter-up-wrap {
     position: relative;
+    width: 230px;
 }
 
 .counter-up-wrap:after {
@@ -1155,6 +1169,10 @@ button.btn-reset {
     background: none;
     visibility: hidden;
     opacity: 0;
+}
+
+.counter-up-wrap:last-child:after {
+    display: none;
 }
 
 

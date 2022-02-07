@@ -30,7 +30,7 @@ function PricingCard({item}) {
         <Card.Text>
           <ul className="pricing-items">
               {
-                  item.feature.map(liItem => <li>{liItem}</li> )
+                  item.feature.map(liItem => <li key={liItem}>{liItem}</li> )
               }
           </ul>
         </Card.Text>

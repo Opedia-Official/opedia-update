@@ -12,7 +12,7 @@ export default function WorkingProcess() {
             <div className='row align-items-center'>
                 <div className="col-lg-7">
                     <div className="section-title">
-                        <h5>// Working Process</h5>
+                        <h5> Working Process</h5>
                         <h3>Our Working Process
                         For Client Work It Specialties.</h3>
                     </div>
@@ -20,12 +20,18 @@ export default function WorkingProcess() {
                 <div className="col-lg-5">
                         <div className={`${style.workingProcessWrap} mt-4 mt-lg-0`} >
                                 <div className={style.wpItem}>
-                                        <h2><CountUp end={365}  duration={5} /> <span className='wpPlus'><FaPlus/></span></h2> 
+                                            <div className={style.wpCountWrap}>
+                                             <h2><CountUp end={365}  duration={5} /> </h2> 
+                                              <span className={style.wpPlus}><FaPlus/></span>
+                                            </div>
                                         <p>Succed Project</p>
                                 </div>
                                 <div className={style.wpItem}>
-                                <h2> <CountUp end={365}  duration={5} /> <span className='wpPlus'><FaPlus/></span></h2> 
-                                        <p>Succed Project</p>
+                                      <div className={style.wpCountWrap}>
+                                        <h2><CountUp end={365}  duration={5} /> </h2> 
+                                        <span className={style.wpPlus}><FaPlus/></span>
+                                    </div>
+                                     <p>Succed Project</p>
                                 </div>
                                        
                                 </div>
@@ -33,9 +39,9 @@ export default function WorkingProcess() {
                 </div>
                 <div className="row justify-content-center align-items-center mt-50">
                     {
-                        [1,2,3,4].map(()=>{
+                        [1,2,3,4].map((item)=>{
                             return (
-                                <div className="col-lg-3 col-sm-6 mb-30">
+                                <div key={item} className="col-lg-3 col-sm-6 mb-30">
                                 <div className={style.workingProgressStepsWrap}>
                                     <div className={style.workingProgressItems}>
                                             <span className={style.wpIcon}>

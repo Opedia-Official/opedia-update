@@ -93,7 +93,18 @@
 }
 
 .dropdown__inner {
-    border-right: 1px solid #2f6eb5;
+    position: relative;
+    /* border-right: 1px solid #2f6eb5; */
+}
+
+.dropdown__inner:after {
+    position: absolute;
+    content: '';
+    background-color: #2f6eb5;
+    height: 100%;
+    width: 1px;
+    right: 0;
+    top: 0;
 }
 
 .dropdown__inner2 {

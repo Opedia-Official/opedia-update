@@ -11,7 +11,7 @@ export default function Update() {
           <div className="col-md-6">
             <div className="project-update-section-wrap">
               <div className="section-title">
-                <h5>// About Company</h5>
+                <h5> About Company</h5>
                 <h3>Don,t miss our update</h3>
               </div>
               <p className="pr-140p">

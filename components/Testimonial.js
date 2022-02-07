@@ -18,157 +18,33 @@ import TestimonialSlider from './TestimonialSlider';
   SwiperCore.use([Navigation,Pagination]);
 
 
+
+
+
+
 export default function Testimonial(props) {
+
+
   console.log('TestimonialSlider compo', typeof(TestimonialSliderData));
 
   // var jsonData = JSON.parse(TestimonialSliderData)
    
   return <>
 
-<Swiper pagination={true} loop={true} navigation={true} className="mySwiper">
-  {/* <SwiperSlide> 
-      <TestimonialSlider/>
-  </SwiperSlide> */}
+          <Swiper pagination={true} loop={true} navigation={true} className="mySwiper">
+            {/* <SwiperSlide> 
+                <TestimonialSlider/>
+            </SwiperSlide> */}
 
-  {
-    props.TestimonialSliderData.map(itam =><SwiperSlide> 
-      <TestimonialSlider itam={itam} />
-  </SwiperSlide> )
-  }
+            {
+              props.TestimonialSliderData.map(itam =><SwiperSlide key={item}> 
+                <TestimonialSlider itam={itam} />
+            </SwiperSlide> )
+            }
+              
     
     
-    
-    {/* <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-                                good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-                                haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide>
-    
-    <SwiperSlide>
-    <div className="testimonial-wrapper text-center">
-                              <div className="testimonial-img">
-                                  <img src="./testimonial/pic-1.png" alt="" />
-                                  <IoIosArrowRoundDown/>
-                              </div>
-                              <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
-good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
-haggle young delinquent say so I said bite your arm off easy peasy.</p>
-                            <div className="testimonial-author-info text-center">
-                                <h5>Lurch Schpellchek</h5>
-                                  <p>UI/UX designer</p>
-                            </div>
-                          </div>
-    </SwiperSlide> */}
+
   </Swiper>
   
   

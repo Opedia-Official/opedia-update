@@ -26,7 +26,7 @@ export default class AsNavFor extends Component {
     const settings = {
         infinite: true,
         speed: 500,
-        autoplay: true,
+        // autoplay: true,
         arrows: false,
         dots: true,
         fade: true,
@@ -35,44 +35,46 @@ export default class AsNavFor extends Component {
       };
     const settings2 = {
         dots: true,
-        // infinite: true,
+        infinite: true,
         speed: 500,
         arrows: false,
-        responsive: [
-          // {
-          //   breakpoint: 1024,
-          //   settings: {
-          //     slidesToShow: 3,
-          //     slidesToScroll: 2,
-          //     infinite: true,
-          //     dots: true
-          //   }
-          // },
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: true
-            }
-          },
+        slidesToShow: 2,
+        slidesToScroll:3,
+        // responsive: [
+        //   {
+        //     breakpoint: 2000,
+        //     settings: {
+        //       slidesToShow: 3,
+        //       slidesToScroll: 3,
+        //       infinite: true,
+        //       dots: true
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 992,
+        //     settings: {
+        //       slidesToShow: 3,
+        //       slidesToScroll: 3,
+        //       infinite: true,
+        //       dots: true
+        //     }
+        //   },
          
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
-          }
-        ]
+        //   {
+        //     breakpoint: 576,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1,
+        //     }
+        //   },
+        //   {
+        //     breakpoint: 480,
+        //     settings: {
+        //       slidesToShow: 1,
+        //       slidesToScroll: 1
+        //     }
+        //   }
+        // ]
       };
     return (
       <div>
@@ -90,9 +92,9 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-6">
                         <div className="hero-left">
-                         <h4>Optimized It System1</h4>
-                       <h2>It & Tech Solution <br />
-                         Your Business</h2>
+                         {/* <h4>Optimized It System</h4> */}
+                       <h2>Web & Software solution 
+                         </h2>
                         <div className="hero-action">
                          <a className="btn-brand" href="#">Get A Quate</a>
                         <a className="btn-two" href="#">Learn More</a>
@@ -115,9 +117,9 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-6">
                         <div className="hero-left">
-                         <h4>Optimized It System2</h4>
-                       <h2>It & Tech Solution <br />
-                         Your Business</h2>
+                         {/* <h4>Optimized It System2</h4> */}
+                       <h2>Product Design </h2>
+                         
                         <div className="hero-action">
                          <a className="btn-brand" href="#">Get A Quate</a>
                         <a className="btn-two" href="#">Learn More</a>
@@ -140,9 +142,9 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-6">
                         <div className="hero-left ">
-                         <h4>Optimized It System3</h4>
-                       <h2>It & Tech Solution <br />
-                         Your Business</h2>
+                         {/* <h4>Optimized It System3</h4> */}
+                       <h2>Digital Marketing<br />
+                         </h2>
                         <div className="hero-action">
                          <a className="btn-brand" href="#">Get A Quate</a>
                         <a className="btn-two" href="#">Learn More</a>
@@ -165,9 +167,9 @@ export default class AsNavFor extends Component {
                  {/* left part */}
                  <div className="col-md-6">
                         <div className="hero-left">
-                         <h4>Optimized It System4</h4>
-                       <h2>It & Tech Solution <br />
-                         Your Business</h2>
+                         {/* <h4>Optimized It System4</h4> */}
+                       <h2>Ecommerce Solution
+                        </h2>
                         <div className="hero-action">
                          <a className="btn-brand" href="#">Get A Quate</a>
                         <a className="btn-two" href="#">Learn More</a>
@@ -188,14 +190,17 @@ export default class AsNavFor extends Component {
         </Slider>
 
         <Slider
+          {...settings2}
           asNavFor={this.state.nav1}
           ref={slider => (this.slider2 = slider)}
           slidesToShow={3}
+          slidesToScroll={3}
           swipeToSlide={true}
           focusOnSelect={true}
-          {...settings2}
+        
           
         >
+      
           {/* single item */}
           <div className="hero-bottom-section">
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
@@ -203,7 +208,46 @@ export default class AsNavFor extends Component {
                         <FaRegLightbulb/>
             </div>
                 <div className="hero-bottom-info">
-                <h4>AUGMENTED REALITY</h4>
+                <h4>Web Design</h4>
+                <p>Custom Website design in Wordpress,HTML Or React</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>Web Development</h4>
+                <p>Web Development in PHP, Laravel, Nodejs Or Mern solution</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>Software as a solution</h4>
+                <p>Any Web Management solution!</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>Ui, UX Design</h4>
                 <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
@@ -216,7 +260,7 @@ export default class AsNavFor extends Component {
                         <FaRegLightbulb/>
             </div>
                 <div className="hero-bottom-info">
-                <h4>AUGMENTED REALITY</h4>
+                <h4>Web App</h4>
                 <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
@@ -229,7 +273,7 @@ export default class AsNavFor extends Component {
                         <FaRegLightbulb/>
             </div>
                 <div className="hero-bottom-info">
-                <h4>AUGMENTED REALITY</h4>
+                <h4>Mobile App</h4>
                 <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
@@ -242,8 +286,73 @@ export default class AsNavFor extends Component {
                         <FaRegLightbulb/>
             </div>
                 <div className="hero-bottom-info">
-                <h4>AUGMENTED REALITY</h4>
+                <h4>SEO Service</h4>
                 <p>Get Regular Support From Our Team</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>SMM Service</h4>
+                <p>Get Regular Support From Our Team</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>Google ADs</h4>
+                <p>Get Regular Support From Our Team</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>E-commerce Design</h4>
+                <p>Get Regular Support From Our Team</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+          {/* single item */}
+          <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>E-commerce Development</h4>
+                <p>Get Regular Support From Our Team</p>
+                </div>
+            </div>
+        </div>
+          {/* single item */}
+              {/* single item */}
+              <div className="hero-bottom-section">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+            <div className="icons">
+                        <FaRegLightbulb/>
+            </div>
+                <div className="hero-bottom-info">
+                <h4>E-commerce Marketing</h4>
+                <p> SEO,SMM, F-commerce solution</p>
                 </div>
             </div>
         </div>

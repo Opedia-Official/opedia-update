@@ -18,14 +18,14 @@ import {
 // Import Swiper styles
 import "swiper/css";
 
-export default function () {
+export default function Specialist() {
   return (
     <div className="specialist-team-area bg-brand text-center text-md-start">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-6">
             <div className="section-title">
-              <h5>// About Company</h5>
+              <h5>About Company</h5>
               <h3>
                 We team of experience <br />
                 It Specialties.
