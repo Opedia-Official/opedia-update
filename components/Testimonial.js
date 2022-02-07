@@ -31,8 +31,8 @@ export default function Testimonial(props) {
   </SwiperSlide> */}
 
   {
-    props.TestimonialSliderData.map(itam =><SwiperSlide> 
-      <TestimonialSlider itam={itam} />
+    props.TestimonialSliderData.map((itam) =><SwiperSlide  key={Math.floor(Math.random() * 15000)}> 
+      <TestimonialSlider itam={itam} key={Math.floor(Math.random() * 15000)} />
   </SwiperSlide> )
   }
     

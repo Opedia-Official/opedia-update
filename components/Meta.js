@@ -5,7 +5,8 @@ const Meta = ({title,description})=>{
             <Head>
             <title>{title}</title>
             <meta name="description" content={description} />
-            <link rel="icon" href="/favicon.ico" />
+            {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
+            <link rel="shortcut icon" type="image/png" sizes="32x32" href="/opedia.ico" />
             </Head>
         </>
       )

@@ -530,7 +530,7 @@ button.btn-reset {
     width: 100%;
     background-color:rgba(255, 255, 255, 0)
 }
- .active{
+ .activeNav{
     width: 100%;
     background-color:rgba(246, 209, 121, 0.959);
     position: fixed;

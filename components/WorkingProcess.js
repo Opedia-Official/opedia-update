@@ -33,9 +33,10 @@ export default function WorkingProcess() {
                 </div>
                 <div className="row justify-content-center align-items-center mt-50">
                     {
-                        [1,2,3,4].map(()=>{
+                        [1,2,3,4].map((item)=>{
                             return (
-                                <div className="col-lg-3 col-sm-6 mb-30">
+                                <div key={item} className="col-lg-3 col-sm-6 mb-30">
+                                    <p>{item}</p>
                                 <div className={style.workingProgressStepsWrap}>
                                     <div className={style.workingProgressItems}>
                                             <span className={style.wpIcon}>
