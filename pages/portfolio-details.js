@@ -5,7 +5,7 @@ import { FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn } from "react-icons/fa";
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
 import { useState } from "react";
 
-export default function portfolio() {
+export default function Portfolio() {
     const [modalShow, setModalShow] = useState(false);
   return <>
         <InnerHead title="Portfolio Details"/>

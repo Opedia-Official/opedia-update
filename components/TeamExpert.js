@@ -8,9 +8,8 @@ function TeamExpert() {
     <div className="row justify-content-center">
       <div className="col-md-6">
         <div className="section-title text-center mb-50">
-            <h5>// Expert Worker</h5>
+            <h5> Expert Worker</h5>
             <h3>Our Expert Worker.</h3>
-
         </div>
       </div>
     </div>

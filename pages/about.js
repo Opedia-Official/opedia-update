@@ -26,7 +26,7 @@ import TeamExpert from "../components/TeamExpert";
 
 
 
-export default function portfolio() {
+export default function About() {
     const [modalShow, setModalShow] = useState(false);
   return <>
             <Meta title="About"/>
@@ -60,7 +60,7 @@ export default function portfolio() {
                         <div className="about great-exp-right ">
                             <p className="a-title-top">Great Experience In Building</p>
                         <div className="section-title">
-                            <h5>// About Company</h5>
+                            <h5> About Company</h5>
                             <h3>We team of experience <br />
                                 It Specialties.</h3>
                                 <p>Construction is a general term meaning the art and science to form objects
@@ -82,7 +82,7 @@ export default function portfolio() {
           <div className="row justify-content-center">
                       <div className="col-md-6">
                         <div className="section-title text-center mb-50">
-                            <h5>// Our Tech Services</h5>
+                            <h5>Our Tech Services</h5>
                             <h3>Our Expert Worker.</h3>
 
                         </div>
@@ -94,7 +94,7 @@ export default function portfolio() {
                       <div className="row">
 
                            {
-                             expertWorker.map(item => <ExpertWorker item={item}/>)
+                             expertWorker.map(item => <ExpertWorker key={item} item={item}/>)
                            }
 
                         
@@ -225,7 +225,7 @@ export default function portfolio() {
             <div className="row justify-content-center">
                       <div className="col-md-6">
                         <div className="section-title text-center mb-50">
-                            <h5>// Our Tech Services</h5>
+                            <h5>Our Tech Services</h5>
                             <h3>Client,S Feedback</h3>
 
                         </div>

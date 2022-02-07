@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import { BiRightArrowAlt} from "react-icons/bi";
 import InnerHead from '../../components/innerHead'
 import Link from "next/link";
-export default function portfolio() {
+export default function Portfolio() {
   return <>
         <InnerHead title="Portfolio"/>
     <div className="portfolio-area">
@@ -10,7 +10,7 @@ export default function portfolio() {
                 <div className="row justify-content-center">
                     <div className="col-md-6">
                     <div className="section-title text-center mb-50">
-                        <h5>// Expert Worker</h5>
+                        <h5>Expert Worker</h5>
                         <h3>Our Expert Worker.</h3>
                     </div>
                     </div>

@@ -45,7 +45,7 @@ export default function ExpTeam({expertTeams}) {
                                 <ul>
                                   
                                     <li> 
-                                        <div> <input onChange={isChecked} class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value2"  />
+                                        <div> <input onChange={isChecked} className="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value2"  />
                                     <label htmlFor="styled-checkbox-1">Lorem Ipsum is simply dummy </label></div>
                                                                         
                                         
@@ -58,7 +58,7 @@ export default function ExpTeam({expertTeams}) {
                         />
                                     </li>
                                     <li> 
-                                        <div> <input onChange={isChecked} class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2"  />
+                                        <div> <input onChange={isChecked} className="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2"  />
                                     <label htmlFor="styled-checkbox-2">Lorem Ipsum is simply dummy </label></div>
                                                                         
                                         
@@ -71,7 +71,7 @@ export default function ExpTeam({expertTeams}) {
                         />
                                     </li>
                                     <li> 
-                                        <div> <input onChange={isChecked} class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value2"  />
+                                        <div> <input onChange={isChecked} className="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value2"  />
                                     <label htmlFor="styled-checkbox-3">Lorem Ipsum is simply dummy </label></div>
                                                                         
                                         

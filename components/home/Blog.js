@@ -18,14 +18,14 @@ import {
 // Import Swiper styles
 import "swiper/css";
 
-export default function () {
+export default function Blog () {
   return (
     <div className="blog-area">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-12">
             <div className="section-title text-center mb-40">
-              <h5>// News & Blogs</h5>
+              <h5>News & Blogs</h5>
               <h3>Leatest News & Blog</h3>
             </div>
           </div>

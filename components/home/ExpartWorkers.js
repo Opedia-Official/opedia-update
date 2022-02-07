@@ -26,7 +26,7 @@ export default function ExpartWorkers() {
         <div className="row">
           <div className="col-md-6 offset-md-3">
             <div className="section-title text-center mb-50">
-              <h5>// Expert Worker</h5>
+              <h5> Expert Worker</h5>
               <h3>Our Expert Worker.</h3>
             </div>
           </div>
