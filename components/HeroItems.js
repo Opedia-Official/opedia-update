@@ -26,7 +26,7 @@ export default class AsNavFor extends Component {
     const settings = {
         infinite: true,
         speed: 500,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         fade: true,
@@ -39,30 +39,30 @@ export default class AsNavFor extends Component {
         speed: 500,
         arrows: false,
         responsive: [
+          // {
+          //   breakpoint: 1024,
+          //   settings: {
+          //     slidesToShow: 3,
+          //     slidesToScroll: 2,
+          //     infinite: true,
+          //     dots: true
+          //   }
+          // },
           {
-            breakpoint: 1024,
+            breakpoint: 992,
             settings: {
               slidesToShow: 2,
-              slidesToScroll: 3,
+              slidesToScroll: 1,
               infinite: true,
               dots: true
             }
           },
+         
           {
-            breakpoint: 1024,
+            breakpoint: 576,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+              slidesToShow: 1,
+              slidesToScroll: 1,
             }
           },
           {
@@ -88,7 +88,7 @@ export default class AsNavFor extends Component {
             <div className="hero-wrap">
                 <div className="row align-items-center">
                  {/* left part */}
-                 <div className="col-md-7">
+                 <div className="col-md-6">
                         <div className="hero-left">
                          <h4>Optimized It System1</h4>
                        <h2>It & Tech Solution <br />
@@ -101,9 +101,9 @@ export default class AsNavFor extends Component {
                 </div>
                 {/* left part */}
 
-                <div className="col-md-5">
-                   <div className="hero-right pt-50">
-                         <img src="./hero/lady.png" alt="" />
+                <div className="col-md-6">
+                   <div className="hero-right pt-40 ">
+                         <img src="./hero/pic-1.png" alt="" />
                    </div>
                 </div>
                </div>
@@ -113,7 +113,7 @@ export default class AsNavFor extends Component {
             <div className="hero-wrap">
                 <div className="row align-items-center">
                  {/* left part */}
-                 <div className="col-md-7">
+                 <div className="col-md-6">
                         <div className="hero-left">
                          <h4>Optimized It System2</h4>
                        <h2>It & Tech Solution <br />
@@ -126,9 +126,9 @@ export default class AsNavFor extends Component {
                 </div>
                 {/* left part */}
 
-                <div className="col-md-5">
-                   <div className="hero-right pt-50">
-                         <img src="./hero/lady.png" alt="" />
+                <div className="col-md-6">
+                   <div className="hero-right pt-40 ">
+                         <img src="./hero/pic-2.png" alt="" />
                    </div>
                 </div>
                </div>
@@ -138,8 +138,8 @@ export default class AsNavFor extends Component {
             <div className="hero-wrap">
                 <div className="row align-items-center">
                  {/* left part */}
-                 <div className="col-md-7">
-                        <div className="hero-left">
+                 <div className="col-md-6">
+                        <div className="hero-left ">
                          <h4>Optimized It System3</h4>
                        <h2>It & Tech Solution <br />
                          Your Business</h2>
@@ -151,19 +151,19 @@ export default class AsNavFor extends Component {
                 </div>
                 {/* left part */}
 
-                <div className="col-md-5">
-                   <div className="hero-right pt-50">
-                         <img src="./hero/lady.png" alt="" />
+                <div className="col-md-6">
+                   <div className="hero-right pt-40 ">
+                         <img src="./hero/pic-3.png" alt="" />
                    </div>
                 </div>
                </div>
                 </div>
                 {/* hero top */}
           {/* hero top */}
-            <div className="hero-wrap">
-                <div className="row align-items-center">
+            <div className="hero-wrap ">
+                <div className="row align-items-center ">
                  {/* left part */}
-                 <div className="col-md-7">
+                 <div className="col-md-6">
                         <div className="hero-left">
                          <h4>Optimized It System4</h4>
                        <h2>It & Tech Solution <br />
@@ -176,9 +176,9 @@ export default class AsNavFor extends Component {
                 </div>
                 {/* left part */}
 
-                <div className="col-md-5">
-                   <div className="hero-right pt-50">
-                         <img src="./hero/lady.png" alt="" />
+                <div className="col-md-6">
+                   <div className="hero-right pt-40">
+                         <img src="./hero/pic-4.png" alt="" />
                    </div>
                 </div>
                </div>

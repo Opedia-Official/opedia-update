@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.5rem 1rem 0;
 }
 
 .hamburger {
@@ -43,10 +43,13 @@
     position: relative;
 }
 
-.navlink:hover, .activenav, .activenav:hover {
+.navlink:hover,
+.activenav,
+.activenav:hover {
     font-size: 18px;
     font-weight: 700;
-    color: #f49735;;
+    color: #f49735;
+    ;
     text-decoration: none;
     transition: 0.3s;
     position: relative;
@@ -60,7 +63,8 @@
 /* *******************************MEGAMENU AREA START********************************** */
 
 .dropdown {
-    background: #ffffff;;
+    background: #ffffff;
+    ;
     position: absolute;
     left: -56rem;
     z-index: 9999;
@@ -72,8 +76,10 @@
     visibility: hidden;
     transition: 0.5s;
 }
+
 .dropdown1 {
-    background: #ffffff;;
+    background: #ffffff;
+    ;
     position: absolute;
     left: 0rem;
     z-index: 9999;
@@ -89,6 +95,7 @@
 .dropdown__inner {
     border-right: 1px solid #2f6eb5;
 }
+
 .dropdown__inner2 {
     border-right: 1px solid #2f6eb500!important;
 }
@@ -105,6 +112,7 @@
     opacity: 1;
     visibility: visible;
 }
+
 .navitem:hover .dropdown1 {
     opacity: 1;
     visibility: visible;
@@ -195,6 +203,12 @@
         height: 600px;
         overflow-y: scroll;
     }
+    .dropdown1 {
+        background: #ffffff;
+        position: fixed;
+        background: #333;
+        left: 59%;
+    }
 }
 
 .footer {
@@ -234,5 +248,44 @@
     .dropdown {
         left: -42rem;
         width: 83rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .dropdown1 {
+        background: #ffffff;
+        position: fixed;
+        background: #333;
+        left: 59%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .dropdown1 {
+        background: #ffffff;
+        position: fixed;
+        background: #333;
+        left: 57%;
+        top: 30%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .dropdown1 {
+        background: #ffffff;
+        position: fixed;
+        background: #333;
+        left: 57%;
+        top: 38%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dropdown1 {
+        background: #ffffff;
+        position: fixed;
+        background: #333;
+        left: 18%;
+        top: 41%;
     }
 }

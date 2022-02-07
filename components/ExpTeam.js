@@ -42,7 +42,7 @@ export default function ExpTeam({expertTeams}) {
                     <div className="expTeam-right">
                         <SectionTitle section ={expertTeams.section.sectionHead} title ={expertTeams.section.title}  description ={expertTeams.section.description}/>
                         <div className="expTeam-youtube-section">
-                                {/* <ul>
+                                <ul>
                                   
                                     <li> 
                                         <div> <input onChange={isChecked} class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value2"  />
@@ -87,7 +87,7 @@ export default function ExpTeam({expertTeams}) {
                
                     
 
-                                </ul> */}
+                                </ul>
                         </div>
                     </div>
 
