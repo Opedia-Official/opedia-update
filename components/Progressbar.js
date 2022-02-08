@@ -20,7 +20,7 @@ export default function Progressbar() {
                             text={`${percentage}%`}
                             styles={buildStyles({
                               pathTransition:
-                                percentage === 0 ? "none" : "stroke-dashoffset 0.5s ease 0s"
+                                percentage === 0 ? "none" : "stroke-dashoffset 1.5s ease 0s"
                             })}
                           />
                         )}

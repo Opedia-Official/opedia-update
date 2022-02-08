@@ -78,7 +78,7 @@ export default function Footer() {
                                                         </div>
                                                 </div>
                                         </div>
-                                        <div className="col-md-2 col-sm-6">
+                                        <div className="col-md-2 col-6 mt-md-0 mt-5">
                                             <div className="footer-widget">
                                                 <h4 className='footer-title'>Useful Links</h4>
                                                 <ul className="link-items">
@@ -91,7 +91,7 @@ export default function Footer() {
                                                 </ul>
                                                 </div>
                                             </div>
-                                        <div className="col-md-2 col-sm-6 mt-5 mt-md-0">
+                                        <div className="col-md-2 col-6 mt-5">
                                             <div className="footer-widget">
                                                 <h4 className='footer-title'>Help?</h4>
                                                 <ul className="link-items">
