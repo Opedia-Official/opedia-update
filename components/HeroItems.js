@@ -40,8 +40,13 @@ export default class AsNavFor extends Component {
         loop:true,
         speed: 500,
         arrows: false,
+<<<<<<< HEAD
+        slidesToShow: 2,
+        slidesToScroll:3,
+=======
         slidesToShow: 3,
         slidesToScroll:1,
+>>>>>>> bdd200381b366d80284c526ebc9e2c71176ca2eb
         responsive: [
           {
               breakpoint: 1024,
