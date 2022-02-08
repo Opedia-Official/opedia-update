@@ -38,43 +38,43 @@ export default class AsNavFor extends Component {
         infinite: true,
         speed: 500,
         arrows: false,
-        slidesToShow: 2,
-        slidesToScroll:3,
-        // responsive: [
-        //   {
-        //     breakpoint: 2000,
-        //     settings: {
-        //       slidesToShow: 3,
-        //       slidesToScroll: 3,
-        //       infinite: true,
-        //       dots: true
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 992,
-        //     settings: {
-        //       slidesToShow: 3,
-        //       slidesToScroll: 3,
-        //       infinite: true,
-        //       dots: true
-        //     }
-        //   },
+        slidesToShow: 3,
+        slidesToScroll:1,
+        responsive: [
+          {
+            breakpoint: 2000,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
          
-        //   {
-        //     breakpoint: 576,
-        //     settings: {
-        //       slidesToShow: 1,
-        //       slidesToScroll: 1,
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 480,
-        //     settings: {
-        //       slidesToShow: 1,
-        //       slidesToScroll: 1
-        //     }
-        //   }
-        // ]
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
     return (
       <div>
@@ -209,7 +209,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Web Design</h4>
-                <p>Custom Website design in Wordpress,HTML Or React</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Web Development</h4>
-                <p>Web Development in PHP, Laravel, Nodejs Or Mern solution</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Software as a solution</h4>
-                <p>Any Web Management solution!</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -352,7 +352,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>E-commerce Marketing</h4>
-                <p> SEO,SMM, F-commerce solution</p>
+                <p> Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>

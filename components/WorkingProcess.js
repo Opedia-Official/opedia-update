@@ -42,7 +42,7 @@ export default function WorkingProcess() {
                         [1,2,3,4].map((item)=>{
                             return (
                                 <div key={item} className="col-lg-3 col-sm-6 mb-30">
-                                    <p>{item}</p>
+                                
                                 <div className={style.workingProgressStepsWrap}>
                                     <div className={style.workingProgressItems}>
                                             <span className={style.wpIcon}>
