@@ -29,7 +29,7 @@ import { useEffect } from "react";
 import {server} from '../config/index'
 
 
-export default function Home({expertTeams,ViewServices,Gallaries,projects }) {
+export default function Home() {
   const [isReact, setIsReact] = useState(false);
 
   useEffect(()=>{
@@ -41,13 +41,24 @@ export default function Home({expertTeams,ViewServices,Gallaries,projects }) {
     <>
       <HeroSlide />
 
-      <ExpTeam expertTeams = {expertTeams}/>
+    <ExpTeam />
+
+      <ViewService />
+
+      <ShowCase  />
+
+      <ShowCaseCounter  />  
+      
+      
+       {/*  */}
+
+      {/* <ExpTeam expertTeams = {expertTeams}/>
 
       <ViewService ViewServices={ViewServices}/>
 
       <ShowCase Gallaries ={Gallaries} />
 
-      <ShowCaseCounter projectsAll ={projects} />
+      <ShowCaseCounter projectsAll ={projects} /> */}
 
       <Update />
   
@@ -65,26 +76,22 @@ export default function Home({expertTeams,ViewServices,Gallaries,projects }) {
   );
 }
 
-export const getStaticProps = async() => {
-  let response = await fetch(`${server}/api`,{
-    method:'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-  });
-  let data =  await response.json();
+// export async function getStaticProps(context) {
+//   let response = await fetch(`${server}/api`)
+//   let data =  await response.json();
+  
 
 
-  return {
-    props: {
-        expertTeams:data.ExpertTeam,
-        ViewServices: data.ViewService,
-        Gallaries: data.Gallary,
-        projects: data.ProjectCount,
-    }, 
-    revalidate: 5, // In seconds
-  }
-}
+//   return {
+//     props: {
+//         expertTeams:data.ExpertTeam,
+//         ViewServices: data.ViewService,
+//         Gallaries: data.Gallary,
+//         projects: data.ProjectCount,
+//     }, 
+//     revalidate: 5, 
+//   }
+// }
 
 
 

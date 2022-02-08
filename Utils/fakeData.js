@@ -117,7 +117,7 @@ export const ExpertTeam = {
 export const ViewService = {
     Section: {
         sectionHead: "About Company",
-        title: 'Software & IT services   ',
+        title: 'Software & IT services',
         description: `Our professional services include Web & Software Solutions, E-commerce Development, User Experience (UI/UX) Design, Digital Marketing, Multimedia and Printing. Using our experienced professionals, we help businesses grow and prosper.  
         `,
         moreText: "We help businesses to boost performance technically and work on initiatives to enhance brand presence on the market, develop a digital platform that fits your exact needs in terms of real-time solutions, and define a clear roadmap for improvement."
@@ -150,6 +150,34 @@ export const ViewService = {
 
     ]
 }
+
+var Services  =  [{
+            id: 1,
+            title: 'Cloud Computing',
+            url: 'Cloud-Computing',
+            desc: 'Construction is a general term the art and science to form',
+        },
+        {
+            id: 2,
+            title: 'Analytic Solutions',
+            url: 'Analytic-Solutions',
+            desc: 'Construction is a general term the art and science to form',
+        },
+        {
+            id: 3,
+            title: 'Product & Design',
+            url: 'Product-&-Design',
+            desc: 'Construction is a general term the art and science to form',
+        },
+        {
+            id: 4,
+            title: 'Data Centers',
+            url: 'Data-centers',
+            desc: 'Construction is a general term the art and science to form',
+        },
+
+
+    ]
 
 
 { /* View Service section */ }
@@ -194,6 +222,32 @@ export const Gallary = {
         }
     ]
 }
+
+const gallaries= [{
+            id: 1,
+            img: './ShowCase-gallary/pic-2.png',
+            title: 'Data Research Analysis',
+            subTitle: 'Cloud Computing',
+        },
+        {
+            id: 2,
+            img: './ShowCase-gallary/pic-2.png',
+            title: 'Data Research Analysis',
+            subTitle: 'Cloud Computing',
+        },
+        {
+            id: 3,
+            img: './ShowCase-gallary/pic-2.png',
+            title: 'Data Research Analysis',
+            subTitle: 'Cloud Computing',
+        },
+        {
+            id: 4,
+            img: './ShowCase-gallary/pic-2.png',
+            title: 'Data Research Analysis',
+            subTitle: 'Cloud Computing',
+        }
+    ]
 
 
 { /* View Service section */ }
@@ -381,3 +435,6 @@ export const expertWorker = [{
         iconSecondary: < BiRightArrowAlt / > ,
     },
 ]
+
+
+export {Services, gallaries}

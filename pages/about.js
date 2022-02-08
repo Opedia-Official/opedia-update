@@ -5,11 +5,7 @@ import Meta from "../components/Meta";
 import { useState } from "react";
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
   
-import { BiRightArrowAlt} from "react-icons/bi";
 import { FaStar} from "react-icons/Fa";
-import { SiSimpleanalytics} from "react-icons/si";
-import { FaCloud, FaDatabase} from "react-icons/fa";
-import { MdOutlineDesignServices} from "react-icons/md";
 import { BsPlayFill} from "react-icons/Bs";
 
 
