@@ -38,8 +38,13 @@ export default class AsNavFor extends Component {
         infinite: true,
         speed: 500,
         arrows: false,
+<<<<<<< HEAD
         slidesToShow: 2,
         slidesToScroll:3,
+=======
+        slidesToShow: 3,
+        slidesToScroll:1,
+>>>>>>> bdd200381b366d80284c526ebc9e2c71176ca2eb
         responsive: [
           {
             breakpoint: 2000,
@@ -209,7 +214,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Web Design</h4>
-                <p>Custom Website design in Wordpress,HTML Or React</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -222,7 +227,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Web Development</h4>
-                <p>Web Development in PHP, Laravel, Nodejs Or Mern solution</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -235,7 +240,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>Software as a solution</h4>
-                <p>Any Web Management solution!</p>
+                <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>
@@ -352,7 +357,7 @@ export default class AsNavFor extends Component {
             </div>
                 <div className="hero-bottom-info">
                 <h4>E-commerce Marketing</h4>
-                <p> SEO,SMM, F-commerce solution</p>
+                <p> Get Regular Support From Our Team</p>
                 </div>
             </div>
         </div>

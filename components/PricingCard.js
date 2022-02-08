@@ -15,7 +15,7 @@ function PricingCard({item}) {
 // console.log('item', item);
 
   return <div className="col-md-4 col-sm-6 ">
-  <div className="our-pricing-wrap text-center">
+  <div className="our-pricing-wrap text-center mb-30">
     <Card>
       <div className="pricing-level">
         <p>{item.type}</p>

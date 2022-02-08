@@ -33,7 +33,7 @@ export default function Home() {
   const [isReact, setIsReact] = useState(false);
 
   useEffect(()=>{
-    // console.log('index TestimonialSlider ',TestimonialSlider)
+    // console.log(asd)
   })
 
 
@@ -92,5 +92,7 @@ export default function Home() {
 //     revalidate: 5, 
 //   }
 // }
+
+
 
 
