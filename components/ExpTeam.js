@@ -24,23 +24,23 @@ export default function ExpTeam({expertTeams}) {
             <div className="row align-items-center">
                 <div className="col-md-6">
                         <div className="expTeam-left ">
-                                <img className="parent-pic" src={expertTeams.imageInfo.feature} alt="" />
+                                <img className="parent-pic" src='./experienceTeam/pic-1.png' alt="" />
                              <div className="child d-none d-xl-block">
-                             <img  src={expertTeams.imageInfo.child} alt="" />
+                             <img  src='./experienceTeam/pic-2.png' alt="" />
                              </div>
                                 <img className="exp-dots" src="./experienceTeam/dot_shapes.png" alt="" />
 
                                 <div className="exp-left-text ">
                                       <div className="exp-left-wrap d-flex align-items-center">
-                                      <h3> {expertTeams.imageInfo.age} <span>+</span></h3>
-                                        <h4>{expertTeams.imageInfo.experiance}</h4>
+                                      <h3> 25 <span>+</span></h3>
+                                        <h4>Years of experience we just achived </h4>
                                       </div>
                                 </div>
                         </div>
                 </div>
                 <div className="col-md-6">
                     <div className="expTeam-right">
-                        <SectionTitle section ={expertTeams.section.sectionHead} title ={expertTeams.section.title}  description ={expertTeams.section.description}/>
+                        <SectionTitle section =" About Company" title ='We team of experience It Specialties.'  description ="25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC"/>
                         <div className="expTeam-youtube-section">
                                 <ul>
                                   

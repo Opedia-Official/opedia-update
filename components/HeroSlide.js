@@ -2,7 +2,7 @@ import HomeStyle from "../styles/Home.module.css";
 
 import HeroItems from './HeroItems';
 
-export default function heroSlide() {
+export default function HeroSlide() {
   
   return <>
           

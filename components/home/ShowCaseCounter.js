@@ -6,7 +6,7 @@ import CountUp from 'react-countup';
 
 
 export default function Home({projectsAll}) {
-  const {projects} = projectsAll;
+  // const {projects} = projectsAll;
 
   return (
      <>

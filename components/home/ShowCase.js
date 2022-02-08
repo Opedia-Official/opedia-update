@@ -12,13 +12,13 @@ import { FiShare2} from "react-icons/Fi";
 import SectionTitle from '../SectionTitle';
 // Import Swiper styles
 import 'swiper/css';
-import { sliderData } from '../../Utils/fakeData';
+import { gallaries, sliderData } from '../../Utils/fakeData';
 
 
 export default function ShowCase({Gallaries}) {
   const [isReact, setIsReact] = useState(false);
-  const {Section,featured,gallaries}= Gallaries
-  const {sectionHead,title, description}  = Section;
+  // const {Section,featured,gallaries}= Gallaries
+  // const {sectionHead,title, description}  = Section;
 
   return (
      <>
@@ -31,18 +31,18 @@ export default function ShowCase({Gallaries}) {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6">
-              <SectionTitle section={sectionHead} title={title}/>
+              <SectionTitle section=" About Company" title='Our Recent Projects Showcase Gallery.  '/>
                 
               </div>
               <div className="col-md-6">
-                 <SectionTitle description={description} />
+                 <SectionTitle description="230+ clients are already growing their businesses. With our quality service, they are able to stand out from the crowd." />
               </div>
             </div>
             <div className="row mt-50 justify-content-center">
               <div className="col-md-5 col-sm-8"> 
                   <div className="showCase-wrap mb-4 mb-md-0">
                       <div className="show-case-features  s-img-wrap">
-                          <img src={featured.img} alt="" />
+                          <img src='./ShowCase-gallary/pic-1.png' alt="" />
                       </div>
                       <div className="show-case-info">
                           <div className="s-action">
@@ -50,8 +50,8 @@ export default function ShowCase({Gallaries}) {
                               <span><FiShare2/></span>
                           </div>
                           <div className="show-case-text">
-                              <h4><a href="#" > {featured.title} </a></h4>
-                                <p>{featured.subTitle}</p>
+                              <h4><a href="#" > Data Research Analysis </a></h4>
+                                <p>Cloud Computing</p>
                           </div>
                       </div>
                   </div>

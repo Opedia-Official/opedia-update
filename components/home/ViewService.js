@@ -8,19 +8,20 @@ import HomeStyle from "../../styles/Home.module.css";
 import SectionTitle from '../SectionTitle';
 
 import Link from 'next/link';
+import { Services } from '../../Utils/fakeData';
 export default function ViewService({ViewServices}) {
 
 
-  const {Section, Services} = ViewServices
+  // const {Section, Services} = ViewServices
     return(      
     <div className="view-service-section">
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6">
                 <div className="view-service-section-wrapper">
-                    <SectionTitle  section={Section.sectionHead} title={Section.title} />
-                      <p >{Section.moreText}</p>
-                    <SectionTitle  description={Section.description} />
+                    <SectionTitle  section="About Company" title='Software & IT services' />
+                      <p >We help businesses to boost performance technically and work on initiatives to enhance brand presence on the market, develop a digital platform that fits your exact needs in terms of real-time solutions, and define a clear roadmap for improvement.</p>
+                    <SectionTitle  description="Our professional services include Web & Software Solutions, E-commerce Development, User Experience (UI/UX) Design, Digital Marketing, Multimedia and Printing. Using our experienced professionals, we help businesses grow and prosper. " />
                     <Link href="/service">
                        <a className="btn-two mt-35">View Service</a>
                     </Link>
