@@ -1249,7 +1249,7 @@
         font-size: 11px;
     }
     .view-service-right-wrapper .card-body, .view-service-right-wrapper .card-body:hover {
-        text-align: center;
+        /* text-align: center; */
     }
     .view-service-right-wrapper .card-body>svg {
 
