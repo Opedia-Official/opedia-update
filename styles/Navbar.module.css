@@ -75,6 +75,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .dropdown1 {
@@ -101,7 +102,7 @@
     position: absolute;
     content: '';
     background-color: #2f6eb5;
-    height: 100%;
+    height: 160%;
     width: 1px;
     right: 0;
     top: 0;
@@ -131,7 +132,7 @@
 
 .dropdown__title {
     color: var(--clr-primary);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 700;
@@ -178,6 +179,8 @@
     }
     .navmenu.active {
         left: 0;
+        top: 0;
+        border-radius: 0;
     }
     .navitem {
         margin: 1rem 0;
@@ -219,6 +222,7 @@
         position: fixed;
         background: #333;
         left: 59%;
+        padding: 60px;
     }
 }
 
@@ -298,5 +302,8 @@
         background: #333;
         left: 18%;
         top: 41%;
+    }
+    a.Navbar_navlogo__SW1lT img {
+        width: 130px;
     }
 }

@@ -14,7 +14,7 @@
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .hero-bottom-info h4 {
-        font-size: 20px;
+        font-size: 18px;
     }
     .icons svg {
         font-size: 35px;
@@ -24,7 +24,7 @@
         margin: 3px;
     }
     .hero-left h2 {
-        font-size: 75px;
+        font-size: 65px;
     }
     .expTeam-left .parent-pic {
         width: 95%;
@@ -122,9 +122,15 @@
 /* Medium devices (tablets, 768px and up) */
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+    .hero-bottom-info h4 {
+        font-size: 20px;
+    }
+    .slick-dots {
+        top: -18rem;
+    }
     .hero-left h2 {
-        font-size: 58px;
-        line-height: 65px;
+        font-size: 51px;
+        line-height: 60px;
     }
     .hero-bottom-section {
         margin-top: -50px;
@@ -399,9 +405,24 @@
     .pr-140p {
         padding-right: 0%;
     }
+    .hero-bottom-info p {
+        font-size: 13px;
+    }
+    .hero-bottom-info h4 {
+        font-size: 16px;
+    }
+    .hero-bottom-items {
+        padding: 46px 10px 35px;
+    }
+    .icons svg {
+        font-size: 20px;
+    }
+    .hero-bottom-section {
+        width: 254px !important;
+    }
     .hero-left h2 {
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 54px;
+        line-height: 64px;
     }
     .hero-left {
         text-align: center;
@@ -420,7 +441,10 @@
         margin-left: 10rem;
     }
     .hero-bottom-section {
-        margin-left: 85px;
+        margin-left: 3px;
+    }
+    .hero-bottom-info {
+        margin-left: 10px;
     }
     .expTeam-left .parent-pic {
         width: 70%;
@@ -661,8 +685,8 @@
         margin-left: 85px;
     }
     .hero-left h2 {
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 40px;
+        line-height: 45px;
     }
     .hero-left {
         text-align: center;
@@ -955,6 +979,9 @@
         font-size: 20px;
         line-height: 20px;
     }
+    .hero-bottom-section {
+        margin-left: 85px;
+    }
 }
 
 
@@ -962,7 +989,7 @@
 
 @media all and (min-width: 481px) and (max-width: 575.98px) {
     .hero-bottom-section {
-        margin-left: 50px;
+        margin-left: 70px;
     }
     .hero-right img {
         margin-left: 9rem;

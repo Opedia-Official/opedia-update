@@ -31,57 +31,48 @@ export default class AsNavFor extends Component {
         arrows: false,
         dots: true,
         fade: true,
+        loop:true,
         slidesToShow: 1,
         slidesToScroll: 1
       };
     const settings2 = {
         dots: true,
         infinite: true,
+        loop:true,
         speed: 500,
         arrows: false,
-        slidesToShow: 3,
-        slidesToScroll:1,
+        slidesToShow: 2,
+        slidesToScroll:3,
         responsive: [
           {
-            breakpoint: 2000,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
+              breakpoint: 1024,
+              settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1,
+              }
           },
           {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
-            }
-          },
-         
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
+              breakpoint: 991,
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll:1
+              }
           },
           {
-            breakpoint: 480,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
-            }
+              breakpoint: 575,
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              }
           }
-        ]
+  
+    ]
       };
     return (
       <div>
         <Head>
                <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
                </Head>
         <Slider {...settings}
           asNavFor={this.state.nav2}
@@ -200,12 +191,8 @@ export default class AsNavFor extends Component {
           {...settings2}
           asNavFor={this.state.nav1}
           ref={slider => (this.slider2 = slider)}
-          slidesToShow={3}
-          slidesToScroll={3}
           swipeToSlide={true}
           focusOnSelect={true}
-        
-          
         >
       
           {/* single item */}
@@ -260,110 +247,13 @@ export default class AsNavFor extends Component {
             </div>
         </div>
           {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>Web App</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>Mobile App</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>SEO Service</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>SMM Service</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>Google ADs</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>E-commerce Design</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-          {/* single item */}
-          <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>E-commerce Development</h4>
-                <p>Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
-              {/* single item */}
-              <div className="hero-bottom-section">
-        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
-            <div className="icons">
-                        <FaRegLightbulb/>
-            </div>
-                <div className="hero-bottom-info">
-                <h4>E-commerce Marketing</h4>
-                <p> Get Regular Support From Our Team</p>
-                </div>
-            </div>
-        </div>
-          {/* single item */}
+       
+       
+         
+       
+        
+  
+
      
         </Slider>
       </div>

@@ -188,7 +188,7 @@ export default function Navbar() {
                 <div className={styles.dropdown}>
                   <div className="containerr">
                     <div className="row justify-content-center">
-                      <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Web & Software
@@ -252,7 +252,7 @@ export default function Navbar() {
                         </div>
                             <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p>
                       </div>
-                      <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Digital Marketing
@@ -286,7 +286,7 @@ export default function Navbar() {
                           </ul>
                         </div>
                       </div>
-                      <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Multimedia & Printing
@@ -321,7 +321,7 @@ export default function Navbar() {
                         </div>
                       </div>
 
-                      <div className="col-md-6 col-xl-2">
+                      <div className="col-md-12 col-xl-2">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Dropdown Title
@@ -355,7 +355,7 @@ export default function Navbar() {
                           </ul>
                         </div>
                       </div>
-                      <div className="col-md-6 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
                         <div
                           className={
                             (styles.dropdown__inner, styles.dropdown__last)
