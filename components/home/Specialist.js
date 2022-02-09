@@ -23,7 +23,7 @@ export default function Specialist() {
     <div className="specialist-team-area bg-brand text-center text-md-start">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-6">
+          <div className="col-md-6 wow fadeInLeft">
             <div className="section-title">
               <h5>About Company</h5>
               <h3>
@@ -68,13 +68,13 @@ export default function Specialist() {
             <div className="sp-r-section-wrap">
               <div className="sp-feature-img">
                 <img
-                  className="sp-feature"
+                  className="sp-feature  wow pulse"
                   src="./specialist/pic-1.png"
                   alt=""
                 />
-                <img src="./specialist/pic-3.png" alt="" className="sp-child" />
+                <img src="./specialist/pic-3.png" alt="" className="sp-child wow bounceInRight" />
               </div>
-              <div className="sp-img-r-child">
+              <div className="sp-img-r-child wow bounceIn">
                 <img src="./specialist/pic-2.png" alt="" />
               </div>
             </div>

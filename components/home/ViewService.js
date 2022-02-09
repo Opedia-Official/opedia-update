@@ -17,7 +17,7 @@ export default function ViewService({ViewServices}) {
     <div className="view-service-section">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12">
+              <div className="col-lg-6 col-md-12  wow fadeInleft"  data-wow-duration="1s">
                 <div className="view-service-section-wrapper">
                     <SectionTitle  section="About Company" title='Software & IT services' />
                       <p >We help businesses to boost performance technically and work on initiatives to enhance brand presence on the market, develop a digital platform that fits your exact needs in terms of real-time solutions, and define a clear roadmap for improvement.</p>
@@ -27,13 +27,13 @@ export default function ViewService({ViewServices}) {
                     </Link>
                 </div>
               </div>
-              <div className="col-lg-6 mt-5 mt-lg-0 ">
+              <div className="col-lg-6 mt-5 mt-lg-0  wow fadeInRight"  data-wow-duration="1s" >
                   <div className= {HomeStyle.viewServiceBg + " " +  "view-service-right-wrapper"}  >
                       <div className="row">
                           {
                             Services.map(service=>{
                               return (
-                                <div className="col-lg-6 col-sm-6" key={service.id}>
+                                <div className="col-lg-6 col-sm-6 "  data-wow-duration="1s" data-wow-delay="1s" key={service.id}>
                                   <Card >
                                     <Card.Body>
                                     <FaCloud/>

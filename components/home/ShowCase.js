@@ -38,7 +38,7 @@ export default function ShowCase({Gallaries}) {
                  <SectionTitle description="230+ clients are already growing their businesses. With our quality service, they are able to stand out from the crowd." />
               </div>
             </div>
-            <div className="row mt-50 justify-content-center">
+            <div className="row mt-50 justify-content-center wow fadeIn"  data-wow-duration="1s" data-wow-delay="0.5s">
               <div className="col-md-5 col-sm-8"> 
                   <div className="showCase-wrap mb-4 mb-md-0">
                       <div className="show-case-features  s-img-wrap">
@@ -61,9 +61,9 @@ export default function ShowCase({Gallaries}) {
                 <div className="row justify-content-center">
 
                   {
-                    gallaries.map(gallary=>{
+                    gallaries.map((gallary,index)=>{
                       return (
-                        <div className="col-md-6 col-sm-6" key={gallary.id}>
+                        <div className="col-md-6 col-sm-6  wow fadeIn"  data-wow-duration="1s" data-wow-delay ="0.5s" key={gallary.id}>
                         <div className="showCase-wrap mb-4 ">
                             <div className="show-case-child s-img-wrap">
                                 <img src={gallary.img} alt={gallary.title} />

@@ -8,7 +8,7 @@ export default function Update() {
     <div className="project-update-section text-center text-md-start bg-brand">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-md-6">
+          <div className="col-md-6 wow slideInLeft"  data-wow-duration="2s">
             <div className="project-update-section-wrap">
               <div className="section-title">
                 <h5> About Company</h5>

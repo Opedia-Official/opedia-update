@@ -17,7 +17,7 @@ export default function WorkingProcess() {
                         For Client Work It Specialties.</h3>
                     </div>
                 </div>
-                <div className="col-lg-5">
+                <div className="col-lg-5  wow fadeIn"  data-wow-duration="2s">
                         <div className={`${style.workingProcessWrap} mt-4 mt-lg-0`} >
                                 <div className={style.wpItem}>
                                             <div className={style.wpCountWrap}>
@@ -38,10 +38,8 @@ export default function WorkingProcess() {
                         </div>
                 </div>
                 <div className="row justify-content-center align-items-center mt-50">
-                    {
-                        [1,2,3,4].map((item)=>{
-                            return (
-                                <div key={item} className="col-lg-3 col-sm-6 mb-30">
+                  
+                                <div  className="col-lg-3 col-sm-6 mb-30 wow fadeIn"  data-wow-duration="1s">
                                   
                                 <div className={style.workingProgressStepsWrap}>
                                     <div className={style.workingProgressItems}>
@@ -55,10 +53,50 @@ export default function WorkingProcess() {
                                     </div>
                                 </div>
                         </div>
-                            )
-
-                        })
-                    }
+                                <div  className="col-lg-3 col-sm-6 mb-30  wow fadeIn"  data-wow-duration="3s">
+                                  
+                                <div className={style.workingProgressStepsWrap}>
+                                    <div className={style.workingProgressItems}>
+                                            <span className={style.wpIcon}>
+                                                <FiSettings/>                                                                                  
+                                            </span>
+                                            <h3>Choose Service</h3>     
+                                            {/* <span className={style.wpArrow}>
+                                            <BsArrowRight/>
+                                            </span> */}
+                                    </div>
+                                </div>
+                        </div>
+                                <div  className="col-lg-3 col-sm-6 mb-30  wow fadeIn"  data-wow-duration="5s">
+                                  
+                                <div className={style.workingProgressStepsWrap}>
+                                    <div className={style.workingProgressItems}>
+                                            <span className={style.wpIcon}>
+                                                <FiSettings/>                                                                                  
+                                            </span>
+                                            <h3>Choose Service</h3>     
+                                            {/* <span className={style.wpArrow}>
+                                            <BsArrowRight/>
+                                            </span> */}
+                                    </div>
+                                </div>
+                        </div>
+                                <div  className="col-lg-3 col-sm-6 mb-30  wow fadeIn"  data-wow-duration="7s">
+                                  
+                                <div className={style.workingProgressStepsWrap}>
+                                    <div className={style.workingProgressItems}>
+                                            <span className={style.wpIcon}>
+                                                <FiSettings/>                                                                                  
+                                            </span>
+                                            <h3>Choose Service</h3>     
+                                            {/* <span className={style.wpArrow}>
+                                            <BsArrowRight/>
+                                            </span> */}
+                                    </div>
+                                </div>
+                        </div>
+                        
+                     
             
                
                 </div>
