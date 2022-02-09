@@ -534,8 +534,11 @@ button.btn-reset {
 
 .activeNav {
     width: 100%;
-    background-color: rgba(246, 209, 121, 0.959);
+    background-color: #3ea3dc;
     position: fixed;
+    z-index: 323232323;
+    top: 0;
+    transition: .4s;
 }
 
 
@@ -716,7 +719,7 @@ button.btn-reset {
 /* *************************EXP TEAM SECTION ******************************** */
 
 .expTeam-section {
-    margin: 100px 0;
+    margin: 180px 0 0px;
 }
 
 .expTeam-left .parent-pic {
@@ -1544,6 +1547,7 @@ ul.pricing-items li {
 
 .testimonial-area {
     padding: 120px 0;
+    margin-bottom: 100px;
 }
 
 .testimonial-img {
@@ -2197,6 +2201,10 @@ ul.portfolio-details-info li:last-child {
 
 
 /* *******************************CONTACT US PAGE AREA********************************** */
+
+.contact-us-area {
+    margin-top: -180px;
+}
 
 .contact-wrap .card {
     border: none;

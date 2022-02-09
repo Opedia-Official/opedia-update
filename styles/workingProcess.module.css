@@ -109,5 +109,11 @@ span.wpPlus {
     color: #fff;
 }
 
+@media (min-width: 320px) and (max-width: 480.98px) {
+    .wpItem h2 {
+        font-size: 40px;
+    }
+}
+
 
 /* progress area */

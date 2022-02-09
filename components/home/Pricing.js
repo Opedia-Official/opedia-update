@@ -23,6 +23,9 @@ import { dataPricing } from "../../Utils/fakeData";
 import PricingCard from "../PricingCard";
 
 export default function Pricing({pricingData}) {
+
+       
+      
  
   return (
     <div className="our-pricing-area">

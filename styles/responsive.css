@@ -603,7 +603,7 @@
     }
     .breadcrumb-area h2 {
         font-size: 40px;
-    line-height: 70px;
+        line-height: 70px;
     }
     .exp-left-text h3 {
         font-size: 50px;
@@ -675,6 +675,12 @@
 }
 
 @media (max-width: 575.98px) {
+    .specialist-team-area {
+        padding: 100px 0;
+    }
+    .view-service-section-wrapper {
+        padding-right: 0px;
+    }
     .pr-140p {
         padding-right: 0%;
     }
@@ -775,7 +781,6 @@
     .section-title p {
         font-size: 14px;
     }
-    
     .sp-feature-img {
         max-width: 59%;
     }
@@ -784,21 +789,23 @@
         display: flex;
         justify-content: center;
     }
-    .footer-logo a{
+    .footer-logo a {
         transition: all 0.3s ease-out 0s;
         display: flex;
         justify-content: center;
     }
-
     .footer-widget p {
-        text-align: center;
+        font-size: 14px;
     }
-
-
     .footer-logo ul {
         margin: 0px;
         padding: 0px;
         text-align: center;
+    }
+    ul.link-items li a {
+        font-size: 14px;
+        line-height: 33px;
+        color: #FFFFFF;
     }
     .sp-feature-img img.sp-child {
         max-width: 200px;
@@ -828,8 +835,8 @@
         margin-top: 3rem;
     }
     ul.pricing-items li {
-        font-size: 16px;
-        line-height: 36px;
+        font-size: 14px;
+        line-height: 32px;
     }
     .testimonial-wrapper>p {
         padding: 0px 50px;
@@ -967,6 +974,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 120px;
+        padding: 0 15px;
     }
     .client-info img {
         max-width: 50px;
@@ -981,6 +989,28 @@
     }
     .hero-bottom-section {
         margin-left: 85px;
+    }
+    .footer-bottom-wrap {
+        padding: 20px 6px;
+    }
+    .footer-middle {
+        padding: 180px 12px 105px;
+    }
+    .hero-section-area {
+        margin-bottom: 0;
+    }
+    a.Navbar_navlogo__SW1lT img {
+        width: 110px;
+    }
+    ul.link-items li a {
+        font-size: 14px;
+        line-height: 33px;
+    }
+    .workingProcess_wpItem__0jrKN h2 {
+        font-size: 40px;
+    }
+    .pt-80 {
+        padding-top: 0;
     }
 }
 
@@ -1142,6 +1172,9 @@
     .subscribe-section input {
         width: 100%;
     }
+    .subscribe-section input::placeholder {
+        font-size: 14px;
+    }
     .blog-home-text-wrap {
         padding: 10px;
     }
@@ -1254,11 +1287,10 @@
         font-size: 24px;
         line-height: 50px;
         margin-bottom: 13px;
-        text-align: center;
     }
     .section-title h3 {
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 27px;
+        line-height: 35px;
     }
     .progress-info h4 {
         font-size: 25px;
@@ -1267,23 +1299,29 @@
         width: 110px;
     }
     .section-title h5 {
-        font-size: 25px;
+        font-size: 15px;
     }
     .workingProcess_wpItem__0jrKN h2 {
         font-size: 35px;
     }
     .section-title p {
-        font-size: 11px;
+        font-size: 12px;
+        line-height: 18px;
     }
-    .view-service-right-wrapper .card-body, .view-service-right-wrapper .card-body:hover {
+    .view-service-right-wrapper .card-body,
+    .view-service-right-wrapper .card-body:hover {
         text-align: center;
     }
     .view-service-right-wrapper .card-body>svg {
-
-       display: inline; 
+        display: inline;
         text-align: center!important;
     }
-    
+    a.Navbar_navlogo__SW1lT img {
+        width: 110px;
+    }
+    .about.great-exp-right P.a-title-top {
+        margin-left: -24px;
+    }
 }
 
 @media all and (min-width: 0px) and (max-width: 319px) {}
