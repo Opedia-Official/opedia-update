@@ -30,7 +30,7 @@ function PricingCard({item}) {
   // })
 
 
-  return <div className="col-md-4 col-sm-6 ">
+  return <div className="col-md-4 col-sm-6 wow zoomIn">
   <div className="our-pricing-wrap text-center mb-30">
     <Card>
       <div className="pricing-level">

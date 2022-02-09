@@ -7,6 +7,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Link from "next/link";
 
+
 export default class AsNavFor extends Component {
   constructor(props) {
     super(props);
@@ -80,11 +81,15 @@ export default class AsNavFor extends Component {
           asNavFor={this.state.nav2}
           ref={slider => (this.slider1 = slider)}
         >
+
+     {/* <ReactWOW animation='fadeIn'> */}
+
+
           {/* hero top */}
             <div className="hero-wrap">
                 <div className="row align-items-center">
                  {/* left part */}
-                 <div className="col-md-6">
+                 <div className="col-md-6 wow bounceInLeft" data-wow-duration="3s" >
                         <div className="hero-left">
                          {/* <h4>Optimized It System</h4> */}
                        <h2>Web & Software solution 
@@ -101,7 +106,7 @@ export default class AsNavFor extends Component {
                 {/* left part */}
                
 
-                <div className="col-md-6">
+                <div className="col-md-6  wow bounceInRight"   data-wow-duration="3s">
                    <div className="hero-right pt-40 ">
                          <img src="./hero/pic-1.png" alt="" />
                    </div>
@@ -109,6 +114,8 @@ export default class AsNavFor extends Component {
                </div>
                 </div>
                 {/* hero top */}
+
+                {/* </ReactWOW> */}
           {/* hero top */}
             <div className="hero-wrap">
                 <div className="row align-items-center">
@@ -203,8 +210,8 @@ export default class AsNavFor extends Component {
         >
       
           {/* single item */}
-          <div className="hero-bottom-section">
-         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
+          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1s">
+        <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
             </div>
@@ -216,7 +223,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section">
+          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1.5s">
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
@@ -229,7 +236,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section">
+          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="2.5s">
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>

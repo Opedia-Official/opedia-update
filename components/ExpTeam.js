@@ -19,7 +19,7 @@ export default function ExpTeam({expertTeams}) {
     <div className="expTeam-section ">
         <div className="container">
             <div className="row align-items-center">
-                <div className="col-md-6">
+                <div className="col-md-6 wow slideInLeft"  data-wow-duration="2s">
                         <div className="expTeam-left ">
                                 <img className="parent-pic" src='./experienceTeam/pic-1.png' alt="" />
                              <div className="child d-none d-xl-block">
@@ -35,7 +35,7 @@ export default function ExpTeam({expertTeams}) {
                                 </div>
                         </div>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-6  wow bounceInRight"   data-wow-duration="2s">
                     <div className="expTeam-right">
                         <SectionTitle section =" About Company" title ='We team of experience It Specialties.'  description ="25+Contrary to popular belief, Lorem Ipsum is not simply random text roots in a piece of classical Latin literature from 45 BC"/>
                         <div className="expTeam-youtube-section">

@@ -21,6 +21,8 @@ import Pricing from "../components/home/Pricing";
 import Testimonial from "../components/home/Testimonial";
 // Import Blog Section
 
+import dynamic from 'next/dynamic'
+
 
 
 
@@ -28,17 +30,29 @@ import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
 import {server} from '../config/index'
 
+import { HiOutlineArrowNarrowUp } from "react-icons/hi";
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
+
 
 export default function Home() {
   const [isReact, setIsReact] = useState(false);
 
   useEffect(()=>{
-    // console.log(asd)
-  })
+    if(typeof window !== 'undefined') {
 
+      window.WOW = require('wowjs');
+  
+    }
+  
+    new WOW.WOW().init();
+  },[])
 
   return (
     <>
+    
       <HeroSlide />
 
     <ExpTeam />
@@ -70,10 +84,24 @@ export default function Home() {
 
       <Pricing  />
 
-      {/* <Testemonial TestimonialSlider={TestimonialSlider} /> */}
-      <Testimonial  />
+      <a href="#">
+        <p className="Top">
+          <HiOutlineArrowNarrowUp/>
+        </p>
+      </a>
 
+      <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 
+      {/* <Testemonial /> */}
+
+     
     </>
   );
 }

@@ -180,6 +180,52 @@ label {
     opacity: 1;
 }
 
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(179, 195, 253); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:  rgb(90, 126, 246); 
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.Top{
+    color: white;
+    background: #f49735;
+    display: inline-grid;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid rosybrown;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    font-size: 30px;
+    transition: 0.2s ease-in-out;
+
+}
+.Top:hover{
+    background: #2f6eb5;
+
+}
+
 
 /* btn btn brand */
 

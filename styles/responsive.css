@@ -1308,10 +1308,6 @@
         font-size: 12px;
         line-height: 18px;
     }
-    .view-service-right-wrapper .card-body,
-    .view-service-right-wrapper .card-body:hover {
-        text-align: center;
-    }
     .view-service-right-wrapper .card-body>svg {
         display: inline;
         text-align: center!important;
