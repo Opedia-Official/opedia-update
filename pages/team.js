@@ -4,11 +4,15 @@ import { FaFacebookF,
 import InnerHead from "../components/innerHead";
 import TeamExpert from "../components/TeamExpert";
 import WhatsappChat from "../components/whatsappChat";
+import dynamic from 'next/dynamic'
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
+
 
 
 export default function Home() {
- 
-
   return (
      <>
         <InnerHead title ="Team"/>
@@ -23,7 +27,14 @@ export default function Home() {
 
         
 
-
+              <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 
 
       

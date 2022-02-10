@@ -15,7 +15,7 @@ function TeamExpert() {
     </div>
     <div className="row ">
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -35,7 +35,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.1s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -55,7 +55,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -75,7 +75,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.4s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -95,7 +95,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -115,7 +115,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="1.8s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -135,7 +135,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="2s" data-wow-delay="2.23s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />
@@ -155,7 +155,7 @@ function TeamExpert() {
         </div>
         {/* single-items */}
         {/* single-items */}
-        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="3.3s" data-wow-delay="2.3s">
+        <div className="col-lg-3 col-md-4 col-sm-6  wow fadeIn" data-wow-duration="1.3s" data-wow-delay="0.9s">
         <div className="exp-workers-item-wrapper mb-4">
               <div className="section-img">
                   <img src="./expert-worker/pic-1.png" alt="" />

@@ -7,7 +7,7 @@ import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
   
 import { FaStar} from "react-icons/Fa";
 import { BsPlayFill} from "react-icons/Bs";
-
+import dynamic from 'next/dynamic'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,6 +21,11 @@ import WhatsappChat from "../components/whatsappChat";
 
 import Card3D from 'react-animated-3d-card'
 
+
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
 
 
 
@@ -404,6 +409,15 @@ export default function About() {
                 </div> */}
             </div>
         </div>
+
+        <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 
 
         <TeamExpert/>

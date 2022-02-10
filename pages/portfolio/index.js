@@ -2,7 +2,18 @@ import { Card } from "react-bootstrap";
 import { BiRightArrowAlt} from "react-icons/bi";
 import InnerHead from '../../components/innerHead'
 import Link from "next/link";
+import { useEffect } from "react";
 export default function Portfolio() {
+
+    useEffect(()=>{
+        if(typeof window !== 'undefined') {
+    
+          window.WOW = require('wowjs');
+      
+        }
+      
+        new WOW.WOW().init();
+      },[])
   return <>
         <InnerHead title="Portfolio"/>
     <div className="portfolio-area">
@@ -15,7 +26,7 @@ export default function Portfolio() {
                     </div>
                     </div>
                 </div>
-            <div className="row">
+            <div className="row   wow fadeIn" data-wow-duration="1s" data-wow-delay="1s">
                     {/* portfolio item */}
                 <div className="col-lg-4 col-sm-6">
                     <div className="portfolio-items mb-100">

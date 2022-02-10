@@ -11,8 +11,8 @@ export default function Progressbar() {
                  
         <div className="progressbar-area">
             <div className="row">
-              <div className="offset-lg-2 col-lg-5 wow slideInRight"  data-wow-duration="1s">
-                <div className="progressbar-wrap">
+              <div className="offset-lg-2 col-lg-5 ">
+                <div className="progressbar-wrap wow fadeIn"  data-wow-duration=".5s"  data-wow-delay="1s">
                       <ChangingProgressProvider values={[0, 60]}>
                         {percentage => (
                           <CircularProgressbar
@@ -31,8 +31,8 @@ export default function Progressbar() {
                      </div>
                 </div>
               </div>
-              <div className="col-lg-5 wow slideInRight"  data-wow-duration="1.5s">
-                <div className="progressbar-wrap mt-5 mt-lg-0">
+              <div className="col-lg-5">
+                <div className="progressbar-wrap mt-5 mt-lg-0  wow fadeIn"  data-wow-duration=".5s"  data-wow-delay="1s">
                       <ChangingProgressProvider values={[0, 80]}>
                         {percentage => (
                           <CircularProgressbar
