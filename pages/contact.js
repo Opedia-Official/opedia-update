@@ -6,12 +6,14 @@ import { AiOutlineMessage} from "react-icons/Ai";
 import { BiRightArrowAlt} from "react-icons/Bi";
 import InnerHead from '../components/innerHead'
 import Meta from "../components/Meta";
+import WhatsappChat from "../components/whatsappChat";
 
 
 export default function portfolio() {
     
   return <>
             <Meta title="Contact"/>
+            <WhatsappChat/>
         <InnerHead title="Contact Us"/>
         <div className="contact-us-area pt-80 pb-120">
             <div className="container">

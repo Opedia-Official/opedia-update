@@ -2,9 +2,11 @@ import React from 'react';
 import Style from '../styles/singleService.module.css'
 
 import { BsArrowRightCircleFill } from "react-icons/bs";
+import WhatsappChat from '../components/whatsappChat';
 
 function singleService() {
   return <div className='container my-5 py-5'>
+    <WhatsappChat/>
     <div className={ 'row' }>
         <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 ">
           <div className="">

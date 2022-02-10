@@ -31,6 +31,12 @@ import { useEffect } from "react";
 import {server} from '../config/index'
 
 import { HiOutlineArrowNarrowUp } from "react-icons/hi";
+import WhatsappChat from "../components/whatsappChat";
+
+
+
+
+
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
@@ -83,11 +89,10 @@ export default function Home() {
 
       <Pricing  />
 
-      <a href="#">
-        <p className="Top">
-          <HiOutlineArrowNarrowUp/>
-        </p>
-      </a>
+
+
+
+ {/* <div className="cursor">
 
       <AnimatedCursor
       innerSize={8}
@@ -97,10 +102,13 @@ export default function Home() {
       innerScale={0.7}
       outerScale={5}
     />
+ </div> */}
+   
+{/* <div class="elfsight-app-666896e2-7e9c-436a-a84b-1070ceca6e89"></div> */}
 
-      {/* <Testemonial /> */}
 
-     
+<WhatsappChat/>
+
     </>
   );
 }

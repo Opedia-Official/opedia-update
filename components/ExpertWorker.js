@@ -9,7 +9,7 @@ function ExpertWorker({item}) {
     iconMain,
     iconSecondary,} = item
 
-  return <div className="col-lg-4 col-sm-6 mb-5">
+  return <div className="col-lg-4 col-sm-6 mb-5 wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
   <Card >
     <Card.Body>
     {iconMain}
