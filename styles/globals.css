@@ -180,34 +180,41 @@ label {
     opacity: 1;
 }
 
+
 /* scrollbar */
+
 ::-webkit-scrollbar {
-  width: 10px;
- 
+    width: 10px;
 }
+
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-  border-radius: 10px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(179, 195, 253); 
-  border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(179, 195, 253);
+    border-radius: 10px;
+}
+
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background:  rgb(90, 126, 246); 
+    background: rgb(90, 126, 246);
 }
 
 html {
     scroll-behavior: smooth;
-  }
+}
 
-.Top{
+.Top {
     color: white;
     background: #f49735;
     display: inline-grid;
@@ -219,11 +226,10 @@ html {
     bottom: 2%;
     font-size: 30px;
     transition: 0.2s ease-in-out;
-
 }
-.Top:hover{
-    background: #2f6eb5;
 
+.Top:hover {
+    background: #2f6eb5;
 }
 
 
@@ -345,6 +351,24 @@ html {
     width: 2px;
     height: 100%;
 }
+
+
+/* Modal */
+
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    background: rgb(47, 110, 181, 0.3) !important;
+}
+
+@media (max-width: 1023) {
+    .ReactModal__Content.ReactModal__Content--after-open {
+        position: fixed !important;
+        z-index: 2147483647 !important;
+        height: 100% !important;
+    }
+}
+
+
+/* Modal */
 
 
 /* INNER HEAD */
@@ -645,7 +669,7 @@ button.btn-reset {
 
 .slick-current .hero-bottom-section .hero-bottom-items {
     background: #fff;
-    padding: 46px 13px 35px;
+    padding: 30px 13px 30px;
     box-shadow: 0 3px 11px #d6d6d7;
     border-bottom: 4px solid var(--clr-sub)!important;
     transition: .3s;
@@ -744,7 +768,7 @@ button.btn-reset {
 
 .hero-bottom-items {
     background: #fff;
-    padding: 46px 13px 35px;
+    padding: 30px 13px 30px;
     box-shadow: 0 3px 11px #d6d6d7;
     border-bottom: 4px solid transparent;
     transition: .3s;
@@ -924,7 +948,7 @@ button.btn-reset {
 }
 
 .expTeam-youtube-section li label {
-    font-size: 16px;
+    font-size: 17px;
     color: #000000;
     font-family: 'Rajdhani';
 }
@@ -1507,6 +1531,16 @@ li.sp-item:hover span {
 
 .our-pricing-wrap {
     text-align: center;
+    animation: shadows 2s linear infinite alternate;
+}
+
+@keyframes shadows {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .our-pricing-wrap .card-body>span {
@@ -2385,6 +2419,14 @@ ul.contact-info-text li:hover:after {
 .c-input-wrap.c-text-area span {
     top: 30px;
     right: 14px;
+}
+
+h3.contact-modal {
+    font-weight: 500;
+    border-bottom: 1px solid var(--clr-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 2.3rem;
 }
 
 

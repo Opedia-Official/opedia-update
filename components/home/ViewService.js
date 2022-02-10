@@ -19,7 +19,7 @@ export default function ViewService({ViewServices}) {
             <div className="row align-items-center">
               <div className="col-lg-6 col-md-12  wow fadeInleft"  data-wow-duration="1s">
                 <div className="view-service-section-wrapper">
-                    <SectionTitle  section="About Company" title='Software & IT services' />
+                    <SectionTitle  section="About Company" title='Software & IT services for you' />
                       <p >We help businesses to boost performance technically and work on initiatives to enhance brand presence on the market, develop a digital platform that fits your exact needs in terms of real-time solutions, and define a clear roadmap for improvement.</p>
                     <SectionTitle  description="Our professional services include Web & Software Solutions, E-commerce Development, User Experience (UI/UX) Design, Digital Marketing, Multimedia and Printing. Using our experienced professionals, we help businesses grow and prosper. " />
                     <Link href="/service">

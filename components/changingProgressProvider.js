@@ -1,25 +1,55 @@
 import React from "react";
+import { Animate } from "react-move";
 
-class ChangingProgressProvider extends React.Component {
-  static defaultProps = {
-    interval: 1000
-  };
+class AnimatedProgressProvider extends React.Component {
+  interval = undefined;
 
   state = {
-    valuesIndex: 0
+    isAnimated: false
+  };
+
+  static defaultProps = {
+    valueStart: 0
   };
 
   componentDidMount() {
-    setInterval(() => {
+    if (this.props.repeat) {
+      this.interval = window.setInterval(() => {
+        this.setState({
+          isAnimated: !this.state.isAnimated
+        });
+      }, this.props.duration * 1000);
+    } else {
       this.setState({
-        valuesIndex: (this.state.valuesIndex + 1) % this.props.values.length
+        isAnimated: !this.state.isAnimated
       });
-    }, this.props.interval);
+    }
+  }
+
+  componentWillUnmount() {
+    window.clearInterval(this.interval);
   }
 
   render() {
-    return this.props.children(this.props.values[this.state.valuesIndex]);
+    return (
+      <Animate
+        start={() => ({
+          value: this.props.valueStart
+        })}
+        update={() => ({
+          value: [
+            this.state.isAnimated ? this.props.valueEnd : this.props.valueStart
+          ],
+          timing: {
+            duration: this.props.duration * 1000,
+            ease: this.props.easingFunction
+          }
+        })}
+      >
+        {({ value }) => this.props.children(value)}
+      </Animate>
+    );
   }
 }
 
-export default ChangingProgressProvider;
+export default AnimatedProgressProvider;

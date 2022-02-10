@@ -35,7 +35,7 @@ export default function ShowCase({Gallaries}) {
                 
               </div>
               <div className="col-md-6">
-                 <SectionTitle description="230+ clients are already growing their businesses. With our quality service, they are able to stand out from the crowd." />
+                 <SectionTitle description="230+ clients are already growing their businesses. With our quality service, they are able to stand out from the crowd. Let us put your vision into practice." />
               </div>
             </div>
             <div className="row mt-50 justify-content-center wow fadeIn"  data-wow-duration="1s" data-wow-delay="0.5s">

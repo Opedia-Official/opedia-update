@@ -1,9 +1,12 @@
 import { Card } from "react-bootstrap";
 import { BiPhoneCall} from "react-icons/Bi";
 import { GoLocation} from "react-icons/Go";
-import { BsPersonFill} from "react-icons/Bs";
+import { BsPersonFill,BsFillTelephoneFill} from "react-icons/Bs";
 import { AiOutlineMessage} from "react-icons/Ai";
-import { BiRightArrowAlt} from "react-icons/Bi";
+import { BiRightArrowAlt,BiMessageAltDetail} from "react-icons/Bi";
+import { MdOutlineEmail} from "react-icons/Md";
+// import { BsFillTelephoneFill} from "react-icons/Fa";
+
 import InnerHead from '../components/innerHead'
 import Meta from "../components/Meta";
 
@@ -80,7 +83,7 @@ export default function portfolio() {
                                                                 <div className="c-input-wrap">
                                                                     <input type="email" placeholder="Mail Address *" />
                                                                     <span>
-                                                                        <BsPersonFill/>
+                                                                        <MdOutlineEmail/>
                                                                     </span>
                                                                 </div>
                                                         </div>
@@ -88,16 +91,16 @@ export default function portfolio() {
                                                                 <div className="c-input-wrap">
                                                                     <input type="tell" placeholder="Phone Number " />
                                                                     <span>
-                                                                        <BsPersonFill/>
+                                                                        <BsFillTelephoneFill/>
                                                                     </span>
                                                                 </div>
                                                         </div>
                                                         <div className="col-lg-12">
                                                                 <div className="c-input-wrap c-text-area">
-                                                                    <textarea name="" id="" cols="30" rows="10" placeholder="Phone Number "></textarea>
+                                                                    <textarea name="" id="" cols="30" rows="10" placeholder="Message "></textarea>
                                                                     
                                                                     <span>
-                                                                        <BsPersonFill/>
+                                                                        <BiMessageAltDetail/>
                                                                     </span>
                                                                 </div>
                                                         </div>
