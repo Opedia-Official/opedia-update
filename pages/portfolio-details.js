@@ -4,12 +4,14 @@ import InnerHead from '../components/innerHead'
 import { FaFacebookF,FaTwitter,FaInstagram,FaLinkedinIn } from "react-icons/fa";
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
 import { useState } from "react";
+import WhatsappChat from "../components/whatsappChat";
 
 export default function Portfolio() {
     const [modalShow, setModalShow] = useState(false);
   return <>
         <InnerHead title="Portfolio Details"/>
-        <div className="portfolio-details mb-100 mt-100">
+        <WhatsappChat/>
+        <div className="portfolio-details mb-100">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mb-5 mb-lg-0">

@@ -218,11 +218,11 @@ html {
     color: white;
     background: #f49735;
     display: inline-grid;
-    padding: 15px 20px;
+    padding: 0.5vw 0.6vw;
     border-radius: 5px;
     border: 1px solid rosybrown;
     position: fixed;
-    right: 2%;
+    left: 2%;
     bottom: 2%;
     font-size: 30px;
     transition: 0.2s ease-in-out;
@@ -230,6 +230,28 @@ html {
 
 .Top:hover {
     background: #2f6eb5;
+}
+
+._1bpcM {
+    position: fixed!important;
+}
+
+._1fOYS {
+    position: fixed!important;
+}
+
+.whatsapp_widget_icon {
+    background-color: #47db49;
+    width: 3vw;
+    height: 3vw;
+}
+
+._2iWL7 {
+    z-index: 11111111111!important;
+}
+
+.cursor {
+    z-index: 111111111111111111111111111!important;
 }
 
 
@@ -2045,6 +2067,7 @@ ul.link-items li svg {
 
 .portfolio-area {
     margin: 120px 0;
+    margin-top: -100px;
 }
 
 .portfolio-items .card {
@@ -2123,6 +2146,10 @@ ul.link-items li svg {
 
 
 /* *******************************PORTFOLIO DETAILS PAGE AREA********************************** */
+
+.portfolio-details {
+    margin-top: -90px;
+}
 
 .portfolio-details-left {
     position: relative;

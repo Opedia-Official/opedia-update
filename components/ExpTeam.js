@@ -20,7 +20,7 @@ export default function ExpTeam({expertTeams}) {
         <div className="container">
             <div className="row align-items-center">
                 <div className="col-md-6 "  >
-                        <div className="expTeam-left wow slideInLeft" data-wow-duration="2s">
+                        <div className="expTeam-left wow fadeInLeft" data-wow-duration="1s">
                                 <img className="parent-pic" src='./experienceTeam/pic-1.png' alt="" />
                              <div className="child d-none d-xl-block">
                              <img  src='./experienceTeam/pic-2.png' alt="" />
@@ -35,7 +35,7 @@ export default function ExpTeam({expertTeams}) {
                                 </div>
                         </div>
                 </div>
-                <div className="col-md-6  wow bounceInRight"   data-wow-duration="2s">
+                <div className="col-md-6  wow fadeInRight"   data-wow-duration="2s">
                     <div className="expTeam-right">
                         <SectionTitle section =" About Company" title ='We team of experience It Specialties.'  description ="2 years+ serving as a leading software company. A unique workflow and high-quality services are what sets us apart from competitors. We understand customers' challenges and pain points. You can count on us for assistance. Simple Steps of growth"/>
                         <div className="expTeam-youtube-section">

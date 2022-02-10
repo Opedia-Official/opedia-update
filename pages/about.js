@@ -2,7 +2,7 @@ import { Card } from "react-bootstrap";
 import { FaPlay} from "react-icons/Fa";
 import InnerHead from '../components/innerHead'
 import Meta from "../components/Meta";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MyVerticallyCentredModal from '../components/MyVerticallyCentredModal'
   
 import { FaStar} from "react-icons/Fa";
@@ -17,6 +17,9 @@ import 'swiper/css';
 import ExpertWorker from "../components/ExpertWorker";
 import { expertWorker } from "../Utils/fakeData";
 import TeamExpert from "../components/TeamExpert";
+import WhatsappChat from "../components/whatsappChat";
+
+import Card3D from 'react-animated-3d-card'
 
 
 
@@ -24,15 +27,29 @@ import TeamExpert from "../components/TeamExpert";
 
 export default function About() {
     const [modalShow, setModalShow] = useState(false);
+
+    useEffect(()=>{
+      if(typeof window !== 'undefined') {
+  
+        window.WOW = require('wowjs');
+    
+      }
+    
+      new WOW.WOW().init();
+    },[])
   return <>
             <Meta title="About"/>
+            <WhatsappChat/>
         <InnerHead title="About Us"/>
         {/* Youtube section */}
         <div className="about-us-area">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6  wow slideInLeft"  data-wow-duration="1s">
+
+                   
                         <div className=" about great-experience-left-wrap mb-5 mb-lg-0">
+               
                             <div className="great-experinec-img">
                                 <img src="./aboutUs/pic-1.png" alt="" />
                             </div>
@@ -40,6 +57,7 @@ export default function About() {
                                 <img className="ge-reactangle" src="./aboutUs/reactangle.png" alt="" />
                                 <span onClick={() => setModalShow(true)} className="youtube-play ">
                                     <FaPlay/></span>
+                  
 
                             <div className="ge-info">
                                 <h2>26 <span>+ Years</span></h2>
@@ -52,7 +70,7 @@ export default function About() {
                             show={modalShow}
                             onHide={() => setModalShow(false)}
                         />
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 wow slideInRight"  data-wow-duration="1s">
                         <div className="about great-exp-right ">
                             <p className="a-title-top">Great Experience In Building</p>
                         <div className="section-title">

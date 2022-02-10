@@ -6,16 +6,28 @@ import { Card } from "react-bootstrap";
 import { SiSimpleanalytics} from "react-icons/si";
 import { FaCloud, FaDatabase} from "react-icons/fa";
 import { MdOutlineDesignServices} from "react-icons/md";
+import WhatsappChat from "../components/whatsappChat";
+import { useEffect } from "react";
 
 
   export default function Home() {
    
+
+    useEffect(()=>{
+      if(typeof window !== 'undefined') {
+  
+        window.WOW = require('wowjs');
+    
+      }
+    
+      new WOW.WOW().init();
+    },[])
   
     return (
        <>
           <InnerHead title = "Service"/>
           
-  
+          <WhatsappChat/>
               {/* VIEW SERVICE AREA */}
         <div className="view-service-page mb-100 mt-50">
           <div className="container">
@@ -29,10 +41,10 @@ import { MdOutlineDesignServices} from "react-icons/md";
                       </div>
                     </div>
             <div className="row">
-              <div className="col-md-12">
+              <div className="col-md-12 ">
                   <div className= {"view-service-right-wrapper service"}  >
                       <div className="row">
-                        <div className="col-lg-4 col-sm-6 mb-5">
+                        <div className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn">
                         <Card >
                           <Card.Body>
                           <FaCloud/>
@@ -48,7 +60,7 @@ import { MdOutlineDesignServices} from "react-icons/md";
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-lg-4 col-md-6  col-sm-6 mb-5 ">
+                        <div className="col-lg-4 col-md-6  col-sm-6 mb-5 wow fadeIn ">
                         <Card >
                           <Card.Body>
                             <SiSimpleanalytics/>
@@ -64,7 +76,7 @@ import { MdOutlineDesignServices} from "react-icons/md";
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 ">
+                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 wow fadeIn ">
                         <Card >
                           <Card.Body>
                             <MdOutlineDesignServices/>
@@ -80,7 +92,7 @@ import { MdOutlineDesignServices} from "react-icons/md";
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 wow fadeIn">
                         <Card >
                           <Card.Body>
                             <FaDatabase/>
@@ -96,7 +108,7 @@ import { MdOutlineDesignServices} from "react-icons/md";
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 wow fadeIn">
                         <Card >
                           <Card.Body>
                             <FaDatabase/>
@@ -112,7 +124,7 @@ import { MdOutlineDesignServices} from "react-icons/md";
                           </Card.Body>
                         </Card>
                         </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
+                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 wow fadeIn">
                         <Card >
                           <Card.Body>
                             <FaDatabase/>
