@@ -19,6 +19,8 @@ import { expertWorker } from "../Utils/fakeData";
 import TeamExpert from "../components/TeamExpert";
 import WhatsappChat from "../components/whatsappChat";
 
+import Card3D from 'react-animated-3d-card'
+
 
 
 
@@ -44,7 +46,10 @@ export default function About() {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6  wow slideInLeft"  data-wow-duration="1s">
+
+                   
                         <div className=" about great-experience-left-wrap mb-5 mb-lg-0">
+               
                             <div className="great-experinec-img">
                                 <img src="./aboutUs/pic-1.png" alt="" />
                             </div>
@@ -52,6 +57,7 @@ export default function About() {
                                 <img className="ge-reactangle" src="./aboutUs/reactangle.png" alt="" />
                                 <span onClick={() => setModalShow(true)} className="youtube-play ">
                                     <FaPlay/></span>
+                  
 
                             <div className="ge-info">
                                 <h2>26 <span>+ Years</span></h2>
