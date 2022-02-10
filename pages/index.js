@@ -18,7 +18,7 @@ import Specialist from "../components/home/Specialist";
 //Import Pricing Section
 import Pricing from "../components/home/Pricing";
 // Import Testemonial Section
-import Testemonial from "../components/home/Testemonial";
+import Testimonial from "../components/home/Testimonial";
 // Import Blog Section
 
 import dynamic from 'next/dynamic'
@@ -68,6 +68,7 @@ export default function Home() {
       <ShowCase  />
 
       <ShowCaseCounter  />  
+     
       
       
        {/*  */}

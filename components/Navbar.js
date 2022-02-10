@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 
 
+
 import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 
 export default function Navbar() {
@@ -26,12 +27,10 @@ export default function Navbar() {
 
   const openMenu = (e) => {
     setIsOpen(!isOpen);
-
-    if (isActive) {
-      e.target.id = "isActive";
-      setActive(!isActive);
-    }
   };
+
+
+
 
   const SearchHandler = (event) => {
     setIsSearch(!isSearch);
@@ -41,6 +40,7 @@ export default function Navbar() {
   const resetHandler = (event) => {
     setIsSearch(!isSearch);
   };
+
 
   useEffect(() => {
     if (!isSearch) return;
@@ -52,9 +52,24 @@ export default function Navbar() {
     window.addEventListener("mousedown", handleClick);
     return () => window.removeEventListener("mousedown", handleClick);
 
-    console.log(window.scrollY());
-    
   }, [isSearch]);
+
+
+  // scrolltop
+
+
+
+  useEffect(()=>{
+    window.addEventListener('scroll',(e)=>{
+      let scrolTop = e.target.documentElement.scrollTop
+
+      if(scrolTop> 160){
+        setNavChange(true)
+      }else{
+        setNavChange(false)
+      }
+    })
+  },[])
 
 
   
@@ -544,7 +559,7 @@ export default function Navbar() {
               </li>
               <li className={styles.navitem}>
                 <Link href="/contact">
-                  <a
+                  <a 
                     id=""
                     className={
                       isSearch ? "btn-brand isSearchClicked" : "btn-brand "
@@ -554,8 +569,10 @@ export default function Navbar() {
                     Contact{" "}
                   </a>
                 </Link>
+
               </li>
             </ul>
+         
             <button
               className={
                 isOpen === false

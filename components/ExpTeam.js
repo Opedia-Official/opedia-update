@@ -15,9 +15,6 @@ export default function ExpTeam({expertTeams}) {
       e.target.checked ? e.target.parentElement.nextSibling.className = 'checked' : e.target.parentElement.nextSibling.className = ''
   }
 
-
-  
-
   return <>
     <div className="expTeam-section ">
         <div className="container">

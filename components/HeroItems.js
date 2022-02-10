@@ -5,6 +5,7 @@ import Head from "next/head";
 
 import React, { Component } from "react";
 import Slider from "react-slick";
+import Link from "next/link";
 
 
 export default class AsNavFor extends Component {
@@ -12,7 +13,7 @@ export default class AsNavFor extends Component {
     super(props);
     this.state = {
       nav1: null,
-      nav2: null
+      nav2: null,
     };
   }
 
@@ -23,11 +24,13 @@ export default class AsNavFor extends Component {
     });
   }
 
+ 
+
   render() {
     const settings = {
         infinite: true,
         speed: 500,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         fade: true,
@@ -41,8 +44,8 @@ export default class AsNavFor extends Component {
         loop:true,
         speed: 500,
         arrows: false,
-        slidesToShow: 2,
-        slidesToScroll:3,
+        slidesToShow: 3,
+        slidesToScroll:1,
         responsive: [
           {
               breakpoint: 1024,
@@ -92,12 +95,16 @@ export default class AsNavFor extends Component {
                        <h2>Web & Software solution 
                          </h2>
                         <div className="hero-action">
-                         <a className="btn-brand" href="#">Get A Quate</a>
+                            <Link href="/contact"> 
+                            <a className="btn-brand"  > Get A Quate</a>
+                            </Link>
+                       
                         <a className="btn-two" href="#">Learn More</a>
                         </div>
                   </div>  
                 </div>
                 {/* left part */}
+               
 
                 <div className="col-md-6  wow bounceInRight"   data-wow-duration="3s">
                    <div className="hero-right pt-40 ">
@@ -119,7 +126,9 @@ export default class AsNavFor extends Component {
                        <h2>Product Design </h2>
                          
                         <div className="hero-action">
-                         <a className="btn-brand" href="#">Get A Quate</a>
+                        <Link href="/contact"> 
+                            <a className="btn-brand"  > Get A Quate</a>
+                            </Link>
                         <a className="btn-two" href="#">Learn More</a>
                         </div>
                   </div>  
@@ -144,7 +153,9 @@ export default class AsNavFor extends Component {
                        <h2>Digital Marketing<br />
                          </h2>
                         <div className="hero-action">
-                         <a className="btn-brand" href="#">Get A Quate</a>
+                        <Link href="/contact"> 
+                            <a className="btn-brand"  > Get A Quate</a>
+                            </Link>
                         <a className="btn-two" href="#">Learn More</a>
                         </div>
                   </div>  
@@ -169,7 +180,9 @@ export default class AsNavFor extends Component {
                        <h2>Ecommerce Solution
                         </h2>
                         <div className="hero-action">
-                         <a className="btn-brand" href="#">Get A Quate</a>
+                        <Link href="/contact"> 
+                            <a className="btn-brand"  > Get A Quate</a>
+                            </Link>
                         <a className="btn-two" href="#">Learn More</a>
                         </div>
                   </div>  
@@ -187,6 +200,7 @@ export default class AsNavFor extends Component {
           
         </Slider>
 
+        <div className="hero-bottom-wrap">
         <Slider
           {...settings2}
           asNavFor={this.state.nav1}
@@ -228,7 +242,7 @@ export default class AsNavFor extends Component {
                         <FaRegLightbulb/>
             </div>
                 <div className="hero-bottom-info">
-                <h4>Software as a solution</h4>
+                <h4>SASS</h4>
                 <p>Get Regular Support From Our Team</p>
                 </div>
             </div>
@@ -256,6 +270,7 @@ export default class AsNavFor extends Component {
 
      
         </Slider>
+        </div>
       </div>
     );
   }

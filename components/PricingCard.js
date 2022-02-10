@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Card } from "react-bootstrap";
 import {
     FaRegPaperPlane,
@@ -9,10 +10,25 @@ import {
   import "swiper/css";
 
 
+  import { useEffect } from 'react';
+
+ 
+
+
 function PricingCard({item}) {
 
-// const {type,icons, pricing, duratin,feature } = item 
-// console.log('item', item);
+                     
+  // useEffect(()=>{
+  //   document.addEventListener("mousemove",function(e){
+  //     this.querySelectorAll('.our-pricing-wrap').forEach(layer=>{
+  //       const speed = layer.getAttribute('data-speed')
+  //       const x = (window.innerWidth - e.pageX*speed)/100;
+  //       const y = (window.innerHeight - e.pageY*speed)/100
+  //       layer.getElementsByClassName.transform = `translateX(${x}px) translateY(${y}px)`
+  //     })
+  //   })
+  // })
+
 
   return <div className="col-md-4 col-sm-6 wow zoomIn">
   <div className="our-pricing-wrap text-center mb-30">
@@ -22,13 +38,13 @@ function PricingCard({item}) {
       </div>
       <Card.Body>
         <span>
-            {item.icons}
+            {item.icons} 
         </span>
         <Card.Title>
           <h4>${item.pricing}</h4> <span>/{item.duratin}</span>
         </Card.Title>
         <Card.Text>
-          <ul className="pricing-items">
+          <ul className="pricing-items"  >
               {
                   item.feature.map(liItem => <li key={liItem}>{liItem}</li> )
               }
