@@ -10,6 +10,12 @@ import { MdOutlineEmail} from "react-icons/Md";
 import InnerHead from '../components/innerHead'
 import Meta from "../components/Meta";
 import WhatsappChat from "../components/whatsappChat";
+import dynamic from 'next/dynamic'
+
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+    ssr: false
+  });
 
 
 export default function portfolio() {
@@ -120,6 +126,15 @@ export default function portfolio() {
                 </div>
             </div>
         </div>
+
+        <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 
   
   </>

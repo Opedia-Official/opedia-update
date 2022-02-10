@@ -1,14 +1,20 @@
 
 import { Card } from "react-bootstrap";
-  import InnerHead from "../components/innerHead";
+import InnerHead from "../components/innerHead";
   
-  import { BiRightArrowAlt} from "react-icons/bi";
+import { BiRightArrowAlt} from "react-icons/bi";
 import { SiSimpleanalytics} from "react-icons/si";
 import { FaCloud, FaDatabase} from "react-icons/fa";
 import { MdOutlineDesignServices} from "react-icons/md";
 import WhatsappChat from "../components/whatsappChat";
 import { useEffect } from "react";
+import dynamic from 'next/dynamic'
 
+
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
 
   export default function Home() {
    
@@ -41,7 +47,7 @@ import { useEffect } from "react";
                       </div>
                     </div>
             <div className="row">
-              <div className="col-md-12 ">
+              <div className="col-md-12  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                   <div className= {"view-service-right-wrapper service"}  >
                       <div className="row">
                         <div className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn">
@@ -150,17 +156,15 @@ import { useEffect } from "react";
    {/* VIEW SERVICE AREA */}
   
   
-          
   
-  
-  
-  
-        
-  
-  
-  
-          
-  
+   <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
   
        </>
   

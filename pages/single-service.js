@@ -3,6 +3,13 @@ import Style from '../styles/singleService.module.css'
 
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import WhatsappChat from '../components/whatsappChat';
+import dynamic from 'next/dynamic'
+
+
+const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+  ssr: false
+});
+
 
 function singleService() {
   return <div className='container my-5 py-5'>
@@ -60,7 +67,14 @@ function singleService() {
         </div>
     </div>
 
-
+    <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 
   </div>;
 }

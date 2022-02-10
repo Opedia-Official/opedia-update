@@ -38,10 +38,10 @@ import WhatsappChat from "../components/whatsappChat";
 
 
 
+
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
 });
-
 
 export default function Home() {
   const [isReact, setIsReact] = useState(false);
@@ -107,7 +107,14 @@ export default function Home() {
    
 {/* <div class="elfsight-app-666896e2-7e9c-436a-a84b-1070ceca6e89"></div> */}
 
-
+<AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
 <WhatsappChat/>
 
     </>
