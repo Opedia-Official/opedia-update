@@ -15,7 +15,8 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   });
 
 
-export default function portfolio() {
+export default function portfolio({posts}) {
+    console.log('All Posts',posts)
     
   return <>
             <Meta title="Contact"/>
@@ -118,11 +119,16 @@ export default function portfolio() {
                             </div>
                             </Card.Body>
                         </Card>
+                        {/* <div style={{textAlign: 'center'}}> */}
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.234956940982!2d90.3633023149818!3d23.774646184577378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c152946ccfad%3A0xc8edb7d360ab91fe!2sOpedia%20Technologies%20Limited!5e0!3m2!1sen!2sbd!4v1644670675499!5m2!1sen!2sbd" width="100%"  height="450" style={{border:'0', margin:'20px auto 0px'}} allowfullscreen="" loading="lazy"></iframe>
+                        {/* </div> */}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+       
 
         <AnimatedCursor
       innerSize={8}
@@ -136,3 +142,37 @@ export default function portfolio() {
   
   </>
 }
+
+
+
+
+
+export async function getStaticProps() {
+    const res = await fetch('https://jsonplaceholder.typicode.com/todos')
+    const posts = await res.json()
+  
+    return {
+      props: {
+        posts,
+      },
+      // Next.js will attempt to re-generate the page:
+      // - When a request comes in
+      // - At most once every 10 seconds
+      revalidate: 10, // In seconds
+    }
+  }
+
+//   export async function getStaticPaths() {
+//     const res = await fetch('https://.../posts')
+//     const posts = await res.json()
+  
+//     // Get the paths we want to pre-render based on posts
+//     const paths = posts.map((post) => ({
+//       params: { id: post.id },
+//     }))
+  
+//     // We'll pre-render only these paths at build time.
+//     // { fallback: blocking } will server-render pages
+//     // on-demand if the path doesn't exist.
+//     return { paths, fallback: 'blocking' }
+//   }
