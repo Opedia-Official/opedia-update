@@ -33,7 +33,7 @@ export default class AsNavFor extends Component {
     const settings = {
         infinite: true,
         speed: 500,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         dots: true,
         fade: true,
@@ -216,7 +216,7 @@ export default class AsNavFor extends Component {
         >
       
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1s">
+          <div className="hero-bottom-section"  >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
@@ -229,7 +229,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1.5s">
+          <div className="hero-bottom-section"  >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
@@ -242,7 +242,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="2.5s">
+          <div className="hero-bottom-section" >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>

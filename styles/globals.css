@@ -626,11 +626,12 @@ button.btn-reset {
 
 .activeNav {
     width: 100%;
-    background-color: #3ea3dc;
+    background-color: #fff;
     position: fixed;
     z-index: 323232323;
     top: 0;
     transition: .4s;
+    box-shadow: 0 -13px 36px #000;
 }
 
 

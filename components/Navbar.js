@@ -100,6 +100,7 @@ export default function Navbar() {
 
   // scrolltop
 
+  // const [count,setIsOpenssseModal] = useState(false);
 
 
   useEffect(()=>{

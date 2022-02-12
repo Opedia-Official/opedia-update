@@ -12,7 +12,7 @@ export default function Progressbar() {
                  
         <div className="progressbar-area">
             <div className="row">
-              <div className="offset-lg-2 col-lg-5 wow slideInRight"  data-wow-duration="1s">
+              <div className="offset-lg-2 col-lg-5 wow fadeIn"  data-wow-duration="1s"  data-wow-delay="1s">
                 <div className="progressbar-wrap">
                     <AnimatedProgressProvider
                           valueStart={0}
@@ -40,7 +40,7 @@ export default function Progressbar() {
                      </div>
                 </div>
               </div>
-              <div className="col-lg-5 wow slideInRight"  data-wow-duration="1.5s">
+              <div className="col-lg-5 wow fadeIn"  data-wow-duration="1.5s">
                 <div className="progressbar-wrap mt-5 mt-lg-0">
                     <AnimatedProgressProvider
                           valueStart={0}

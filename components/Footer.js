@@ -40,6 +40,7 @@ export default function Footer() {
                                         slidesPerView: 2,
                                     },
                                 }}
+                                loop={true}
                                 autoplay={{
                                     "delay": 2500,
                                     "disableOnInteraction": false
