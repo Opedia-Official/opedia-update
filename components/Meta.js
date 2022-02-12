@@ -23,8 +23,8 @@ const Meta = ({title,description})=>{
 
 
 Meta.defaultProps ={
-    title: "Opedia Technologist",
-    description: "We Are One of the best It solution company"
+    title: "Opedia Technologies - Softwer & IT solution Company",
+    description: "We Are One of the best It solution company in Dhaka, Bangladesh"
 }
 
 export default Meta;

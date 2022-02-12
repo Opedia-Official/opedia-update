@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import Link from "next/link";
 
 
+
 export default class AsNavFor extends Component {
   constructor(props) {
     super(props);
@@ -16,6 +17,8 @@ export default class AsNavFor extends Component {
       nav2: null,
     };
   }
+
+
 
   componentDidMount() {
     this.setState({
@@ -101,9 +104,12 @@ export default class AsNavFor extends Component {
                        
                         <a className="btn-two" href="#">Learn More</a>
                         </div>
+
+
                   </div>  
                 </div>
                 {/* left part */}
+
                
 
                 <div className="col-md-6  wow bounceInRight"   data-wow-duration="3s">
@@ -210,7 +216,7 @@ export default class AsNavFor extends Component {
         >
       
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1s">
+          <div className="hero-bottom-section"  >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
@@ -223,7 +229,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="1.5s">
+          <div className="hero-bottom-section"  >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>
@@ -236,7 +242,7 @@ export default class AsNavFor extends Component {
         </div>
           {/* single item */}
           {/* single item */}
-          <div className="hero-bottom-section   wow flipInX"  data-wow-duration="1s" data-wow-delay="2.5s">
+          <div className="hero-bottom-section" >
         <div className="hero-bottom-items d-flex align-items-center justify-content-center">
             <div className="icons">
                         <FaRegLightbulb/>

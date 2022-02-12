@@ -18,7 +18,7 @@ export default function Portfolio() {
   return <>
         <InnerHead title="Portfolio Details"/>
         <WhatsappChat/>
-        <div className="portfolio-details mb-100 mt-100">
+        <div className="portfolio-details mb-100">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 mb-5 mb-lg-0">

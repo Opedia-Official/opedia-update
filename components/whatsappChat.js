@@ -13,8 +13,6 @@ function WhatsappChat() {
     <WhatsAppWidget phoneNumber='+8801625556584' textReplyTime='Typically replies within a day' message= 'Hello! 👋🏼 Wanna contact wiht us?' companyName="Opedia Technologies Limited " />
     
 
-     
-
     <a href="#">
         <p className="Top">
           <HiOutlineArrowNarrowUp/>

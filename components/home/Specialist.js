@@ -27,13 +27,11 @@ export default function Specialist() {
             <div className="section-title">
               <h5>About Company</h5>
               <h3>
-                We team of experience <br />
-                It Specialties.
+                Experienced IT professionals are   <br />
+                at your service
               </h3>
               <p>
-                25+Contrary to popular belief, Lorem Ipsum is not simply random
-                text <br />
-                roots in a piece of classical Latin literature from 45 BC
+              Every project is handled by a team of industry experts. The proper knowledge, research, analysis, and implementation help us develop your business.
               </p>
             </div>
 

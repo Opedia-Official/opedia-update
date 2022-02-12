@@ -40,6 +40,7 @@ export default function Footer() {
                                         slidesPerView: 2,
                                     },
                                 }}
+                                loop={true}
                                 autoplay={{
                                     "delay": 2500,
                                     "disableOnInteraction": false
@@ -91,7 +92,7 @@ export default function Footer() {
                                                 </ul>
                                                 </div>
                                             </div>
-                                        <div className="col-md-2 col-6 mt-5">
+                                        <div className="col-md-2 col-6 mt-5 mt-md-0">
                                             <div className="footer-widget">
                                                 <h4 className='footer-title'>Help?</h4>
                                                 <ul className="link-items">
