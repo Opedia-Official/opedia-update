@@ -11,12 +11,13 @@ import Loader from '../components/home/Loader';
 
 
 function MyApp({ Component, pageProps }) {
-  const [loading,setLoading]= useState(false);
+  const [loading,setLoading]= useState(true);
+
   useEffect(()=>{
     window.addEventListener('load', ()=>{
       setLoading(false)
     });
-  })
+  },[])
   const handleScroll = e => {
     let element = e.target
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
