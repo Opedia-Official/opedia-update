@@ -17,6 +17,8 @@ import { BsPersonFill,BsFillTelephoneFill} from "react-icons/Bs";
 import { BiRightArrowAlt,BiMessageAltDetail} from "react-icons/Bi";
 import { MdOutlineEmail} from "react-icons/Md";
 
+import { useScrollDirection } from 'react-use-scroll-direction'
+
 import Modal from 'react-modal';
 
 import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
@@ -100,21 +102,56 @@ export default function Navbar() {
 
   // scrolltop
 
-  // const [count,setIsOpenssseModal] = useState(false);
+  const [presentPosition,setPresentPosition] = useState(null);
+
+  const [direction, setDirection] = useState(String)
+const { isScrollingUp, isScrollingDown } = useScrollDirection()
+
+
+
+useEffect(() => {
+  
+  isScrollingDown && setDirection('down')
+  isScrollingDown &&  setNavChange(false) 
+  isScrollingUp && setDirection('up')
+  isScrollingUp &&  setNavChange(true) 
+}, [isScrollingDown, isScrollingUp])
+
 
 
   useEffect(()=>{
     window.addEventListener('scroll',(e)=>{
-      let scrolTop = e.target.documentElement.scrollTop
+      let scrolTop = e.target.documentElement.scrollTop;
+  
+      
+      // if(presentPosition < scrolTop){
+      //   console.log("lows point ",scrolTop)
+      //   setPresentPosition(scrolTop)
+      // }
+      
+      // else{
+      //   console.log("height point ",scrolTop)
+      //   setPresentPosition(scrolTop)
+      // }
+      
+      
+      // if(scrolTop> 160){
+      //   direction === 'down' ?  setNavChange(false) : setNavChange(false)
+      // }else{
+      //   setNavChange(false)
+      // }
 
-      if(scrolTop> 160){
-        setNavChange(true)
-      }else{
-        setNavChange(false)
-      }
-    })
-  },[])
+      
 
+  
+})
+},[])
+
+direction === 'down' ?  console.log("height point ",'down') : console.log("height point up")
+
+ 
+
+ 
 
   
 
@@ -122,6 +159,7 @@ export default function Navbar() {
 
   return (
     <>
+   
       <div  className="top-header">
         <div className="container">
           <div className="row justify-content-center">
