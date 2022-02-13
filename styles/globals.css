@@ -634,7 +634,7 @@ button.btn-reset {
     position: fixed;
     z-index: 323232323;
     top: 0;
-    transition: .4s;
+    /* transition: .4s; */
     box-shadow: 0 -13px 36px #000;
 }
 
