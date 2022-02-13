@@ -135,53 +135,9 @@ useEffect(() => {
       isScrollingDown &&  setHamburg(false) 
       isScrollingUp && setDirection('up')
       isScrollingUp &&  setHamburg(true) 
-
-    
-
-
 })
 
-  
- 
 }, [isScrollingDown, isScrollingUp])
-
-
-
-  useEffect(()=>{
-    window.addEventListener('scroll',(e)=>{
-      let scrolTop = e.target.documentElement.scrollTop;
-  
-      
-      // if(presentPosition < scrolTop){
-      //   console.log("lows point ",scrolTop)
-      //   setPresentPosition(scrolTop)
-      // }
-      
-      // else{
-      //   console.log("height point ",scrolTop)
-      //   setPresentPosition(scrolTop)
-      // }
-      
-      
-      // if(scrolTop> 160){
-      //   direction === 'down' ?  setNavChange(false) : setNavChange(false)
-      // }else{
-      //   setNavChange(false)
-      // }
-
-      
-
-  
-})
-},[])
-
-direction === 'down' ?  console.log("height point ",'down') : console.log("height point up")
-
- 
-
- 
-
-  
 
 
 
