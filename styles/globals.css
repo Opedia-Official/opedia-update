@@ -2384,6 +2384,15 @@ ul.contact-info-text .contact-icon {
     margin: 0;
 }
 
+.c-input-wrap select {
+    height: 47px;
+    width: 100%;
+    border: none;
+    background: #F5F5F7;
+    padding: 5px 17px;
+    font-size: 15px;
+}
+
 .contact-info-text p {
     font-size: 16px;
     color: #666E77;

@@ -104,6 +104,18 @@ export default function portfolio({posts}) {
                                                                     </span>
                                                                 </div>
                                                         </div>
+                                                        <div className="col-lg-12 mb-5">
+                                                                <div className="c-input-wrap">
+                                                                    <select name="service_type" id="">
+                                                                        <option value="#">Web Development</option>
+                                                                        <option value="#">Web Design</option>
+                                                                        <option value="#">Web Graphics Design</option>
+                                                                    </select>
+                                                                    <span>
+                                                                    </span>
+                                                                </div>
+                                                        </div>
+                                                        
                                                         <div className="col-lg-12">
                                                                 <div className="c-input-wrap c-text-area">
                                                                     <textarea name="" id="" cols="30" rows="10" placeholder="Message "></textarea>
