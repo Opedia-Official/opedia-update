@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
       setLoading(false)
     });
   },[])
+  
   const handleScroll = e => {
     let element = e.target
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {

@@ -14,7 +14,7 @@
 }
 
 .bar {
-    display: block;
+    display: none;
     width: 25px;
     height: 3px;
     margin: 5px auto;
@@ -65,7 +65,6 @@
 
 .dropdown {
     background: #ffffff;
-    ;
     position: absolute;
     left: -56rem;
     z-index: 9999;
@@ -77,6 +76,7 @@
     visibility: hidden;
     transition: 0.5s;
     overflow: hidden;
+    box-shadow: 0 2px 6px #777;
 }
 
 .dropdown1 {
@@ -159,8 +159,17 @@
 
 /* *******************************MEGAMENU AREA END********************************** */
 
+@media (max-width: 1023px) {
+    .openHamburg {
+        display: none!important;
+    }
+}
+
 @media only screen and (max-width: 1023px) {
-    .isSearchClicked {
+    .openHamburg {
+        display: block!important;
+    }
+    dis .isSearchClicked {
         margin-left: 0px;
     }
     .navmenu {

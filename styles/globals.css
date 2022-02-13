@@ -258,6 +258,7 @@ html {
     font-size: 3.3em!important;
 }
 
+
 /* btn btn brand */
 
 .btn-brand {
@@ -726,6 +727,10 @@ button.btn-reset {
     transform: translateY(-50%);
 }
 
+.hero-bottom-wrap {
+    text-align: center;
+}
+
 .slick-slide img {
     width: 90% !important;
     max-width: 90%;
@@ -774,12 +779,14 @@ button.btn-reset {
     color: #14212B;
     font-weight: 700;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .hero-bottom-info p {
     font-size: 14px;
     color: #5C727D;
     text-transform: capitalize;
+    text-align: left;
 }
 
 .icons svg {

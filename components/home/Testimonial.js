@@ -22,7 +22,7 @@ export default function Testimonial() {
 
       <div className="testimonial-area bg-brand">
         <div className="container">
-        <Swiper pagination={true}  navigation={true} className="mySwiper">
+        <Swiper pagination={true}  navigation={true} className="mySwiper wow fadeIn">
           {/* Single Item */}
               <SwiperSlide> 
                   <div className="testimonial-wrapper text-center">

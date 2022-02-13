@@ -4,6 +4,7 @@ import SwiperCore, {
     Autoplay
   } from 'swiper';
   SwiperCore.use([Autoplay]);
+  
 import { FaFacebookF, 
     FaLinkedin,
     FaInstagram,FaTwitter} from "react-icons/fa";

@@ -46,6 +46,9 @@ export default function Navbar() {
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
   const [navChange, setNavChange] = useState(false);
+
+  const [hamburg, setHamburg] = useState(true);
+
   const textInput = useRef(null);
 
   const openMenu = (e) => {
@@ -111,10 +114,35 @@ const { isScrollingUp, isScrollingDown } = useScrollDirection()
 
 useEffect(() => {
   
-  isScrollingDown && setDirection('down')
-  isScrollingDown &&  setNavChange(false) 
-  isScrollingUp && setDirection('up')
-  isScrollingUp &&  setNavChange(true) 
+  window.addEventListener('scroll',(e)=>{
+    let scrolTop = e.target.documentElement.scrollTop;
+
+    
+
+    
+    if(scrolTop> 160){
+      isScrollingDown && setDirection('down')
+      isScrollingDown &&  setNavChange(false) 
+      isScrollingUp && setDirection('up')
+      isScrollingUp &&  setNavChange(true) 
+    }else{ 
+      setNavChange(false)
+     
+    }
+
+    // hamburg
+     isScrollingDown && setDirection('down')
+      isScrollingDown &&  setHamburg(false) 
+      isScrollingUp && setDirection('up')
+      isScrollingUp &&  setHamburg(true) 
+
+    
+
+
+})
+
+  
+ 
 }, [isScrollingDown, isScrollingUp])
 
 
@@ -167,7 +195,6 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
               <ul className="social-info text-center text-md-start">
                 <li>
                   <a className={styles.socialIconItem} href="#">
-                 
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
@@ -187,8 +214,6 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
             </div>
             <div className="col-md-4">
               <ul className="social text-center text-md-end">
-           
-                
                 <li>
                   <a className="social-item" href="#">
                  
@@ -197,19 +222,16 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
                 </li>
                 <li>
                   <a className="social-item" href="#">
-                
                     <FaTwitter />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
-                  
                     <FaLinkedinIn />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
-              
                     <FaInstagram />
                   </a>
                 </li>
@@ -722,12 +744,13 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
 
               </li>
             </ul>
+
          
             <button
-              className={
-                isOpen === false
-                  ? styles.hamburger
-                  : styles.hamburger + " " + styles.active
+              className={ hamburg ?  isOpen === false
+                ? styles.hamburger
+                : styles.hamburger + " " + styles.active : ''
+                
               }
               onClick={openMenu}
             >

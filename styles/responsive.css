@@ -710,6 +710,7 @@
     .expTeam-left .parent-pic {
         width: 70%;
         max-height: 370px;
+        margin-top: -36px;
     }
     .expTeam-left {
         text-align: center;
@@ -718,7 +719,7 @@
     }
     .expTeam-left .exp-dots {
         left: 54px;
-        top: -31px;
+        top: -93px;
         width: 187px;
     }
     .expTeam-right {
