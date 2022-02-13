@@ -111,6 +111,9 @@ const { isScrollingUp, isScrollingDown } = useScrollDirection()
 
 useEffect(() => {
   
+
+
+
   isScrollingDown && setDirection('down')
   isScrollingDown &&  setNavChange(false) 
   isScrollingUp && setDirection('up')
@@ -123,7 +126,6 @@ useEffect(() => {
     window.addEventListener('scroll',(e)=>{
       let scrolTop = e.target.documentElement.scrollTop;
   
-      
       // if(presentPosition < scrolTop){
       //   console.log("lows point ",scrolTop)
       //   setPresentPosition(scrolTop)
