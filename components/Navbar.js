@@ -145,7 +145,7 @@ useEffect(() => {
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
-                    Shyamoli Square Complex Southern-Building,
+                    Shyamoli Square Complex,Dhaka-1207
                   </a>
                 </li>
                 <li>
