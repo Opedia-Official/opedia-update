@@ -43,7 +43,7 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
 });
 
-export default function Home() {
+export default function Home({posts}) {
   const [isReact, setIsReact] = useState(false);
 
   useEffect(()=>{
@@ -65,7 +65,7 @@ export default function Home() {
 
       <ViewService />
 
-      <ShowCase  />
+      <ShowCase  posts={posts} />
 
       <ShowCaseCounter  />  
      
@@ -121,23 +121,17 @@ export default function Home() {
   );
 }
 
-// export async function getStaticProps(context) {
-//   let response = await fetch(`${server}/api`)
-//   let data =  await response.json();
-  
 
+export async function getStaticProps() {
+  const res = await fetch('http://admin.opediatech.com/api/portfolio')
+  const posts = await res.json()
 
-//   return {
-//     props: {
-//         expertTeams:data.ExpertTeam,
-//         ViewServices: data.ViewService,
-//         Gallaries: data.Gallary,
-//         projects: data.ProjectCount,
-//     }, 
-//     revalidate: 5, 
-//   }
-// }
-
-
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  }
+}
 
 
