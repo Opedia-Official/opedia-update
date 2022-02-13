@@ -46,9 +46,6 @@ export default function Navbar() {
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
   const [navChange, setNavChange] = useState(false);
-
-  const [hamburg, setHamburg] = useState(true);
-
   const textInput = useRef(null);
 
   const openMenu = (e) => {
@@ -130,11 +127,6 @@ useEffect(() => {
      
     }
 
-    // hamburg
-     isScrollingDown && setDirection('down')
-      isScrollingDown &&  setHamburg(false) 
-      isScrollingUp && setDirection('up')
-      isScrollingUp &&  setHamburg(true) 
 })
 
 }, [isScrollingDown, isScrollingUp])
@@ -151,6 +143,7 @@ useEffect(() => {
               <ul className="social-info text-center text-md-start">
                 <li>
                   <a className={styles.socialIconItem} href="#">
+                 
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
@@ -170,6 +163,8 @@ useEffect(() => {
             </div>
             <div className="col-md-4">
               <ul className="social text-center text-md-end">
+           
+                
                 <li>
                   <a className="social-item" href="#">
                  
@@ -178,16 +173,19 @@ useEffect(() => {
                 </li>
                 <li>
                   <a className="social-item" href="#">
+                
                     <FaTwitter />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
+                  
                     <FaLinkedinIn />
                   </a>
                 </li>
                 <li>
                   <a className="social-item" href="#">
+              
                     <FaInstagram />
                   </a>
                 </li>
@@ -700,20 +698,19 @@ useEffect(() => {
 
               </li>
             </ul>
-
          
-            <button
-              className={ hamburg ?  isOpen === false
-                ? styles.hamburger
-                : styles.hamburger + " " + styles.active : ''
-                
+           {navChange &&   <button
+              className={
+                isOpen === false
+                  ? styles.hamburger
+                  : styles.hamburger + " " + styles.active
               }
               onClick={openMenu}
             >
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
               <span className={styles.bar}></span>
-            </button>
+            </button>}
           </nav>
       </div>
         </header>
