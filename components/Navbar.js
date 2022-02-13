@@ -171,7 +171,7 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
-                    254 Lillian Blvd, Holbrook
+                    Shyamoli Square Complex Southern-Building,
                   </a>
                 </li>
                 <li>
@@ -180,7 +180,7 @@ direction === 'down' ?  console.log("height point ",'down') : console.log("heigh
                     <span className="s-icon">
                       <FaRegEnvelope />
                     </span>
-                    info@santizex-site.com
+                    opedia.technologies@gmail.com
                   </a>
                 </li>
               </ul>
