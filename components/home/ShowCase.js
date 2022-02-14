@@ -23,6 +23,7 @@ import SectionTitle from "../SectionTitle";
 // Import Swiper styles
 import "swiper/css";
 import { gallaries, sliderData } from "../../Utils/fakeData";
+import Link from "next/link";
 
 export default function ShowCase({ posts }) {
   const [isReact, setIsReact] = useState(false);
@@ -95,8 +96,8 @@ export default function ShowCase({ posts }) {
                       <div className="showCase-wrap mb-4 ">
                         <div className="show-case-child s-img-wrap">
                           <img
-                            src={`${gallary.thambnail_image}`}
-                            // src={`http://admin.opediatech.com/${gallary.thambnail_image}`}
+                            // src={`${gallary.thambnail_image}`}
+                            src={`http://admin.opediatech.com/${gallary.img}`}
                             alt={gallary.portfolio_title}
                           />
                         </div>
@@ -117,10 +118,14 @@ export default function ShowCase({ posts }) {
                           </div>
                           <div className="show-case-text">
                             <h4>
-                              <a href="#"> {gallary.portfolio_title} </a>
+                              <Link
+                                href={`/portfolio/${gallary.category_slug}`}
+                              >
+                                <a> {gallary.category_name}</a>
+                              </Link>
                             </h4>
                             {/* <p>{gallary.subTitle}</p> */}
-                            {gallary.portfolio_desc}
+                            {gallary.title}
                           </div>
                         </div>
                       </div>

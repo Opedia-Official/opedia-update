@@ -12,6 +12,10 @@ html {
   font-size: 62.5%;
 }
 
+div#cursor-outline {
+  z-index: 999999999999999 !important;
+}
+
 :root {
   --clr-primary: #2f6eb5;
   --clr-secondary: #f49735;
@@ -225,6 +229,17 @@ html {
   bottom: 2%;
   font-size: 30px;
   transition: 0.2s ease-in-out;
+  /* position: relative; */
+  animation: shadows1 1.9s linear infinite alternate;
+}
+
+@keyframes shadows1 {
+  0% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .Top:hover {
@@ -2048,7 +2063,8 @@ ul.link-items li svg {
 
 .portfolio-items .card img {
   width: 100%;
-  max-height: 367px;
+  height: 367px;
+  object-fit: contain;
 }
 
 .portfolio-info > span {
@@ -2339,6 +2355,15 @@ ul.contact-info-text .contact-icon {
   color: #232323;
   text-transform: capitalize;
   margin: 0;
+}
+
+.c-input-wrap select {
+  height: 47px;
+  width: 100%;
+  border: none;
+  background: #f5f5f7;
+  padding: 5px 17px;
+  font-size: 15px;
 }
 
 .contact-info-text p {

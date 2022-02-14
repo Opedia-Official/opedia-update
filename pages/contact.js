@@ -1,4 +1,6 @@
 import { useState } from "react";
+import axios from "axios";
+
 import { Card } from "react-bootstrap";
 import { BiPhoneCall } from "react-icons/Bi";
 import { GoLocation } from "react-icons/Go";
@@ -24,6 +26,7 @@ export default function portfolio({ posts }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [text, setText] = useState("");
+  const [service, setService] = useState("");
 
   const contactData = {
     fname: fistName,
@@ -31,6 +34,7 @@ export default function portfolio({ posts }) {
     email: email,
     phone: phone,
     message: text,
+    service: service,
   };
 
   const Contacthandler = async () => {
@@ -38,8 +42,34 @@ export default function portfolio({ posts }) {
     console.log(email, "email");
     console.log(phone, "phone");
     console.log(text, "text");
+    console.log(service, "service");
 
-    await axios.post("https://admin.opediatech.com/api/contact", contactData);
+    const posted = await axios.post(
+      "http://admin.opediatech.com/api/message",
+      {
+        fname: fistName,
+        lname: lastName,
+        email: email,
+        phone: phone,
+        message: text,
+        service: service,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(posted, "posted");
+    if (posted.status === 200) {
+      alert("ok");
+      toast("Wow so easy!");
+      // closeModal();
+    } else {
+      alert("error");
+      toast("Wow so easy!");
+      // closeModal();
+    }
   };
 
   return (
@@ -151,6 +181,26 @@ export default function portfolio({ posts }) {
                                   <span>
                                     <BsFillTelephoneFill />
                                   </span>
+                                </div>
+                              </div>
+                              <div className="col-lg-12 mb-5">
+                                <div className="c-input-wrap">
+                                  <select
+                                    name="service_type"
+                                    id=""
+                                    onChange={(e) => setService(e.target.value)}
+                                  >
+                                    <option value="Web Development">
+                                      Web Development
+                                    </option>
+                                    <option value="Web Design">
+                                      Web Design
+                                    </option>
+                                    <option value="Web Graphics Design">
+                                      Web Graphics Design
+                                    </option>
+                                  </select>
+                                  <span></span>
                                 </div>
                               </div>
                               <div className="col-lg-12">

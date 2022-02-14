@@ -20,7 +20,7 @@ const lowerImage = {
     
 }
     return (
-        <div style={backgroundC} className="container">
+        <div style={backgroundC} className="container mb-100">
         
         <div style={styling} className="img">
             <img src="./error/404.png" alt="" />

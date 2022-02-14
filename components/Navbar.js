@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
+import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import styles from "../styles/Navbar.module.css";
 import logo from "../public/logo/logo-blue.png";
 import {
@@ -48,9 +54,59 @@ export default function Navbar() {
   const [navChange, setNavChange] = useState(false);
   const textInput = useRef(null);
 
+  // api post
+
+  // all states
+  const [fistName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [text, setText] = useState("");
+  const [service, setService] = useState("");
+
+  const contactData = {
+    fname: fistName,
+    lname: lastName,
+    email: email,
+    phone: phone,
+    message: text,
+    service: service,
+  };
+
+  const Contacthandler = async () => {
+    console.log(lastName, "name");
+    console.log(email, "email");
+    console.log(phone, "phone");
+    console.log(text, "text");
+    console.log(service, "service");
+
+    const posted = await axios.post(
+      "http://admin.opediatech.com/api/message",
+      {
+        body: contactData,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    console.log(posted, "posted");
+    if (posted.status === 200) {
+      alert("ok");
+      toast("Wow so easy!");
+      // closeModal();
+    } else {
+      alert("error");
+      toast("Wow so easy!");
+      // closeModal();
+    }
+  };
+
+  // api post
+
   const openMenu = (e) => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   };
 
   // modal
@@ -114,13 +170,17 @@ export default function Navbar() {
       // console.log("100vh", newWidth);
       // console.log("Total page scrolTop", scrolTop);
 
-      if (scrolTop > 160) {
-        isScrollingDown && setDirection("down");
-        isScrollingDown && setNavChange(false);
-        isScrollingUp && setDirection("up");
-        isScrollingUp && setNavChange(true);
+      if (isOpen == false) {
+        if (scrolTop > 160) {
+          isScrollingDown && setDirection("down");
+          isScrollingDown && setNavChange(false);
+          isScrollingUp && setDirection("up");
+          isScrollingUp && setNavChange(true);
+        } else {
+          setNavChange(false);
+        }
       } else {
-        setNavChange(false);
+        setNavChange(true);
       }
     });
   }, [isScrollingDown, isScrollingUp]);
@@ -137,7 +197,7 @@ export default function Navbar() {
                     <span className="s-icon">
                       <FaMapMarkerAlt />
                     </span>
-                    Shyamoli Square Complex Southern-Building,
+                    Shyamoli Square Complex,Dhaka-1207
                   </a>
                 </li>
                 <li>
@@ -258,7 +318,7 @@ export default function Navbar() {
                 <div className={styles.dropdown}>
                   <div className="containerr">
                     <div className="row justify-content-center">
-                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Web & Software
@@ -320,18 +380,8 @@ export default function Navbar() {
                             )}
                           </ul>
                         </div>
-                        <p
-                          style={{
-                            color: "#f49735",
-                            fontSize: "18px",
-                            fontWeight: "bold",
-                          }}
-                          onClick={() => setIsMore(!isMore)}
-                        >
-                          {isMore ? "Less" : "More"}
-                        </p>
                       </div>
-                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Digital Marketing
@@ -365,42 +415,8 @@ export default function Navbar() {
                           </ul>
                         </div>
                       </div>
-                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
-                        <div className={styles.dropdown__inner}>
-                          <h2 className={styles.dropdown__title}>
-                            Multimedia & Printing
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Corporate Brand Guideline
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                2D & 3D Video Creation
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Promotional Video Creation
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Video Editing Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Corporate Printing <br /> Service & Delivery
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
 
-                      <div className="col-md-12 col-xl-2">
+                      <div className="col-md-12 borderLeft col-xl-2">
                         <div className={styles.dropdown__inner}>
                           <h2 className={styles.dropdown__title}>
                             Dropdown Title
@@ -434,11 +450,12 @@ export default function Navbar() {
                           </ul>
                         </div>
                       </div>
-                      <div className="col-md-12 col-xl-2 mb-4 mb-xl-0">
+                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
                         <div
                           className={
                             (styles.dropdown__inner, styles.dropdown__last)
                           }
+                          // style={{ borderRight: "1px solid #2f6eb5" }}
                         >
                           <h2 className={styles.dropdown__title}>
                             Product Design
@@ -472,8 +489,66 @@ export default function Navbar() {
                           </ul>
                         </div>
                       </div>
+                      <div className="col-md-12 borderLeft col-xl-3 mb-4 mb-xl-0">
+                        <div className={styles.dropdown__inner}>
+                          <h2 className={styles.dropdown__title}>
+                            Multimedia & Printing
+                          </h2>
+                          <ul className={styles.dropdown__list}>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Corporate Brand Guideline
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                2D & 3D Video Creation
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Promotional Video Creation
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Video Editing Service
+                              </a>
+                            </li>
+                            <li className={styles.dropdown__item}>
+                              <a className={styles.dropdown__link}>
+                                Corporate Printing <br /> Service & Delivery
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <p
+                    style={{
+                      color: "#f49735",
+                      fontSize: "18px",
+                      fontWeight: "bold",
+                    }}
+                    onClick={() => setIsMore(!isMore)}
+                  >
+                    {isMore ? (
+                      <AiOutlineArrowUp
+                        style={{
+                          border: "1px solid #f49735",
+                          borderRadius: "50%",
+                        }}
+                      />
+                    ) : (
+                      <AiOutlineArrowDown
+                        style={{
+                          border: "1px solid #f49735",
+                          borderRadius: "50%",
+                        }}
+                      />
+                    )}
+                  </p>
                 </div>
               </li>
               <li className={styles.navitem}>
@@ -660,7 +735,11 @@ export default function Navbar() {
                         <div className="row">
                           <div className="col-lg-6 mb-5">
                             <div className="c-input-wrap">
-                              <input type="text" placeholder="First Name *" />
+                              <input
+                                type="text"
+                                placeholder="First Name *"
+                                onChange={(e) => setFirstName(e.target.value)}
+                              />
                               <span>
                                 <BsPersonFill />
                               </span>
@@ -668,7 +747,11 @@ export default function Navbar() {
                           </div>
                           <div className="col-lg-6 mb-5">
                             <div className="c-input-wrap">
-                              <input type="text" placeholder="First Name *" />
+                              <input
+                                type="text"
+                                placeholder="First Name *"
+                                onChange={(e) => setLastName(e.target.value)}
+                              />
                               <span>
                                 <BsPersonFill />
                               </span>
@@ -679,6 +762,7 @@ export default function Navbar() {
                               <input
                                 type="email"
                                 placeholder="Mail Address *"
+                                onChange={(e) => setEmail(e.target.value)}
                               />
                               <span>
                                 <MdOutlineEmail />
@@ -687,10 +771,32 @@ export default function Navbar() {
                           </div>
                           <div className="col-lg-6 mb-5">
                             <div className="c-input-wrap">
-                              <input type="tell" placeholder="Phone Number " />
+                              <input
+                                type="tell"
+                                placeholder="Phone Number "
+                                onChange={(e) => setPhone(e.target.value)}
+                              />
                               <span>
                                 <BsFillTelephoneFill />
                               </span>
+                            </div>
+                          </div>
+                          <div className="col-lg-12 mb-5">
+                            <div className="c-input-wrap">
+                              <select
+                                name="service_type"
+                                id=""
+                                onChange={(e) => setService(e.target.value)}
+                              >
+                                <option value="Web Development">
+                                  Web Development
+                                </option>
+                                <option value="Web Design">Web Design</option>
+                                <option value="Web Graphics Design">
+                                  Web Graphics Design
+                                </option>
+                              </select>
+                              <span></span>
                             </div>
                           </div>
                           <div className="col-lg-12">
@@ -701,6 +807,7 @@ export default function Navbar() {
                                 cols="30"
                                 rows="10"
                                 placeholder="Message "
+                                onChange={(e) => setText(e.target.value)}
                               ></textarea>
 
                               <span>
@@ -715,7 +822,11 @@ export default function Navbar() {
                         >
                           Close
                         </button>
-                        <button type="submit" className="btn-brand mt-4">
+                        <button
+                          type="submit"
+                          className="btn-brand mt-4"
+                          onClick={Contacthandler}
+                        >
                           Submit Request <BiRightArrowAlt />{" "}
                         </button>
                       </form>
@@ -729,9 +840,11 @@ export default function Navbar() {
             {navChange && (
               <button
                 className={
-                  isOpen === false
-                    ? styles.hamburger
-                    : styles.hamburger + " " + styles.active
+                  navChange
+                    ? isOpen === false
+                      ? styles.hamburger
+                      : styles.hamburger + " " + styles.active
+                    : ""
                 }
                 onClick={openMenu}
               >

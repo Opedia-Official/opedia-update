@@ -21,57 +21,43 @@ import Pricing from "../components/home/Pricing";
 import Testimonial from "../components/home/Testimonial";
 // Import Blog Section
 
-import dynamic from 'next/dynamic'
-
-
-
+import dynamic from "next/dynamic";
 
 import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
-import {server} from '../config/index'
+import { server } from "../config/index";
 
 import { HiOutlineArrowNarrowUp } from "react-icons/hi";
 import WhatsappChat from "../components/whatsappChat";
 
-
-
-
-
-
-
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
-  ssr: false
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
 });
 
-export default function Home({posts}) {
+export default function Home({ posts }) {
   const [isReact, setIsReact] = useState(false);
 
-  useEffect(()=>{
-    if(typeof window !== 'undefined') {
-
-      window.WOW = require('wowjs');
-  
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.WOW = require("wowjs");
     }
-  
+
     new WOW.WOW().init();
-  },[])
+  }, []);
 
   return (
     <>
-    
       <HeroSlide />
 
-    <ExpTeam />
+      <ExpTeam />
 
       <ViewService />
 
-      <ShowCase  posts={posts} />
+      <ShowCase posts={posts} />
 
-      <ShowCaseCounter  />  
-     
-      
-      
-       {/*  */}
+      <ShowCaseCounter />
+
+      {/*  */}
 
       {/* <ExpTeam expertTeams = {expertTeams}/>
 
@@ -82,18 +68,17 @@ export default function Home({posts}) {
       <ShowCaseCounter projectsAll ={projects} /> */}
 
       <Update />
-  
+
       {/* <ExpartWorkers /> */}
-      <WorkingProcess/>
+      <WorkingProcess />
 
       <Specialist />
 
-      <Pricing  />
+      <Pricing />
 
-      <Testimonial/>
+      <Testimonial />
 
-
- {/* <div className="cursor">
+      {/* <div className="cursor">
 
       <AnimatedCursor
       innerSize={8}
@@ -104,34 +89,30 @@ export default function Home({posts}) {
       outerScale={5}
     />
  </div> */}
-   
-{/* <div class="elfsight-app-666896e2-7e9c-436a-a84b-1070ceca6e89"></div> */}
 
-<AnimatedCursor
-      innerSize={8}
-      outerSize={8}
-      color='251, 129, 0'
-      outerAlpha={0.2}
-      innerScale={0.7}
-      outerScale={5}
-    />
-<WhatsappChat/>
+      {/* <div class="elfsight-app-666896e2-7e9c-436a-a84b-1070ceca6e89"></div> */}
 
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={8}
+        color="251, 129, 0"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5}
+      />
+      <WhatsappChat />
     </>
   );
 }
 
-
 export async function getStaticProps() {
-  const res = await fetch('http://admin.opediatech.com/api/portfolio')
-  const posts = await res.json()
+  const res = await fetch("http://admin.opediatech.com/api/category");
+  const posts = await res.json();
 
   return {
     props: {
       posts,
     },
     revalidate: 10,
-  }
+  };
 }
-
-
