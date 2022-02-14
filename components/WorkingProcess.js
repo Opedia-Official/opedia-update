@@ -95,9 +95,6 @@ export default function WorkingProcess() {
                                     </div>
                                 </div>
                         </div>
-                        
-                     
-            
                
                 </div>
             </div>

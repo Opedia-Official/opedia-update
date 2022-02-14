@@ -41,6 +41,7 @@ const customStyles = {
 Modal.setAppElement('body')
 
 export default function Navbar() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
@@ -52,9 +53,6 @@ export default function Navbar() {
     setIsOpen(!isOpen);
     console.log(isOpen)
   };
-
-
-
 
   // modal
 
@@ -73,9 +71,6 @@ export default function Navbar() {
     setIsOpenModal(false);
   }
   // modal
-
-
-
 
   const SearchHandler = (event) => {
     setIsSearch(!isSearch);
@@ -108,22 +103,42 @@ export default function Navbar() {
 const { isScrollingUp, isScrollingDown } = useScrollDirection()
 
 
-
+const navChageRef = useRef()
 useEffect(() => {
-  
+
+  let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
+
   window.addEventListener('scroll',(e)=>{
     let scrolTop = e.target.documentElement.scrollTop;
 
-    
-    if(scrolTop> 160){
-      isScrollingDown && setDirection('down')
-      isScrollingDown &&  setNavChange(false) 
-      isScrollingUp && setDirection('up')
-      isScrollingUp &&  setNavChange(true) 
+    // Scroll top navbar hide open
+   let currentPosition = e.target.documentElement.scrollTop;
+
+
+    // mobile navigation
+    // if (previousPosition > currentPosition) {
+    //    setNavChange(true)
+    // } else {
+    //   setNavChange(false)
+    // }
+    // previousPosition = currentPosition;
+  // mobile navigation
+
+    if(scrolTop > 160){
+      if (previousPosition > currentPosition) {
+        navChageRef.current.className = 'header activeNav'
+
+      } else {
+        navChageRef.current.className = 'header'
+      }
+      previousPosition = currentPosition;
     }else{ 
-      setNavChange(false)
-     
+      navChageRef.current.className = 'header'
     }
+
+    
+    // Scroll top navbar hide open
+
 
 })
 
@@ -193,7 +208,7 @@ useEffect(() => {
         </div>
       </div>
 
-        <header className={navChange?  "activeNav" : 'header' }>
+        <header ref={navChageRef} >
       <div className="container">
           <nav className={styles.navbar}>
             <Link href="/">
