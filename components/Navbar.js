@@ -52,7 +52,7 @@ export default function Navbar() {
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
-  const [navChange, setNavChange] = useState(false);
+  const [navChange, setNavChange] = useState(true);
   const textInput = useRef(null);
 
   // api post
@@ -164,6 +164,8 @@ export default function Navbar() {
   };
 
 const navChageRef = useRef()
+
+
 useEffect(() => {
 
   let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -186,10 +188,13 @@ useEffect(() => {
 
     if(scrolTop > 160){
       if (previousPosition > currentPosition) {
+        
         navChageRef.current.className = 'header activeNav'
+        setNavChange(true)
 
       } else {
         navChageRef.current.className = 'header'
+        setNavChange(false)
       }
       previousPosition = currentPosition;
     }else{ 
@@ -858,14 +863,14 @@ useEffect(() => {
               </li>
             </ul>
 
-            {navChange && (
+            {navChange ? (
               <button
                 className={
-                  navChange
-                    ? isOpen === false
+                  
+                     isOpen === false
                       ? styles.hamburger
                       : styles.hamburger + " " + styles.active
-                    : ""
+                    
                 }
                 onClick={openMenu}
               >
@@ -873,7 +878,24 @@ useEffect(() => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            )}
+            ) :   
+            
+            (
+              <button
+                className={
+                  
+                     isOpen === true && styles.hamburger + " " + styles.active
+                     
+                    
+                }
+                onClick={openMenu}
+              >
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+              </button>
+            )
+            }
           </nav>
         </div>
       </header>
