@@ -47,11 +47,12 @@ const customStyles = {
 Modal.setAppElement("body");
 
 export default function Navbar() {
+
   const [isOpen, setIsOpen] = useState(false);
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
-  const [navChange, setNavChange] = useState(false);
+  const [navChange, setNavChange] = useState(true);
   const textInput = useRef(null);
 
   // api post
@@ -162,28 +163,53 @@ export default function Navbar() {
     // console.log(newHeight);
   };
 
-  useEffect(() => {
-    getListSize();
-    window.addEventListener("scroll", (e) => {
-      let scrolTop = e.target.documentElement.scrollTop;
-      // console.log("Total page size", e.target.documentElement.scrollHeight);
-      // console.log("100vh", newWidth);
-      // console.log("Total page scrolTop", scrolTop);
+const navChageRef = useRef()
 
-      if (isOpen == false) {
-        if (scrolTop > 160) {
-          isScrollingDown && setDirection("down");
-          isScrollingDown && setNavChange(false);
-          isScrollingUp && setDirection("up");
-          isScrollingUp && setNavChange(true);
-        } else {
-          setNavChange(false);
-        }
+
+useEffect(() => {
+
+  let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  window.addEventListener('scroll',(e)=>{
+    let scrolTop = e.target.documentElement.scrollTop;
+
+    // Scroll top navbar hide open
+   let currentPosition = e.target.documentElement.scrollTop;
+
+
+    // mobile navigation
+    // if (previousPosition > currentPosition) {
+    //    setNavChange(true)
+    // } else {
+    //   setNavChange(false)
+    // }
+    // previousPosition = currentPosition;
+  // mobile navigation
+
+    if(scrolTop > 160){
+      if (previousPosition > currentPosition) {
+        
+        navChageRef.current.className = 'header activeNav'
+        setNavChange(true)
+
       } else {
-        setNavChange(true);
+        navChageRef.current.className = 'header'
+        setNavChange(false)
       }
-    });
-  }, [isScrollingDown, isScrollingUp]);
+      previousPosition = currentPosition;
+    }else{ 
+      navChageRef.current.className = 'header'
+    }
+
+    
+    // Scroll top navbar hide open
+
+
+})
+
+}, [isScrollingDown, isScrollingUp])
+
+
 
   return (
     <>
@@ -238,8 +264,8 @@ export default function Navbar() {
         </div>
       </div>
 
-      <header className={navChange ? "activeNav" : "header"}>
-        <div className="container">
+        <header ref={navChageRef} >
+      <div className="container">
           <nav className={styles.navbar}>
             <Link href="/">
               <a className={styles.navlogo}>
@@ -837,14 +863,14 @@ export default function Navbar() {
               </li>
             </ul>
 
-            {navChange && (
+            {navChange ? (
               <button
                 className={
-                  navChange
-                    ? isOpen === false
+                  
+                     isOpen === false
                       ? styles.hamburger
                       : styles.hamburger + " " + styles.active
-                    : ""
+                    
                 }
                 onClick={openMenu}
               >
@@ -852,7 +878,24 @@ export default function Navbar() {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            )}
+            ) :   
+            
+            (
+              <button
+                className={
+                  
+                     isOpen === true && styles.hamburger + " " + styles.active
+                     
+                    
+                }
+                onClick={openMenu}
+              >
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+                <span className={styles.bar}></span>
+              </button>
+            )
+            }
           </nav>
         </div>
       </header>
