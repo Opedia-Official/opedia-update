@@ -53,8 +53,8 @@ export default function ExpTeam({ expertTeams }) {
                   "
                 />
                 <div className="expTeam-youtube-section">
-                  <div className="row">
-                    <div className="col-md-6">
+                  <div className="row justify-content-center">
+                    <div className="col-6">
                       <ul>
                         <li>
                           <div>
@@ -133,7 +133,7 @@ export default function ExpTeam({ expertTeams }) {
                                     </li> */}
                       </ul>
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-6">
                       <ul>
                         <li>
                           <div>
