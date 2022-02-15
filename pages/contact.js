@@ -19,7 +19,7 @@ const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
-export default function portfolio({ posts }) {
+export default function Portfolio({ posts }) {
   // all states
   const [fistName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -240,7 +240,6 @@ export default function portfolio({ posts }) {
                   width="100%"
                   height="450"
                   style={{ border: "0", margin: "20px auto 0px" }}
-                  allowfullscreen=""
                   loading="lazy"
                 ></iframe>
                 {/* </div> */}

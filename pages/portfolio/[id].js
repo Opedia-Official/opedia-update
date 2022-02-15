@@ -35,7 +35,7 @@ export default function Portfolio({ posts }) {
           >
             {/* portfolio item */}
             {posts.map((item) => (
-              <div className="col-lg-4 col-sm-6">
+              <div key={item.id} className="col-lg-4 col-sm-6">
                 <Meta title={item.portfolio_title} />
                 <div className="portfolio-items mb-100">
                   <Card>

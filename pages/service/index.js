@@ -51,7 +51,10 @@ export default function Home({ services }) {
               <div className={"view-service-right-wrapper service"}>
                 <div className="row">
                   {services.map((item) => (
-                    <div className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn">
+                    <div
+                      key={item.id}
+                      className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn"
+                    >
                       <ServiceItem item={item} />
                       {/* <Card>
                         <Card.Body>

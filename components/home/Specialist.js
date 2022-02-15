@@ -27,11 +27,13 @@ export default function Specialist() {
             <div className="section-title">
               <h5>About Company</h5>
               <h3>
-                Experienced IT professionals are   <br />
+                Experienced IT professionals are <br />
                 at your service
               </h3>
               <p>
-              Every project is handled by a team of industry experts. The proper knowledge, research, analysis, and implementation help us develop your business.
+                Every project is handled by a team of industry experts. The
+                proper knowledge, research, analysis, and implementation help us
+                develop your business.
               </p>
             </div>
 
@@ -41,10 +43,10 @@ export default function Specialist() {
                   <FaHeadphonesAlt />
                 </span>
                 <div className="sp-item-info">
-                  <h4>Helpdesk Support</h4>
+                  <h4>Agile Solution</h4>
                   <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web.
+                    Equipped with high-end technological supports and experts, a
+                    combination of global service provider.
                   </p>
                 </div>
               </li>
@@ -53,10 +55,10 @@ export default function Specialist() {
                   <FaRegLightbulb />
                 </span>
                 <div className="sp-item-info mb-5 mb-md-0">
-                  <h4>Creative Solutions</h4>
+                  <h4>Robust Support</h4>
                   <p>
-                    Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                    text used in laying out print, graphic or web.
+                    Professional support within global horizon regardless time
+                    zone and regional borders.
                   </p>
                 </div>
               </li>
@@ -70,7 +72,11 @@ export default function Specialist() {
                   src="./specialist/pic-1.png"
                   alt=""
                 />
-                <img src="./specialist/pic-3.png" alt="" className="sp-child wow bounceInRight" />
+                <img
+                  src="./specialist/pic-3.png"
+                  alt=""
+                  className="sp-child wow bounceInRight"
+                />
               </div>
               <div className="sp-img-r-child wow bounceIn">
                 <img src="./specialist/pic-2.png" alt="" />
