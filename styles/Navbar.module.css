@@ -125,6 +125,7 @@
 .navitem:hover .dropdown {
   opacity: 1;
   visibility: visible;
+  transform: translate(8%, 10px);
 }
 
 .navitem:hover .dropdown1 {
@@ -215,8 +216,8 @@
   }
   .dropdown {
     background: #2a2c30;
-    left: 50%;
-    transform: translateX(-50%);
+    /* left: 50%; */
+    transform: translate(30%, 10px) !important;
     z-index: 9999;
     padding: 1rem;
     border-radius: 0.5rem;
