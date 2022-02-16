@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "../styles/Navbar.module.css";
@@ -24,11 +24,13 @@ import { BsPersonFill, BsFillTelephoneFill } from "react-icons/Bs";
 import { BiRightArrowAlt, BiMessageAltDetail } from "react-icons/Bi";
 import { MdOutlineEmail } from "react-icons/Md";
 
-import { useScrollDirection } from "react-use-scroll-direction";
+
 
 import Modal from "react-modal";
 
-import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
+import {server} from '../config/index'
+
+
 
 const customStyles = {
   content: {
@@ -54,7 +56,7 @@ export default function Navbar() {
   const [isMore, setIsMore] = useState(false);
   const [navChange, setNavChange] = useState(true);
   const textInput = useRef(null);
-
+  const [trainings, setTraining] = useState([]);
   // api post
 
   // all states
@@ -93,6 +95,7 @@ export default function Navbar() {
       }
     );
     console.log(posted, "posted");
+    
     if (posted.status === 200) {
       alert("ok");
       toast("Wow so easy!");
@@ -118,10 +121,6 @@ export default function Navbar() {
     setIsOpenModal(true);
   }
 
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = '#f00';
-  // }
 
   function closeModal() {
     setIsOpenModal(false);
@@ -138,6 +137,7 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+
     if (!isSearch) return;
     function handleClick(event) {
       if (textInput.current && !textInput.current.contains(event.target)) {
@@ -146,27 +146,32 @@ export default function Navbar() {
     }
     window.addEventListener("mousedown", handleClick);
     return () => window.removeEventListener("mousedown", handleClick);
+
+
   }, [isSearch]);
 
-  // scrolltop
 
-  const [presentPosition, setPresentPosition] = useState(null);
-
-  const [direction, setDirection] = useState(String);
-  const { isScrollingUp, isScrollingDown } = useScrollDirection();
-
-  const listRef = useRef();
-  const getListSize = () => {
-    // const newWidth = listRef?.current?.clientWidth;
-    // console.log(listRef?.current?.clientWidth);
-    // const newHeight = listRef?.current?.clientHeight;
-    // console.log(newHeight);
-  };
 
 const navChageRef = useRef()
 
 
 useEffect(() => {
+
+
+
+  // Get Data Course
+
+  const posted =  axios.get(
+    `${server}/api/course`
+
+  );
+
+  posted.then(data=>{
+    setTraining(data.data)
+  })
+
+
+
 
   let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -175,16 +180,6 @@ useEffect(() => {
 
     // Scroll top navbar hide open
    let currentPosition = e.target.documentElement.scrollTop;
-
-
-    // mobile navigation
-    // if (previousPosition > currentPosition) {
-    //    setNavChange(true)
-    // } else {
-    //   setNavChange(false)
-    // }
-    // previousPosition = currentPosition;
-  // mobile navigation
 
     if(scrolTop > 160){
       if (previousPosition > currentPosition) {
@@ -201,13 +196,12 @@ useEffect(() => {
       navChageRef.current.className = 'header'
     }
 
-    
-    // Scroll top navbar hide open
-
-
 })
 
-}, [isScrollingDown, isScrollingUp])
+}, [])
+
+
+
 
 
 
@@ -603,30 +597,19 @@ useEffect(() => {
                       <div className="col-12">
                         <div className={styles.dropdown__inner2}>
                           <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>Training</a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Affiliate Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Graphic Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Logo Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web Development
-                              </a>
-                            </li>
-                            {isMore && (
+                            <li><h4 >Trainings</h4></li>
+                            {
+                              trainings.map(training=> (
+                                <li key={training.id} className={styles.dropdown__item}>
+                                  <Link href={training.slug}>
+                                     <a className={styles.dropdown__link}>{training.title}</a>
+                                  </Link>
+                                </li>
+                              ))
+                            }
+                            
+                       
+                            {/* {isMore && (
                               <ul>
                                 <li className={styles.dropdown__item}>
                                   <a className={styles.dropdown__link}>
@@ -654,7 +637,7 @@ useEffect(() => {
                                   </a>
                                 </li>
                               </ul>
-                            )}
+                            )} */}
                           </ul>
                         </div>
                         {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
