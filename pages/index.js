@@ -101,9 +101,9 @@ export default function Home({ posts }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch("http://admin.opediatech.com/api/category");
-//   const posts = await res.json();
+export async function getStaticProps() {
+  const res = await fetch(`${server}/api/portfolio/category`);
+  const posts = await res.json();
 
 //   return {
 //     props: {

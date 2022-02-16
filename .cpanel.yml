@@ -1,5 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/opedxpla/public_html/App
+    - export DEPLOYPATH=/home/opedxpla/public_html
     - /bin/cp * $DEPLOYPATH
  
