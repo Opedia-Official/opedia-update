@@ -30,7 +30,7 @@ export default function Specialist() {
                 Experienced IT professionals are <br />
                 at your service
               </h3>
-              <p>
+              <p className="pera">
                 Every project is handled by a team of industry experts. The
                 proper knowledge, research, analysis, and implementation help us
                 develop your business.
@@ -43,10 +43,10 @@ export default function Specialist() {
                   <FaHeadphonesAlt />
                 </span>
                 <div className="sp-item-info">
-                  <h4>Agile Solution</h4>
-                  <p>
-                    Equipped with high-end technological supports and experts, a
-                    combination of global service provider.
+                  <h4>Robust Support</h4>
+                  <p className="pera">
+                    Professional support within global horizon regardless time
+                    zone and regional borders.
                   </p>
                 </div>
               </li>
@@ -55,10 +55,10 @@ export default function Specialist() {
                   <FaRegLightbulb />
                 </span>
                 <div className="sp-item-info mb-5 mb-md-0">
-                  <h4>Robust Support</h4>
-                  <p>
-                    Professional support within global horizon regardless time
-                    zone and regional borders.
+                  <h4>Agile Solution</h4>
+                  <p className="pera">
+                    Equipped with high-end technological supports and experts, a
+                    combination of global service provider.
                   </p>
                 </div>
               </li>

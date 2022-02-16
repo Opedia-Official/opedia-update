@@ -18,7 +18,7 @@ export default function Update() {
                 <h5> About Company</h5>
                 <h3>Don,t miss our update</h3>
               </div>
-              <p className="pr-140p">
+              <p className="pr-140p pera">
                 Let us help you to build up your business the way you always
                 envisioned. Get in touch with our specialists and let us build
                 the strategy for your business. Start your journey with Opedia,

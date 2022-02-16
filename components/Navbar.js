@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
 
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -47,7 +48,6 @@ const customStyles = {
 Modal.setAppElement("body");
 
 export default function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
@@ -163,53 +163,36 @@ export default function Navbar() {
     // console.log(newHeight);
   };
 
-const navChageRef = useRef()
+  const navChageRef = useRef();
 
+  useEffect(() => {
+    let previousPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
 
-useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      let scrolTop = e.target.documentElement.scrollTop;
 
-  let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
+      // Scroll top navbar hide open
+      let currentPosition = e.target.documentElement.scrollTop;
 
-  window.addEventListener('scroll',(e)=>{
-    let scrolTop = e.target.documentElement.scrollTop;
-
-    // Scroll top navbar hide open
-   let currentPosition = e.target.documentElement.scrollTop;
-
-
-    // mobile navigation
-    // if (previousPosition > currentPosition) {
-    //    setNavChange(true)
-    // } else {
-    //   setNavChange(false)
-    // }
-    // previousPosition = currentPosition;
-  // mobile navigation
-
-    if(scrolTop > 160){
-      if (previousPosition > currentPosition) {
-        
-        navChageRef.current.className = 'header activeNav'
-        setNavChange(true)
-
+      if (scrolTop > 160) {
+        if (previousPosition > currentPosition) {
+          navChageRef.current.className = "header activeNav";
+          setNavChange(true);
+        } else {
+          navChageRef.current.className = "header";
+          setNavChange(false);
+        }
+        previousPosition = currentPosition;
       } else {
-        navChageRef.current.className = 'header'
-        setNavChange(false)
+        navChageRef.current.className = "header";
       }
-      previousPosition = currentPosition;
-    }else{ 
-      navChageRef.current.className = 'header'
-    }
+    });
 
-    
-    // Scroll top navbar hide open
-
-
-})
-
-}, [isScrollingDown, isScrollingUp])
-
-
+    const allData = axios
+      .get("http://admin.opediatech.com/api/service")
+      .then((res) => console.log("allData", res.data));
+  }, [isScrollingDown, isScrollingUp]);
 
   return (
     <>
@@ -221,17 +204,17 @@ useEffect(() => {
                 <li>
                   <a className={styles.socialIconItem} href="#">
                     <span className="s-icon">
-                      <FaMapMarkerAlt />
+                      <FaRegEnvelope />
                     </span>
-                    Shyamoli Square Complex,Dhaka-1207
+                    opedia.technologies@gmail.com
                   </a>
                 </li>
                 <li>
                   <a className={styles.socialIconItem} href="#">
                     <span className="s-icon">
-                      <FaRegEnvelope />
+                      <BsTelephone />
                     </span>
-                    opedia.technologies@gmail.com
+                    01978159172
                   </a>
                 </li>
               </ul>
@@ -264,8 +247,8 @@ useEffect(() => {
         </div>
       </div>
 
-        <header ref={navChageRef} >
-      <div className="container">
+      <header ref={navChageRef}>
+        <div className="container">
           <nav className={styles.navbar}>
             <Link href="/">
               <a className={styles.navlogo}>
@@ -680,7 +663,7 @@ useEffect(() => {
                       setActiveNav("Blog");
                     }}
                   >
-                    Blog
+                    Contact
                   </a>
                 </Link>
               </li>
@@ -866,11 +849,9 @@ useEffect(() => {
             {navChange ? (
               <button
                 className={
-                  
-                     isOpen === false
-                      ? styles.hamburger
-                      : styles.hamburger + " " + styles.active
-                    
+                  isOpen === false
+                    ? styles.hamburger
+                    : styles.hamburger + " " + styles.active
                 }
                 onClick={openMenu}
               >
@@ -878,15 +859,10 @@ useEffect(() => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            ) :   
-            
-            (
+            ) : (
               <button
                 className={
-                  
-                     isOpen === true && styles.hamburger + " " + styles.active
-                     
-                    
+                  isOpen === true && styles.hamburger + " " + styles.active
                 }
                 onClick={openMenu}
               >
@@ -894,8 +870,7 @@ useEffect(() => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            )
-            }
+            )}
           </nav>
         </div>
       </header>

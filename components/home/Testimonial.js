@@ -30,7 +30,7 @@ export default function Testimonial() {
                           <img src="./testimonial/pic-1.png" alt="" />
                           <IoIosArrowRoundDown/>
                       </div>
-                      <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+                      <p className="pera">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
                           good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
                           haggle young delinquent say so I said bite your arm off easy peasy.</p>
                     <div className="testimonial-author-info text-center">
@@ -48,7 +48,7 @@ export default function Testimonial() {
                         <img src="./testimonial/pic-1.png" alt="" />
                         <IoIosArrowRoundDown/>
                     </div>
-                    <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+                    <p className="pera">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
                       good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
                       haggle young delinquent say so I said bite your arm off easy peasy.</p>
                   <div className="testimonial-author-info text-center">
@@ -65,7 +65,7 @@ export default function Testimonial() {
                         <img src="./testimonial/pic-1.png" alt="" />
                         <IoIosArrowRoundDown/>
                     </div>
-                    <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+                    <p className="pera">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
                       good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
                       haggle young delinquent say so I said bite your arm off easy peasy.</p>
                   <div className="testimonial-author-info text-center">
@@ -82,7 +82,7 @@ export default function Testimonial() {
                         <img src="./testimonial/pic-1.png" alt="" />
                         <IoIosArrowRoundDown/>
                     </div>
-                    <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+                    <p className="pera">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
                       good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
                       haggle young delinquent say so I said bite your arm off easy peasy.</p>
                   <div className="testimonial-author-info text-center">
@@ -99,7 +99,7 @@ export default function Testimonial() {
                         <img src="./testimonial/pic-1.png" alt="" />
                         <IoIosArrowRoundDown/>
                     </div>
-                    <p>What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
+                    <p className="pera">What a load of rubbish bits and bobs pear shaped owt to do with me bubble and squeak jolly 
                       good morish tinkety tonk old fruit, car boot my good sir buggered plastered cheeky David, 
                       haggle young delinquent say so I said bite your arm off easy peasy.</p>
                   <div className="testimonial-author-info text-center">
