@@ -17,13 +17,14 @@ import Pricing from "../components/home/Pricing";
 import Testimonial from "../components/home/Testimonial";
 // Import Blog Section
 
+import { server } from "../config/index";
+
 import dynamic from "next/dynamic";
 
 import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
 import WhatsappChat from "../components/whatsappChat";
 import LogoSlider from "../components/LogoSlider";
-
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
@@ -105,10 +106,10 @@ export async function getStaticProps() {
   const res = await fetch(`${server}/api/portfolio/category`);
   const posts = await res.json();
 
-//   return {
-//     props: {
-//       posts,
-//     },
-//     revalidate: 10,
-//   };
-// }
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  };
+}

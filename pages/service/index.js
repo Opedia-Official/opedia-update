@@ -50,13 +50,15 @@ export default function Home({ services }) {
             >
               <div className={"view-service-right-wrapper service"}>
                 <div className="row">
-                  {services.map((item) => (
-                    <div
-                      key={item.id}
-                      className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn"
-                    >
-                      <ServiceItem item={item} />
-                      {/* <Card>
+                  <p>{services.length}</p>
+                  {services.length > 0
+                    ? services.map((item) => (
+                        <div
+                          key={item.id}
+                          className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn"
+                        >
+                          <ServiceItem item={item} />
+                          {/* <Card>
                         <Card.Body>
                           <FaCloud />
                           <Card.Title>Cloud Computing</Card.Title>
@@ -75,8 +77,9 @@ export default function Home({ services }) {
                           </Card.Text>
                         </Card.Body>
                       </Card> */}
-                    </div>
-                  ))}
+                        </div>
+                      ))
+                    : "Loading "}
                   {/* <div className="col-lg-4 col-md-6  col-sm-6 mb-5 wow fadeIn ">
                         <Card >
                           <Card.Body>
@@ -177,7 +180,19 @@ export default function Home({ services }) {
   );
 }
 
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   const res = await fetch("http://admin.opediatech.com/api/service");
+//   const services = await res.json();
+
+//   return {
+//     props: {
+//       services,
+//     },
+//     revalidate: 10,
+//   };
+// }
+
+export async function getServerSideProps() {
   const res = await fetch("http://admin.opediatech.com/api/service");
   const services = await res.json();
 
@@ -185,6 +200,5 @@ export async function getStaticProps() {
     props: {
       services,
     },
-    revalidate: 10,
   };
 }

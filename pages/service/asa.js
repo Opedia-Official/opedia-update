@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { server } from "../../config";
 import axios from "axios";
 import { useState } from "react";
+import context from "react-bootstrap/esm/AccordionContext";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -99,6 +100,32 @@ function SinglePage() {
 
 export default SinglePage;
 
+export const getStaticPaths = async () => {
+  const res = await fetch(`${server}/api/serviceAllCategory`);
+  const allData = res.data;
+
+  const paths = data.map((singlePage) => {
+    return { params: { id: singlePage.id } };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async (context) => {
+  const id = context.params.id;
+  const res = await fetch(`${server}/api/service/${slug}`);
+  const posts = await res.json();
+
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+
 function ServiceDetails({ slug }) {
   const [content, setContent] = useState(null);
 
@@ -113,12 +140,12 @@ function ServiceDetails({ slug }) {
   return (
     <>
       <h2 className={Style.title}>{content?.service_title}</h2>
-
+      {/* <p className={Style.pera}>{content?.service_desc}</p> */}
       <p
         dangerouslySetInnerHTML={{
-          __html: `${content?.service_desc}`,
+          __html: `${content.service_desc}`,
         }}
-        className={Style?.pera}
+        className={Style.pera}
       ></p>
     </>
   );
