@@ -25,11 +25,11 @@ import { BsPersonFill, BsFillTelephoneFill } from "react-icons/Bs";
 import { BiRightArrowAlt, BiMessageAltDetail } from "react-icons/Bi";
 import { MdOutlineEmail } from "react-icons/Md";
 
-import { useScrollDirection } from "react-use-scroll-direction";
+
 
 import Modal from "react-modal";
 
-import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
+import {server} from "../config/index"
 
 const customStyles = {
   content: {
@@ -42,7 +42,7 @@ const customStyles = {
     zIndex: 22342434234234,
     padding: "50px 0",
     border: "1px solid rgb(244, 151, 53)",
-    height: "50rem",
+    height: '70vh'
   },
 };
 Modal.setAppElement("body");
@@ -113,15 +113,13 @@ export default function Navbar() {
   // modal
 
   const [modalIsOpen, setIsOpenModal] = useState(false);
+  const [trainings, setTrainings] = useState([]);
 
   function openModal() {
     setIsOpenModal(true);
   }
 
-  // function afterOpenModal() {
-  //   // references are now sync'd and can be accessed.
-  //   subtitle.style.color = '#f00';
-  // }
+   
 
   function closeModal() {
     setIsOpenModal(false);
@@ -137,35 +135,25 @@ export default function Navbar() {
     setIsSearch(!isSearch);
   };
 
-  useEffect(() => {
-    if (!isSearch) return;
-    function handleClick(event) {
-      if (textInput.current && !textInput.current.contains(event.target)) {
-        setIsSearch(!isSearch);
-      }
-    }
-    window.addEventListener("mousedown", handleClick);
-    return () => window.removeEventListener("mousedown", handleClick);
-  }, [isSearch]);
 
-  // scrolltop
+  const [isLink,setLink]= useState(false)
 
-  const [presentPosition, setPresentPosition] = useState(null);
-
-  const [direction, setDirection] = useState(String);
-  const { isScrollingUp, isScrollingDown } = useScrollDirection();
-
-  const listRef = useRef();
-  const getListSize = () => {
-    // const newWidth = listRef?.current?.clientWidth;
-    // console.log(listRef?.current?.clientWidth);
-    // const newHeight = listRef?.current?.clientHeight;
-    // console.log(newHeight);
-  };
 
   const navChageRef = useRef();
 
   useEffect(() => {
+
+
+    window.location.href == 'http://localhost:3000/' ? setLink(true) : setLink(false)
+
+    // training
+
+    const allData = axios
+    .get(`${server}/api/course`)
+    .then((res) => setTrainings(res.data));
+    // training
+
+
     let previousPosition =
       window.pageYOffset || document.documentElement.scrollTop;
 
@@ -189,11 +177,9 @@ export default function Navbar() {
       }
     });
 
-    const allData = axios
-      .get("http://admin.opediatech.com/api/service")
-      .then((res) => console.log("allData", res.data));
-  }, [isScrollingDown, isScrollingUp]);
 
+  }, [window.location.href]);
+  // console.log(isLink);
   return (
     <>
       <div className="top-header">
@@ -590,7 +576,7 @@ export default function Navbar() {
                             {
                               trainings.map(training=> (
                                 <li key={training.id} className={styles.dropdown__item}>
-                                  <Link href={`${training.slug}`}>
+                                  <Link href={`/training/${training.slug}`}>
                                      <a className={styles.dropdown__link}>{training.title}</a>
                                   </Link>
                                 </li>
@@ -631,8 +617,8 @@ export default function Navbar() {
                         </div>
                         {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
                         </ul>
+                        </div>
                       </div>
-                    </div>
                     </div>
                   </div>
                 </div>
@@ -658,7 +644,8 @@ export default function Navbar() {
                   </a>
                 </Link>
               </li>
-              <li className={styles.navitem}>
+              {
+                isLink  &&  (<li className={styles.navitem}>
                 {/* <Link href="/portfolio"> */}
                 <a
                   // id="#portfolio"
@@ -679,30 +666,10 @@ export default function Navbar() {
                   Portfolio
                 </a>
                 {/* </Link> */}
-              </li>
-              <li className={styles.navitem}>
-                <div className="sample fourteen">
-                  <input
-                    type="text"
-                    ref={textInput}
-                    name="search"
-                    placeholder="search"
-                  />
-                  <button
-                    type="submit"
-                    onClick={SearchHandler}
-                    className="btn btn-search"
-                  >
-                    <FaSearch />
-                  </button>
-                  <button
-                    type="reset"
-                    onClick={resetHandler}
-                    form="form"
-                    className="btn-reset fa fa-times"
-                  ></button>
-                </div>
-              </li>
+              </li>)
+              }
+             
+          
               <li className={styles.navitem}>
                 <Link href="#">
                   <a

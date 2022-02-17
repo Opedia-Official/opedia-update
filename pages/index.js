@@ -23,8 +23,9 @@ import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
 import WhatsappChat from "../components/whatsappChat";
 import LogoSlider from "../components/LogoSlider";
+import {server} from '../config/index'
 
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
@@ -105,10 +106,12 @@ export async function getStaticProps() {
   const res = await fetch(`${server}/api/portfolio/category`);
   const posts = await res.json();
 
-//   return {
-//     props: {
-//       posts,
-//     },
-//     revalidate: 10,
-//   };
-// }
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  };
+}
+
+

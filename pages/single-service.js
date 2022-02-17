@@ -6,7 +6,7 @@ import WhatsappChat from '../components/whatsappChat';
 import dynamic from 'next/dynamic'
 
 
-const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
+let AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
 });
 

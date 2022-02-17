@@ -21,7 +21,7 @@ import WhatsappChat from "../components/whatsappChat";
 
 import Card3D from "react-animated-3d-card";
 
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
