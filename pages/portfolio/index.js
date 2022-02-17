@@ -41,7 +41,6 @@ export default function Portfolio() {
                   <div>
                     <Link href="portfolio-details">
                       <a>
-                        {" "}
                         View Projects <BiRightArrowAlt />
                       </a>
                     </Link>

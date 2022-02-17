@@ -21,11 +21,16 @@ function ServiceItem({ item }) {
     <Card>
       <Card.Body>
         <FaCloud />
-        <Card.Title>Cloud Computing</Card.Title>
+        <Card.Title>{item.service_title}</Card.Title>
         <Card.Text>
-          Construction is a general term the art and science to form
+          <p
+            dangerouslySetInnerHTML={{
+              __html: `${item.service_desc}`,
+            }}
+          ></p>
+
           <div>
-            <Link href={`service/${slug}`}>
+            <Link href={`http://localhost:3000/service/${item.service_slug}`}>
               <a>
                 Service Details <BiRightArrowAlt />
               </a>

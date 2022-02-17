@@ -118,14 +118,11 @@ export default function ShowCase({ posts }) {
                           </div>
                           <div className="show-case-text">
                             <h4>
-                              <Link
-                                href={`/portfolio/${gallary.category_slug}`}
-                              >
-                                <a> {gallary.category_name}</a>
+                              <Link href={`/portfolio/`}>
+                                <a> {gallary.title}</a>
                               </Link>
                             </h4>
                             {/* <p>{gallary.subTitle}</p> */}
-                            {gallary.title}
                           </div>
                         </div>
                       </div>

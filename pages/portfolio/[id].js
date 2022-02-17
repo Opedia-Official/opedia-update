@@ -188,10 +188,11 @@ export const getStaticPaths = async () => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(
-    "http://admin.opediatech.com/public/api/portfolio/category/13"
-  );
-  const posts = await res.json();
+  // const res = await fetch(
+  //   "http://admin.opediatech.com/public/api/portfolio/category/13"
+  // );
+  // const posts = await res.json();
+  const posts = ["gfdgfd"];
 
   return {
     props: {
