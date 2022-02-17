@@ -415,30 +415,19 @@ export default function Navbar() {
                       <div className="col-12">
                         <div className={styles.dropdown__inner2}>
                           <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>Training</a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Affiliate Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Graphic Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Logo Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web Development
-                              </a>
-                            </li>
-                            {isMore && (
+                            <li><h4 >Trainings</h4></li>
+                            {
+                              trainings.map(training=> (
+                                <li key={training.id} className={styles.dropdown__item}>
+                                  <Link href={`${training.slug}`}>
+                                     <a className={styles.dropdown__link}>{training.title}</a>
+                                  </Link>
+                                </li>
+                              ))
+                            }
+                            
+                       
+                            {/* {isMore && (
                               <ul>
                                 <li className={styles.dropdown__item}>
                                   <a className={styles.dropdown__link}>
@@ -470,7 +459,9 @@ export default function Navbar() {
                           </ul>
                         </div>
                         {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
+                        </ul>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
