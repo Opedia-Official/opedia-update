@@ -85,7 +85,7 @@ export default function ShowCase({ posts }) {
             </div>
             <div className="col-md-7">
               <div className="row justify-content-center">
-                {posts.map((gallary, index) => {
+                {gallaries.map((gallary, index) => {
                   return (
                     <div
                       className="col-md-6 col-sm-6  wow fadeIn"
@@ -96,8 +96,8 @@ export default function ShowCase({ posts }) {
                       <div className="showCase-wrap mb-4 ">
                         <div className="show-case-child s-img-wrap">
                           <img
-                            // src={`${gallary.thambnail_image}`}
-                            src={`http://admin.opediatech.com/${gallary.img}`}
+                            src={`${gallary.img}`}
+                            // src={`http://admin.opediatech.com/${gallary.img}`}
                             alt={gallary.portfolio_title}
                           />
                         </div>

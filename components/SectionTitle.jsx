@@ -4,7 +4,7 @@ export default function SectionTitle({ section, title, description }) {
       <div className="section-title">
         <h5>{section}</h5>
         <h3>{title} </h3>
-        <p>{description}</p>
+        <p className="pera">{description}</p>
       </div>
     </>
   );

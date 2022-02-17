@@ -86,7 +86,7 @@ export default function WorkingProcess() {
                   <span className={style.wpIcon}>
                     <FiSettings />
                   </span>
-                  <h3>Custome Plan</h3>
+                  <h3>Custom Plan</h3>
                   {/* <span className={style.wpArrow}>
                                             <BsArrowRight/>
                                             </span> */}

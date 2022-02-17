@@ -125,7 +125,7 @@
 .navitem:hover .dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translate(8%, 10px);
+  transform: translate(8%, 2px);
 }
 
 .navitem:hover .dropdown1 {

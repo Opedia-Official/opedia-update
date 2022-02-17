@@ -44,32 +44,32 @@ export default function Portfolio({ posts }) {
     console.log(text, "text");
     console.log(service, "service");
 
-    const posted = await axios.post(
-      "http://admin.opediatech.com/api/message",
-      {
-        fname: fistName,
-        lname: lastName,
-        email: email,
-        phone: phone,
-        message: text,
-        service: service,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    console.log(posted, "posted");
-    if (posted.status === 200) {
-      alert("ok");
-      toast("Wow so easy!");
-      // closeModal();
-    } else {
-      alert("error");
-      toast("Wow so easy!");
-      // closeModal();
-    }
+    // const posted = await axios.post(
+    //   "http://admin.opediatech.com/api/message",
+    //   {
+    //     fname: fistName,
+    //     lname: lastName,
+    //     email: email,
+    //     phone: phone,
+    //     message: text,
+    //     service: service,
+    //   },
+    //   {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //   }
+    // );
+    // console.log(posted, "posted");
+    // if (posted.status === 200) {
+    //   alert("ok");
+    //   toast("Wow so easy!");
+    //   // closeModal();
+    // } else {
+    //   alert("error");
+    //   toast("Wow so easy!");
+    //   // closeModal();
+    // }
   };
 
   return (
@@ -261,17 +261,17 @@ export default function Portfolio({ posts }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/todos");
-  const posts = await res.json();
+// export async function getStaticProps() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/todos");
+//   const posts = await res.json();
 
-  return {
-    props: {
-      posts,
-    },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10, // In seconds
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//     // Next.js will attempt to re-generate the page:
+//     // - When a request comes in
+//     // - At most once every 10 seconds
+//     revalidate: 10, // In seconds
+//   };
+// }

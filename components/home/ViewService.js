@@ -23,7 +23,7 @@ export default function ViewService({ ViewServices }) {
                 section="About Company"
                 title="Software & IT services for you"
               />
-              <p>
+              <p className="pera">
                 We help businesses to boost performance technically and work on
                 initiatives to enhance brand presence on the market, develop a
                 digital platform that fits your exact needs in terms of
@@ -67,7 +67,6 @@ export default function ViewService({ ViewServices }) {
                             <div>
                               <Link href={`/service/${service.id}`}>
                                 <a>
-                                  {" "}
                                   Service Details <BiRightArrowAlt />
                                 </a>
                               </Link>

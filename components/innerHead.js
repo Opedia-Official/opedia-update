@@ -3,19 +3,25 @@ import { Breadcrumb } from "react-bootstrap";
 import { FaHome } from "react-icons/fa";
 import Link from "next/link";
 
-export default function InnerHead({title}) {
-       
-  return <>
-    <div className="hero-section-area" >
-
-      <div className={" Hero-top-section"+" " +HomeStyle.heroBackground+" "+ "InnerHead"} >
-      <div className="container">
-
+export default function InnerHead({ title }) {
+  return (
+    <>
+      <div className="hero-section-area">
+        <div
+          className={
+            " Hero-top-section" +
+            " " +
+            HomeStyle.heroBackground +
+            " " +
+            "InnerHead"
+          }
+        >
+          <div className="container">
             <div className="row">
-                <div className="col-md-12">
-                    <div className="breadcrumb-area">
-                        <h2>{title}</h2>
-                    <Breadcrumb >
+              <div className="col-md-12">
+                <div className="breadcrumb-area">
+                  <h2>{title}</h2>
+                  {/* <Breadcrumb >
                      
                       <Breadcrumb.Item > <FaHome/>  <Link  href="/">  Home     </Link> </Breadcrumb.Item>
                   
@@ -23,17 +29,13 @@ export default function InnerHead({title}) {
                       <Link  href="/">  Home     </Link>
                       </Breadcrumb.Item>
                       <Breadcrumb.Item active>Data</Breadcrumb.Item>
-                    </Breadcrumb>
-                    </div>
-                
+                    </Breadcrumb> */}
                 </div>
+              </div>
             </div>
-              
-           
+          </div>
         </div>
       </div>
-
-    </div>
-
-  </>;
+    </>
+  );
 }

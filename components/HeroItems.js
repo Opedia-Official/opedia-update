@@ -228,7 +228,9 @@ export default class AsNavFor extends Component {
                 </div>
                 <div className="hero-bottom-info">
                   <h4>Web Design</h4>
-                  <p>Static, Dynamic & Responsive solution with recursive UI</p>
+                  <p className="pera">
+                    Static, Dynamic & Responsive solution with recursive UI
+                  </p>
                 </div>
               </div>
             </div>

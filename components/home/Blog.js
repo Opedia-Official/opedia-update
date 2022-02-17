@@ -47,7 +47,7 @@ export default function Blog () {
                       Standard Part
                     </a>
                   </h3>
-                  <p>
+                  <p className="pera">
                     A wonderful serenity has taken possssion of my entire souing
                     like these sweet morning spring whch enjoy with my whole
                     heart I am alone, and feel the charm of existenceths spot

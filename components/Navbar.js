@@ -2,9 +2,10 @@ import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
+import { BsTelephone } from "react-icons/bs";
 
 import axios from "axios";
-
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "../styles/Navbar.module.css";
@@ -24,13 +25,11 @@ import { BsPersonFill, BsFillTelephoneFill } from "react-icons/Bs";
 import { BiRightArrowAlt, BiMessageAltDetail } from "react-icons/Bi";
 import { MdOutlineEmail } from "react-icons/Md";
 
-
+import { useScrollDirection } from "react-use-scroll-direction";
 
 import Modal from "react-modal";
 
-import {server} from '../config/index'
-
-
+import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 
 const customStyles = {
   content: {
@@ -49,14 +48,13 @@ const customStyles = {
 Modal.setAppElement("body");
 
 export default function Navbar() {
-
   const [isOpen, setIsOpen] = useState(false);
   const [isActiveNav, setActiveNav] = useState("Home");
   const [isSearch, setIsSearch] = useState(false);
   const [isMore, setIsMore] = useState(false);
   const [navChange, setNavChange] = useState(true);
   const textInput = useRef(null);
-  const [trainings, setTraining] = useState([]);
+
   // api post
 
   // all states
@@ -95,7 +93,6 @@ export default function Navbar() {
       }
     );
     console.log(posted, "posted");
-    
     if (posted.status === 200) {
       alert("ok");
       toast("Wow so easy!");
@@ -121,6 +118,10 @@ export default function Navbar() {
     setIsOpenModal(true);
   }
 
+  // function afterOpenModal() {
+  //   // references are now sync'd and can be accessed.
+  //   subtitle.style.color = '#f00';
+  // }
 
   function closeModal() {
     setIsOpenModal(false);
@@ -137,7 +138,6 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-
     if (!isSearch) return;
     function handleClick(event) {
       if (textInput.current && !textInput.current.contains(event.target)) {
@@ -146,64 +146,53 @@ export default function Navbar() {
     }
     window.addEventListener("mousedown", handleClick);
     return () => window.removeEventListener("mousedown", handleClick);
-
-
   }, [isSearch]);
 
+  // scrolltop
 
+  const [presentPosition, setPresentPosition] = useState(null);
 
-const navChageRef = useRef()
+  const [direction, setDirection] = useState(String);
+  const { isScrollingUp, isScrollingDown } = useScrollDirection();
 
+  const listRef = useRef();
+  const getListSize = () => {
+    // const newWidth = listRef?.current?.clientWidth;
+    // console.log(listRef?.current?.clientWidth);
+    // const newHeight = listRef?.current?.clientHeight;
+    // console.log(newHeight);
+  };
 
-useEffect(() => {
+  const navChageRef = useRef();
 
+  useEffect(() => {
+    let previousPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
 
+    window.addEventListener("scroll", (e) => {
+      let scrolTop = e.target.documentElement.scrollTop;
 
-  // Get Data Course
+      // Scroll top navbar hide open
+      let currentPosition = e.target.documentElement.scrollTop;
 
-  const posted =  axios.get(
-    `${server}/api/course`
-
-  );
-
-  posted.then(data=>{
-    setTraining(data.data)
-  })
-
-
-
-
-  let previousPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-  window.addEventListener('scroll',(e)=>{
-    let scrolTop = e.target.documentElement.scrollTop;
-
-    // Scroll top navbar hide open
-   let currentPosition = e.target.documentElement.scrollTop;
-
-    if(scrolTop > 160){
-      if (previousPosition > currentPosition) {
-        
-        navChageRef.current.className = 'header activeNav'
-        setNavChange(true)
-
+      if (scrolTop > 160) {
+        if (previousPosition > currentPosition) {
+          navChageRef.current.className = "header activeNav";
+          setNavChange(true);
+        } else {
+          navChageRef.current.className = "header";
+          setNavChange(false);
+        }
+        previousPosition = currentPosition;
       } else {
-        navChageRef.current.className = 'header'
-        setNavChange(false)
+        navChageRef.current.className = "header";
       }
-      previousPosition = currentPosition;
-    }else{ 
-      navChageRef.current.className = 'header'
-    }
+    });
 
-})
-
-}, [])
-
-
-
-
-
+    const allData = axios
+      .get("http://admin.opediatech.com/api/service")
+      .then((res) => console.log("allData", res.data));
+  }, [isScrollingDown, isScrollingUp]);
 
   return (
     <>
@@ -215,17 +204,17 @@ useEffect(() => {
                 <li>
                   <a className={styles.socialIconItem} href="#">
                     <span className="s-icon">
-                      <FaMapMarkerAlt />
+                      <FaRegEnvelope />
                     </span>
-                    Shyamoli Square Complex,Dhaka-1207
+                    opedia.technologies@gmail.com
                   </a>
                 </li>
                 <li>
                   <a className={styles.socialIconItem} href="#">
                     <span className="s-icon">
-                      <FaRegEnvelope />
+                      <BsTelephone />
                     </span>
-                    opedia.technologies@gmail.com
+                    01978159172
                   </a>
                 </li>
               </ul>
@@ -258,8 +247,8 @@ useEffect(() => {
         </div>
       </div>
 
-        <header ref={navChageRef} >
-      <div className="container">
+      <header ref={navChageRef}>
+        <div className="container">
           <nav className={styles.navbar}>
             <Link href="/">
               <a className={styles.navlogo}>
@@ -637,11 +626,13 @@ useEffect(() => {
                                   </a>
                                 </li>
                               </ul>
-                            )} */}
+                            )}
                           </ul>
                         </div>
                         {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
+                        </ul>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -663,7 +654,7 @@ useEffect(() => {
                       setActiveNav("Blog");
                     }}
                   >
-                    Blog
+                    Contact
                   </a>
                 </Link>
               </li>
@@ -849,11 +840,9 @@ useEffect(() => {
             {navChange ? (
               <button
                 className={
-                  
-                     isOpen === false
-                      ? styles.hamburger
-                      : styles.hamburger + " " + styles.active
-                    
+                  isOpen === false
+                    ? styles.hamburger
+                    : styles.hamburger + " " + styles.active
                 }
                 onClick={openMenu}
               >
@@ -861,15 +850,10 @@ useEffect(() => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            ) :   
-            
-            (
+            ) : (
               <button
                 className={
-                  
-                     isOpen === true && styles.hamburger + " " + styles.active
-                     
-                    
+                  isOpen === true && styles.hamburger + " " + styles.active
                 }
                 onClick={openMenu}
               >
@@ -877,8 +861,7 @@ useEffect(() => {
                 <span className={styles.bar}></span>
                 <span className={styles.bar}></span>
               </button>
-            )
-            }
+            )}
           </nav>
         </div>
       </header>

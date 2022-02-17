@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Head from "next/head";
 import HeroSlide from "../components/HeroSlide";
 import ExpTeam from "../components/ExpTeam";
 
@@ -11,9 +10,6 @@ import ShowCase from "../components/home/ShowCase";
 import ShowCaseCounter from "../components/home/ShowCaseCounter";
 // Import Update Section
 import Update from "../components/home/Update";
-//Import Expert Workers section
-import ExpartWorkers from "../components/home/ExpartWorkers";
-//Import Speacialist Section
 import Specialist from "../components/home/Specialist";
 //Import Pricing Section
 import Pricing from "../components/home/Pricing";
@@ -25,10 +21,8 @@ import dynamic from "next/dynamic";
 
 import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
-import { server } from "../config/index";
-
-import { HiOutlineArrowNarrowUp } from "react-icons/hi";
 import WhatsappChat from "../components/whatsappChat";
+import LogoSlider from "../components/LogoSlider";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -51,9 +45,11 @@ export default function Home({ posts }) {
 
       <ExpTeam />
 
+      <LogoSlider />
       <ViewService />
 
-      <ShowCase posts={posts} />
+      {/* <ShowCase posts={posts} /> */}
+      <ShowCase />
 
       <ShowCaseCounter />
 
@@ -109,10 +105,10 @@ export async function getStaticProps() {
   const res = await fetch(`${server}/api/portfolio/category`);
   const posts = await res.json();
 
-  return {
-    props: {
-      posts,
-    },
-    revalidate: 10,
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//     revalidate: 10,
+//   };
+// }
