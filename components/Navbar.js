@@ -601,7 +601,7 @@ useEffect(() => {
                             {
                               trainings.map(training=> (
                                 <li key={training.id} className={styles.dropdown__item}>
-                                  <Link href={training.slug}>
+                                  <Link href={`${training.slug}`}>
                                      <a className={styles.dropdown__link}>{training.title}</a>
                                   </Link>
                                 </li>
