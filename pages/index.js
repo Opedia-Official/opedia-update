@@ -17,13 +17,15 @@ import Pricing from "../components/home/Pricing";
 import Testimonial from "../components/home/Testimonial";
 // Import Blog Section
 
+import { server } from "../config/index";
+
 import dynamic from "next/dynamic";
 
 import WorkingProcess from "../components/WorkingProcess";
 import { useEffect } from "react";
 import WhatsappChat from "../components/whatsappChat";
 import LogoSlider from "../components/LogoSlider";
-import {server} from '../config/index'
+
 
 let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,

@@ -7,9 +7,7 @@ import MyVerticallyCentredModal from "../components/MyVerticallyCentredModal";
 export default function ExpTeam({ expertTeams }) {
   const [modalShow, setModalShow] = useState(false);
 
-  //   const isChecked = (e)=>{
-  //       e.target.checked ? e.target.parentElement.nextSibling.className = 'checked' : e.target.parentElement.nextSibling.className = ''
-  //   }
+
 
   return (
     <>

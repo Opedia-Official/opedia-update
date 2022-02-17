@@ -29,7 +29,9 @@ import { MdOutlineEmail } from "react-icons/Md";
 
 import Modal from "react-modal";
 
-import {server} from "../config/index"
+
+import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
+import { ClientURL, server } from "../config/index";
 
 const customStyles = {
   content: {
@@ -65,6 +67,9 @@ export default function Navbar() {
   const [text, setText] = useState("");
   const [service, setService] = useState("");
 
+  // services state
+  const [allCategory, setAllCategory] = useState([]);
+
   const contactData = {
     fname: fistName,
     lname: lastName,
@@ -75,11 +80,11 @@ export default function Navbar() {
   };
 
   const Contacthandler = async () => {
-    console.log(lastName, "name");
-    console.log(email, "email");
-    console.log(phone, "phone");
-    console.log(text, "text");
-    console.log(service, "service");
+    // console.log(lastName, "name");
+    // console.log(email, "email");
+    // console.log(phone, "phone");
+    // console.log(text, "text");
+    // console.log(service, "service");
 
     const posted = await axios.post(
       "http://admin.opediatech.com/api/message",
@@ -92,7 +97,7 @@ export default function Navbar() {
         },
       }
     );
-    console.log(posted, "posted");
+    // console.log(posted, "posted");
     if (posted.status === 200) {
       alert("ok");
       toast("Wow so easy!");
@@ -177,9 +182,18 @@ export default function Navbar() {
       }
     });
 
+    // allcategory called
+    const allCategory = axios
+      .get(`${server}/api/serviceAllCategory`)
+      .then((res) => {
+        setAllCategory(res.data);
+        // console.log("allCategory", res.data);
+      });
 
   }, [window.location.href]);
-  // console.log(isLink);
+
+  // console.log(allCategory, "allCategory");
+
   return (
     <>
       <div className="top-header">
@@ -313,211 +327,18 @@ export default function Navbar() {
                 <div className={styles.dropdown}>
                   <div className="containerr">
                     <div className="row justify-content-center">
-                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
-                        <div className={styles.dropdown__inner}>
-                          <h2 className={styles.dropdown__title}>
-                            Web & Software
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web Development
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Apps Development
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Mern Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Api create and integration
-                              </a>
-                            </li>
-                            {isMore && (
-                              <ul>
-                                <li className={styles.dropdown__item}>
-                                  <a className={styles.dropdown__link}>
-                                    Digital Marketing
-                                  </a>
-                                </li>
-                                <li className={styles.dropdown__item}>
-                                  <a className={styles.dropdown__link}>
-                                    Dashboard Design
-                                  </a>
-                                </li>
-                                <li className={styles.dropdown__item}>
-                                  <a className={styles.dropdown__link}>
-                                    Single Page Application
-                                  </a>
-                                </li>
-                                <li className={styles.dropdown__item}>
-                                  <a className={styles.dropdown__link}>
-                                    React Application
-                                  </a>
-                                </li>
-                                <li className={styles.dropdown__item}>
-                                  <a className={styles.dropdown__link}>
-                                    Wordpress Design and Development
-                                  </a>
-                                </li>
-                              </ul>
-                            )}
-                          </ul>
+                      {allCategory.map((singleCategory) => (
+                        <div className="col-md borderLeft col-xl mb-4 mb-xl-0">
+                          <div className={styles.dropdown__inner}>
+                            <h2 className={styles.dropdown__title}>
+                              {singleCategory.category_name}
+                            </h2>
+                            <SingleServiceCompo
+                              singleCategory={singleCategory}
+                            />
+                          </div>
                         </div>
-                      </div>
-                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
-                        <div className={styles.dropdown__inner}>
-                          <h2 className={styles.dropdown__title}>
-                            Digital Marketing
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                SEO Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                SMM Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Email Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                F-Commerce Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Google Ads
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-
-                      <div className="col-md-12 borderLeft col-xl-2">
-                        <div className={styles.dropdown__inner}>
-                          <h2 className={styles.dropdown__title}>
-                            Dropdown Title
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Digital Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Affiliate Marketing
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Graphic Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Logo Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-md-12 borderLeft col-xl-2 mb-4 mb-xl-0">
-                        <div
-                          className={
-                            (styles.dropdown__inner, styles.dropdown__last)
-                          }
-                          // style={{ borderRight: "1px solid #2f6eb5" }}
-                        >
-                          <h2 className={styles.dropdown__title}>
-                            Product Design
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                UI, UX Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Web App Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Mobile App Design
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Product Redesign
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Application Solution
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-md-12 borderLeft col-xl-3 mb-4 mb-xl-0">
-                        <div className={styles.dropdown__inner}>
-                          <h2 className={styles.dropdown__title}>
-                            Multimedia & Printing
-                          </h2>
-                          <ul className={styles.dropdown__list}>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Corporate Brand Guideline
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                2D & 3D Video Creation
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Promotional Video Creation
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Video Editing Service
-                              </a>
-                            </li>
-                            <li className={styles.dropdown__item}>
-                              <a className={styles.dropdown__link}>
-                                Corporate Printing <br /> Service & Delivery
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                      ))}
                     </div>
                   </div>
                   <p
@@ -833,5 +654,29 @@ export default function Navbar() {
         </div>
       </header>
     </>
+  );
+}
+
+function SingleServiceCompo({ singleCategory }) {
+  const [marketing, setMarketing] = useState([]);
+
+  useEffect(() => {
+    const marketingData = axios
+      .get(`${server}/api/service-category/${singleCategory.category_slug}`)
+      .then((res) => {
+        setMarketing(res.data);
+      });
+  }, []);
+
+  return (
+    <ul className={styles.dropdown__list}>
+      {marketing.map((item) => (
+        <li className={styles.dropdown__item}>
+          <Link href={`${ClientURL}service/${item.service_slug}`}>
+            <a className={styles.dropdown__link}>{item.service_title}</a>
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 }
