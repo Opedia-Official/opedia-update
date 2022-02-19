@@ -26,7 +26,6 @@ import { useEffect } from "react";
 import WhatsappChat from "../components/whatsappChat";
 import LogoSlider from "../components/LogoSlider";
 
-
 let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
@@ -49,6 +48,7 @@ export default function Home({ posts }) {
       <ExpTeam />
 
       <LogoSlider />
+
       <ViewService />
 
       {/* <ShowCase posts={posts} /> */}
@@ -115,5 +115,3 @@ export async function getStaticProps() {
     revalidate: 10,
   };
 }
-
-
