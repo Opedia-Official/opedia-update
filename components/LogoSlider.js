@@ -8,7 +8,7 @@ import Meta from "./Meta";
 
 // import reactJS from "../public/webLogo/django.png";
 
-const reactJS = "./webLogo/ReactJS logo.png";
+const reactJS = "./webLogo/ReactJS_logo.png";
 const nextJS = "./webLogo/Nextjs.png";
 const nodeJS = "./webLogo/nodejs.png";
 const djaongo = "./webLogo/django.png";
