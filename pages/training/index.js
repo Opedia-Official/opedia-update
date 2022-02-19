@@ -26,7 +26,7 @@ export default function Portfolio({courses} ) {
             <div className="col-md-6">
               <div className="section-title text-center mb-50">
                 <h5>Courses</h5>
-                <h3>Our Expert Worker.</h3>
+                <h3>Our Best Courses.</h3>
               </div>
             </div>
           </div>

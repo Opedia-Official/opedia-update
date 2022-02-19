@@ -17,10 +17,15 @@ export default function Portfolio({ cats,params} ) {
 
     new WOW.WOW().init();
   }, []);
+
+  const portsTitle = params.catSlug.replace(
+    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+    " "
+  );
   return (
     <>
 
- <Meta title = {params.catSlug} />
+ <Meta title = {portsTitle} />
     <WhatsappChat/>
       <InnerHead title="Portfolio" />
       <div className="portfolio-area">
