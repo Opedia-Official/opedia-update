@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import WhatsappChat from "../../components/whatsappChat";
 import AnimatedCursor from "react-animated-cursor";
 import { server } from "../../config";
-export default function Portfolio({categories} ) {
+import Meta from '../../components/Meta'
+export default function Portfolio({courses} ) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.WOW = require("wowjs");
@@ -16,6 +17,7 @@ export default function Portfolio({categories} ) {
   }, []);
   return (
     <>
+    <Meta title = "training" />
     <WhatsappChat/>
       <InnerHead title="Portfolio" />
       <div className="portfolio-area">
@@ -23,7 +25,7 @@ export default function Portfolio({categories} ) {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <div className="section-title text-center mb-50">
-                <h5>Expert Worker2</h5>
+                <h5>Courses</h5>
                 <h3>Our Expert Worker.</h3>
               </div>
             </div>
@@ -34,20 +36,20 @@ export default function Portfolio({categories} ) {
             data-wow-delay="1s"
           >
             {
-              categories.map(category=>{
+              courses.map(course=>{
                 return (
                   <div className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">
                     <Card>
-                      <Card.Img src={`${server}/${category.img}`} />
+                      <Card.Img src={`${server}/${course.Featured_img}`} />
                     </Card>
                     <div className="portfolio-info">
-                      <span>{category.title}</span>
-                      <h2>{category.category_name}</h2>
+                      <span>{course.title}</span>
+                      <h2>{course.course_name}</h2>
                       <div>
-                        <Link href={`/portfolio/category/${category.category_slug}`}>
+                        <Link href={`/training/${course.slug}`}>
                           <a>
-                            View Projects <BiRightArrowAlt />
+                            View details <BiRightArrowAlt />
                           </a>
                         </Link>
                       </div>
@@ -77,17 +79,16 @@ export default function Portfolio({categories} ) {
 }
 
 
-// }
 
 export async function getStaticProps() {
   
-  const res = await fetch( `${server}/api/portfolio/category`);
-  const categories = await res.json();
+  const res = await fetch( `${server}/api/course`);
+  const courses = await res.json();
 
   
   return {
     props:{
-      categories
+        courses
     },
     revalidate: 10,
   }

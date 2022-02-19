@@ -9,6 +9,7 @@ import { MdOutlineDesignServices } from "react-icons/md";
 import WhatsappChat from "../../components/whatsappChat";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
+import {ClientURL} from '../../config/index'
 
 function ServiceItem({ item }) {
   const slug = item.service_title
@@ -30,7 +31,7 @@ function ServiceItem({ item }) {
           ></p>
 
           <div>
-            <Link href={`http://localhost:3000/service/${item.service_slug}`}>
+            <Link href={`${ClientURL}/${item.service_slug}`}>
               <a>
                 Service Details <BiRightArrowAlt />
               </a>

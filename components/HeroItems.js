@@ -1,6 +1,7 @@
 // import Head from "next/head";
 import { FaRegLightbulb } from "react-icons/fa";
 import Head from "next/head";
+import Image from 'next/image';
 
 import React, { Component } from "react";
 import Slider from "react-slick";
@@ -114,7 +115,11 @@ export default class AsNavFor extends Component {
                 data-wow-duration="3s"
               >
                 <div className="hero-right pt-40 ">
-                  <img src="./hero/pic-1.png" alt="" />
+                <Image
+                    src='/hero/pic-1.png'
+                    alt='opediatech'
+                    layout='fill'
+                />
                 </div>
               </div>
             </div>
@@ -145,7 +150,12 @@ export default class AsNavFor extends Component {
 
               <div className="col-md-6">
                 <div className="hero-right pt-40 ">
-                  <img src="./hero/pic-2.png" alt="" />
+                <Image
+                    src='/hero/pic-2.png'
+                    alt='opediatech'
+                    layout='fill'
+                />
+                 
                 </div>
               </div>
             </div>
@@ -176,7 +186,12 @@ export default class AsNavFor extends Component {
 
               <div className="col-md-6">
                 <div className="hero-right pt-40 ">
-                  <img src="./hero/pic-3.png" alt="" />
+                <Image
+                    src='/hero/pic-3.png'
+                    alt='opediatech'
+                    layout='fill'
+                />
+             
                 </div>
               </div>
             </div>
@@ -204,7 +219,12 @@ export default class AsNavFor extends Component {
 
               <div className="col-md-6">
                 <div className="hero-right pt-40">
-                  <img src="./hero/pic-4.png" alt="" />
+                <Image
+                    src='/hero/pic-4.png'
+                    alt='opediatech'
+                    layout='fill'
+                />
+              
                 </div>
               </div>
             </div>

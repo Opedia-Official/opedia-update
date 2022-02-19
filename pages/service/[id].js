@@ -11,7 +11,7 @@ import { server } from "../../config";
 import axios from "axios";
 import { useState } from "react";
 
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 

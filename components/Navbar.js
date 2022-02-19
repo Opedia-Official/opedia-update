@@ -19,7 +19,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
-
+import { useRouter } from 'next/router'
 import { BsPersonFill, BsFillTelephoneFill } from "react-icons/Bs";
 
 import { BiRightArrowAlt, BiMessageAltDetail } from "react-icons/Bi";
@@ -138,9 +138,10 @@ export default function Navbar() {
   const [isLink, setLink] = useState(false);
 
   const navChageRef = useRef();
-
+  const router = useRouter();
+ 
   useEffect(() => {
-    window.location.href == "http://localhost:3000/"
+    router.pathname == "/"
       ? setLink(true)
       : setLink(false);
 
@@ -363,7 +364,7 @@ export default function Navbar() {
                 </div>
               </li>
               <li className={styles.navitem}>
-                <Link href="/team">
+                <Link href="/training">
                   <a
                     id=""
                     className={

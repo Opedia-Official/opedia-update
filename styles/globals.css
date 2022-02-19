@@ -702,6 +702,10 @@ ul.social {
     display: flex;
     justify-content: flex-end;
     margin-right: 50px;
+    position: relative;
+    width: 80%;
+    height: 522px;
+    margin-top: 40px;
 }
 
 .hero-left h2 {
@@ -1072,6 +1076,8 @@ ul.social {
 .show-case-features img {
     max-height: 613px;
     width: 100%;
+    height: 613px;
+    object-fit: cover;
 }
 
 .showCase-wrap {
@@ -1163,7 +1169,7 @@ ul.social {
     width: 100%;
     max-height: 297px;
     height: 297px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .show-case-features {

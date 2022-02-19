@@ -1,6 +1,7 @@
 import { FaYoutube } from "react-icons/fa";
 import SectionTitle from "./SectionTitle";
 import { useState } from "react";
+import Image from 'next/image';
 
 import MyVerticallyCentredModal from "../components/MyVerticallyCentredModal";
 
@@ -16,6 +17,7 @@ export default function ExpTeam({ expertTeams }) {
           <div className="row align-items-center">
             <div className="col-md-6 wow fadeIn" data-wow-duration="2s">
               <div className="expTeam-left ">
+             
                 <img
                   className="parent-pic"
                   src="./experienceTeam/pic-1.png"

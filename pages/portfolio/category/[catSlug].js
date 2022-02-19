@@ -1,13 +1,16 @@
 import { Card } from "react-bootstrap";
 import { BiRightArrowAlt } from "react-icons/bi";
-import InnerHead from "../../components/innerHead";
+import InnerHead from "../../../components/innerHead";
 import Link from "next/link";
 import { useEffect } from "react";
-import WhatsappChat from "../../components/whatsappChat";
+import WhatsappChat from "../../../components/whatsappChat";
 import AnimatedCursor from "react-animated-cursor";
-import { server } from "../../config";
-export default function Portfolio({categories} ) {
+
+import { server } from "../../../config";
+
+export default function Portfolio({ cats} ) {
   useEffect(() => {
+      console.log(  cats)
     if (typeof window !== "undefined") {
       window.WOW = require("wowjs");
     }
@@ -34,18 +37,18 @@ export default function Portfolio({categories} ) {
             data-wow-delay="1s"
           >
             {
-              categories.map(category=>{
+              cats.map(cat=>{
                 return (
-                  <div className="col-lg-4 col-sm-6">
+                  <div key={cat.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">
                     <Card>
-                      <Card.Img src={`${server}/${category.img}`} />
+                      <Card.Img src={`${server}/${cat.thambnail_image}`} />
                     </Card>
                     <div className="portfolio-info">
-                      <span>{category.title}</span>
-                      <h2>{category.category_name}</h2>
+                      <span>{cat.portfolio_title}</span>
+                      <h2>{cat.project_name}</h2>
                       <div>
-                        <Link href={`/portfolio/category/${category.category_slug}`}>
+                        <Link href={`/portfolio/${cat.portfolio_slug}`}>
                           <a>
                             View Projects <BiRightArrowAlt />
                           </a>
@@ -77,20 +80,41 @@ export default function Portfolio({categories} ) {
 }
 
 
-// }
 
-export async function getStaticProps() {
-  
-  const res = await fetch( `${server}/api/portfolio/category`);
-  const categories = await res.json();
 
-  
+export async function getStaticPaths() {
+    const res = await fetch(`${server}/api/portfolio/category`);
+    const categories = await res.json();
+
+  const paths = categories.map(category=>{
+      return {
+          params:{
+            catSlug: `${category.category_slug}`
+          }
+      }
+  })
   return {
-    props:{
-      categories
-    },
-    revalidate: 10,
+      paths,
+      fallback:false
   }
-}
+
+
+
+  }
+
+export async function getStaticProps(context) {
+    const { params } = context
+    
+    const res = await fetch( `${server}/api/portfolio/category/${params.catSlug}`);
+    const cats = await res.json();
+
+    
+    return {
+      props:{
+        cats
+      },
+      revalidate: 10,
+    }
+  }
 
 

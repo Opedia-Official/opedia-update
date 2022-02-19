@@ -1,22 +1,9 @@
 import { useState } from "react";
 
 import {
-  FaCloud,
-  FaDatabase,
   FaRegHeart,
   FaHeart,
-  FaRegSmileBeam,
-  FaFacebookF,
-  FaRegPaperPlane,
-  FaRegLightbulb,
-  FaPlaneDeparture,
-  FaAngleDoubleRight,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-  FaHeadphonesAlt,
 } from "react-icons/fa";
-import { MdOutlineDesignServices } from "react-icons/md";
 import { FiShare2 } from "react-icons/Fi";
 
 import SectionTitle from "../SectionTitle";
@@ -24,13 +11,13 @@ import SectionTitle from "../SectionTitle";
 import "swiper/css";
 import { gallaries, sliderData } from "../../Utils/fakeData";
 import Link from "next/link";
-
-export default function ShowCase({ posts }) {
+import { server } from "../../config";
+export default function ShowCase({ portCats }) {
   const [isReact, setIsReact] = useState(false);
   // const {Section,featured,gallaries}= Gallaries
   // const {sectionHead,title, description}  = Section;
 
-  console.log("portfolios posts: ", posts);
+  console.log("portfolios posts: ", portCats);
 
   return (
     <>
@@ -54,51 +41,65 @@ export default function ShowCase({ posts }) {
             data-wow-duration="1s"
             data-wow-delay="0.5s"
           >
-            <div className="col-md-5 col-sm-8">
-              <div className="showCase-wrap mb-4 mb-md-0">
-                <div className="show-case-features  s-img-wrap">
-                  <img src="./ShowCase-gallary/pic-1.png" alt="" />
-                </div>
-                <div className="show-case-info">
-                  <div className="s-action">
-                    {isReact ? (
-                      <span onClick={() => setIsReact(!isReact)}>
-                        <FaHeart />
-                      </span>
-                    ) : (
-                      <span onClick={() => setIsReact(!isReact)}>
-                        <FaRegHeart />
-                      </span>
-                    )}
-                    <span>
-                      <FiShare2 />
-                    </span>
+             {
+               portCats.map((cat)=>{
+                 return (
+                  cat.isFeatured == 1 && (
+                    <div key={cat.id} className="col-md-5 col-sm-8">
+                    <div className="showCase-wrap mb-4 mb-md-0">
+                      <div className="show-case-features  s-img-wrap">
+                        <img src={`${server}/${cat.img}`} alt={cat.category_name} />
+                      </div>
+                      <div className="show-case-info">
+                        <div className="s-action">
+                          {isReact ? (
+                            <span onClick={() => setIsReact(!isReact)}>
+                              <FaHeart />
+                            </span>
+                          ) : (
+                            <span onClick={() => setIsReact(!isReact)}>
+                              <FaRegHeart />
+                            </span>
+                          )}
+                          <span>
+                            <FiShare2 />
+                          </span>
+                        </div>
+                        <div className="show-case-text">
+                          <h4>
+                          <Link href={`/portfolio/category/${cat.category_slug}`}>
+                                <a> {cat.category_name}</a>
+                              </Link>
+                          </h4>
+                          <p>{cat.title}</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="show-case-text">
-                    <h4>
-                      <a href="#"> Data Research Analysis </a>
-                    </h4>
-                    <p>Cloud Computing</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  )
+
+                 
+                 )
+               })
+             }
+
+
             <div className="col-md-7">
               <div className="row justify-content-center">
-                {gallaries.map((gallary, index) => {
+                {portCats.map((port) => {
                   return (
-                    <div
+                    port.isFeatured == null && (
+                      <div
                       className="col-md-6 col-sm-6  wow fadeIn"
                       data-wow-duration="1s"
                       data-wow-delay="0.5s"
-                      key={gallary.id}
+                      key={port.id}
                     >
                       <div className="showCase-wrap mb-4 ">
                         <div className="show-case-child s-img-wrap">
                           <img
-                            src={`${gallary.img}`}
-                            // src={`http://admin.opediatech.com/${gallary.img}`}
-                            alt={gallary.portfolio_title}
+                            src={`${server}/${port.img}`}
+                            alt={port.category_name}
                           />
                         </div>
                         <div className="show-case-info">
@@ -118,19 +119,23 @@ export default function ShowCase({ posts }) {
                           </div>
                           <div className="show-case-text">
                             <h4>
-                              <Link href={`/portfolio/`}>
-                                <a> {gallary.title}</a>
+                              <Link href={`/portfolio/category/${port.category_slug}`}>
+                                <a> {port.category_name}</a>
                               </Link>
                             </h4>
-                            {/* <p>{gallary.subTitle}</p> */}
+                            <p>{port.title}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                  );
+                    )
+                   
+                  )
                 })}
               </div>
             </div>
+
+
           </div>
         </div>
       </div>

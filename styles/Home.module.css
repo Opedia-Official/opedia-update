@@ -32,14 +32,14 @@
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .heroBackground {
-        height: 900px;
-        max-height: 900px;
+        height: 770px;
+        max-height: 770px;
     }
 }
 
 @media (max-width: 575.98px) {
     .heroBackground {
-        height: 765px;
-        max-height: 765px;
+        height: 700px;
+        max-height: 700px;
     }
 }

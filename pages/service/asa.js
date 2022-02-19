@@ -12,7 +12,7 @@ import axios from "axios";
 import { useState } from "react";
 import context from "react-bootstrap/esm/AccordionContext";
 
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 

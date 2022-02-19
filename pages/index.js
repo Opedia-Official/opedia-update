@@ -31,7 +31,7 @@ let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
-export default function Home({ posts }) {
+export default function Home({portCats}) {
   const [isReact, setIsReact] = useState(false);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ export default function Home({ posts }) {
       <ViewService />
 
       {/* <ShowCase posts={posts} /> */}
-      <ShowCase />
+      <ShowCase portCats= {portCats} />
 
       <ShowCaseCounter />
 
@@ -104,16 +104,17 @@ export default function Home({ posts }) {
   );
 }
 
+
+
+
 export async function getStaticProps() {
   const res = await fetch(`${server}/api/portfolio/category`);
-  const posts = await res.json();
+  const portCats = await res.json();
 
   return {
     props: {
-      posts,
+      portCats,
     },
     revalidate: 10,
   };
 }
-
-
