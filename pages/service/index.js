@@ -180,19 +180,7 @@ export default function Home({ services }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch("http://admin.opediatech.com/api/service");
-//   const services = await res.json();
-
-//   return {
-//     props: {
-//       services,
-//     },
-//     revalidate: 10,
-//   };
-// }
-
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("http://admin.opediatech.com/api/service");
   const services = await res.json();
 
@@ -200,5 +188,17 @@ export async function getServerSideProps() {
     props: {
       services,
     },
+    revalidate: 10,
   };
 }
+
+// export async function getServerSideProps() {
+//   const res = await fetch("http://admin.opediatech.com/api/service");
+//   const services = await res.json();
+
+//   return {
+//     props: {
+//       services,
+//     },
+//   };
+// }

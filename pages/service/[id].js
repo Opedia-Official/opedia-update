@@ -22,7 +22,6 @@ function SinglePage() {
     <div className="container my-5 py-5">
       <WhatsappChat />
 
-      <p>Post: {id}</p>
       <div className={"row"}>
         <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 ">
           <div className="">

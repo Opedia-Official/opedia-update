@@ -154,25 +154,25 @@ export const ViewService = {
 
 var Services = [
   {
-    id: 1,
+    id: "e-commerce-solution",
     title: "Cloud Computing",
     url: "Cloud-Computing",
     desc: "Construction is a general term the art and science to form",
   },
   {
-    id: 2,
+    id: "product-design",
     title: "Analytic Solutions",
     url: "Analytic-Solutions",
     desc: "Construction is a general term the art and science to form",
   },
   {
-    id: 3,
+    id: "digital-marketing",
     title: "Product & Design",
     url: "Product-&-Design",
     desc: "Construction is a general term the art and science to form",
   },
   {
-    id: 4,
+    id: "web-software",
     title: "Data Centers",
     url: "Data-centers",
     desc: "Construction is a general term the art and science to form",

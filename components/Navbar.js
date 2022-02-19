@@ -25,10 +25,7 @@ import { BsPersonFill, BsFillTelephoneFill } from "react-icons/Bs";
 import { BiRightArrowAlt, BiMessageAltDetail } from "react-icons/Bi";
 import { MdOutlineEmail } from "react-icons/Md";
 
-
-
 import Modal from "react-modal";
-
 
 import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 import { ClientURL, server } from "../config/index";
@@ -44,7 +41,7 @@ const customStyles = {
     zIndex: 22342434234234,
     padding: "50px 0",
     border: "1px solid rgb(244, 151, 53)",
-    height: '70vh'
+    height: "70vh",
   },
 };
 Modal.setAppElement("body");
@@ -124,8 +121,6 @@ export default function Navbar() {
     setIsOpenModal(true);
   }
 
-   
-
   function closeModal() {
     setIsOpenModal(false);
   }
@@ -140,24 +135,21 @@ export default function Navbar() {
     setIsSearch(!isSearch);
   };
 
-
-  const [isLink,setLink]= useState(false)
-
+  const [isLink, setLink] = useState(false);
 
   const navChageRef = useRef();
 
   useEffect(() => {
-
-
-    window.location.href == 'http://localhost:3000/' ? setLink(true) : setLink(false)
+    window.location.href == "http://localhost:3000/"
+      ? setLink(true)
+      : setLink(false);
 
     // training
 
     const allData = axios
-    .get(`${server}/api/course`)
-    .then((res) => setTrainings(res.data));
+      .get(`${server}/api/course`)
+      .then((res) => setTrainings(res.data));
     // training
-
 
     let previousPosition =
       window.pageYOffset || document.documentElement.scrollTop;
@@ -189,7 +181,6 @@ export default function Navbar() {
         setAllCategory(res.data);
         // console.log("allCategory", res.data);
       });
-
   }, [window.location.href]);
 
   // console.log(allCategory, "allCategory");
@@ -330,9 +321,13 @@ export default function Navbar() {
                       {allCategory.map((singleCategory) => (
                         <div className="col-md borderLeft col-xl mb-4 mb-xl-0">
                           <div className={styles.dropdown__inner}>
-                            <h2 className={styles.dropdown__title}>
-                              {singleCategory.category_name}
-                            </h2>
+                            <Link
+                              href={`${ClientURL}service/category/${singleCategory.category_slug}`}
+                            >
+                              <h2 className={styles.dropdown__title}>
+                                {singleCategory.category_name}
+                              </h2>
+                            </Link>
                             <SingleServiceCompo
                               singleCategory={singleCategory}
                             />
@@ -393,18 +388,22 @@ export default function Navbar() {
                       <div className="col-12">
                         <div className={styles.dropdown__inner2}>
                           <ul className={styles.dropdown__list}>
-                            <li><h4 >Trainings</h4></li>
-                            {
-                              trainings.map(training=> (
-                                <li key={training.id} className={styles.dropdown__item}>
-                                  <Link href={`/training/${training.slug}`}>
-                                     <a className={styles.dropdown__link}>{training.title}</a>
-                                  </Link>
-                                </li>
-                              ))
-                            }
-                            
-                       
+                            <li>
+                              <h4>Trainings</h4>
+                            </li>
+                            {trainings.map((training) => (
+                              <li
+                                key={training.id}
+                                className={styles.dropdown__item}
+                              >
+                                <Link href={`/training/${training.slug}`}>
+                                  <a className={styles.dropdown__link}>
+                                    {training.title}
+                                  </a>
+                                </Link>
+                              </li>
+                            ))}
+
                             {/* {isMore && (
                               <ul>
                                 <li className={styles.dropdown__item}>
@@ -437,7 +436,7 @@ export default function Navbar() {
                           </ul>
                         </div>
                         {/* <p style={{color: "#f49735", fontSize:'18px', fontWeight:'bold'}} onClick={() =>setIsMore(!isMore)}>{isMore ?  "Less" :  'More'}</p> */}
-                        </ul>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -465,32 +464,31 @@ export default function Navbar() {
                   </a>
                 </Link>
               </li>
-              {
-                isLink  &&  (<li className={styles.navitem}>
-                {/* <Link href="/portfolio"> */}
-                <a
-                  // id="#portfolio"
-                  href="#portfolio"
-                  className={
-                    (isOpen === false
-                      ? styles.navlink
-                      : styles.navlink + " " + styles.active,
-                    isActiveNav === "Portfolio"
-                      ? styles.activenav
-                      : styles.navlink)
-                  }
-                  onClick={() => {
-                    openMenu();
-                    setActiveNav("Portfolio");
-                  }}
-                >
-                  Portfolio
-                </a>
-                {/* </Link> */}
-              </li>)
-              }
-             
-          
+              {isLink && (
+                <li className={styles.navitem}>
+                  {/* <Link href="/portfolio"> */}
+                  <a
+                    // id="#portfolio"
+                    href="#portfolio"
+                    className={
+                      (isOpen === false
+                        ? styles.navlink
+                        : styles.navlink + " " + styles.active,
+                      isActiveNav === "Portfolio"
+                        ? styles.activenav
+                        : styles.navlink)
+                    }
+                    onClick={() => {
+                      openMenu();
+                      setActiveNav("Portfolio");
+                    }}
+                  >
+                    Portfolio
+                  </a>
+                  {/* </Link> */}
+                </li>
+              )}
+
               <li className={styles.navitem}>
                 <Link href="#">
                   <a

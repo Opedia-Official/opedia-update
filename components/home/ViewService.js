@@ -65,7 +65,7 @@ export default function ViewService({ ViewServices }) {
                           <Card.Text>
                             {service.desc}
                             <div>
-                              <Link href={`/service/${service.id}`}>
+                              <Link href={`/service/category/${service.id}`}>
                                 <a>
                                   Service Details <BiRightArrowAlt />
                                 </a>
