@@ -2,6 +2,11 @@ import React from "react";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Meta from "./Meta";
+
+// logos
+
+const reactJS = "https://image.pngaaa.com/930/2507930-middle.png";
 
 const responsive = {
   superLargeDesktop: {
@@ -24,37 +29,36 @@ const responsive = {
 };
 function LogoSlider() {
   return (
-    <div className="container">
+    <div style={{ marginTop: "5vh" }} className="container">
+      <Meta title="" />
       <Carousel
         responsive={responsive}
         swipeable={true}
-        draggable={true}
+        draggable={false}
         showDots={false}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={4000}
+        autoPlaySpeed={3000}
         transition={1500}
         loop={true}
         customTransition="1300ms ease-in-out"
         // duration={300}
       >
-        {[
-          "React js",
-          "Next js",
-          "Node js",
-          "Laravel",
-          "ExpressJS",
-          "MongoDB",
-          "Django",
-        ].map((item) => (
+        {[reactJS, reactJS, reactJS, reactJS, reactJS, reactJS].map((item) => (
           <div className="logoLiderDiv">
-            {item}
-            <div className="img">
-              <img
-                src="https://image.pngaaa.com/930/2507930-middle.png"
-                alt=""
-              />
-            </div>
+            {/* {item} */}
+            <div
+              style={{
+                height: "100%",
+                objectFit: "cover",
+                backgroundImage: `url(${item})`,
+                width: "100%",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}
+              className="img"
+            ></div>
           </div>
         ))}
       </Carousel>

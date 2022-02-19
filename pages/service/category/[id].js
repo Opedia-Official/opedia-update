@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import axios from "axios";
 import { server } from "../../../config";
+import Meta from "../../../components/Meta";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -45,10 +46,15 @@ export default function Home({ services }) {
 
   console.log("services", service);
 
+  const servicesTitle = id.replace(
+    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+    " "
+  );
+
   return (
     <>
-      <InnerHead title="Service" />
-
+      <InnerHead title={servicesTitle} />
+      <Meta title={id} />
       <WhatsappChat />
       {/* VIEW SERVICE AREA */}
       <div className="view-service-page mb-100 mt-50">

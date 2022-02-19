@@ -255,7 +255,7 @@ export default class AsNavFor extends Component {
                   <FaRegLightbulb />
                 </div>
                 <div className="hero-bottom-info">
-                  <h4>SASS</h4>
+                  <h4>SAAS</h4>
                   <p>CRM, ERP & Document management software solution </p>
                 </div>
               </div>

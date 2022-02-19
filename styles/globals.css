@@ -194,7 +194,7 @@ label {
 
 .logoLiderDiv {
   background-color: rgb(255, 255, 255);
-  border: 1px solid #666;
+  border: 1px solid #f3f3f3;
   color: rgb(17, 17, 17);
   font-size: 20px;
   font-weight: bold;
@@ -267,7 +267,12 @@ label {
   border-radius: 10px;
   display: none; */
 }
-
+.Link {
+  color: #242323 !important;
+}
+.Link:hover {
+  color: #707070 !important;
+}
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
@@ -439,7 +444,7 @@ html {
   position: relative;
   margin-left: 10px;
   line-height: 28px;
-  padding-right: 20px;
+  padding-right: 0px;
   text-align: justify;
 }
 
@@ -497,6 +502,7 @@ html {
   color: #000000;
   font-weight: 700;
   line-height: 91px;
+  text-transform: capitalize;
 }
 
 li.breadcrumb-item a {
