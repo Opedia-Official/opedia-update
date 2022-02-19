@@ -194,7 +194,10 @@ export default function Navbar() {
             <div className="col-md-8">
               <ul className="social-info text-center text-md-start">
                 <li>
-                  <a className={styles.socialIconItem} href="#">
+                  <a
+                    className={styles.socialIconItem}
+                    href="mailto: opedia.technologies@gmail.com"
+                  >
                     <span className="s-icon">
                       <FaRegEnvelope />
                     </span>
@@ -202,7 +205,10 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li>
-                  <a className={styles.socialIconItem} href="#">
+                  <a
+                    href="tel:+8801978159172"
+                    className={styles.socialIconItem}
+                  >
                     <span className="s-icon">
                       <BsTelephone />
                     </span>

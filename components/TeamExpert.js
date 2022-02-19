@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 function TeamExpert({ services }) {
-  console.log("services getStaticProps: ", services);
+  console.log("services getStaticProps now: ", services);
   return (
     <div className="expert-workers-section-area text-center text-md-start">
       <div className="container">
@@ -16,8 +16,9 @@ function TeamExpert({ services }) {
         </div>
         <div className="row ">
           {/* single-items */}
-          {services.map((item) => (
+          {services.map((item, index) => (
             <div
+              key={index}
               className="col-lg-3 col-md-4 col-sm-6  wow fadeIn"
               data-wow-duration="1s"
               data-wow-delay="0.3s"
