@@ -64,11 +64,11 @@
 .dropdown {
   background: #ffffff;
   position: absolute;
-  left: -56rem;
+  left: -87rem;
   z-index: 9999;
   padding: 2rem;
   border-radius: 0.5rem;
-  width: 100rem;
+  width: 128rem;
   top: 5rem;
   opacity: 0;
   visibility: hidden;
@@ -135,10 +135,11 @@
 
 .dropdown__title {
   color: var(--clr-primary);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .dropdown__item {
@@ -148,7 +149,7 @@
 }
 
 .dropdown__link {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #818181e8;
   padding: 1rem 0;
   cursor: pointer;
