@@ -8,6 +8,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 import { server } from "../../../config";
 import Meta from '../../../components/Meta'
+
 export default function Portfolio({ cats,params} ) {
   useEffect(() => {
       console.log(  cats)
@@ -16,7 +17,7 @@ export default function Portfolio({ cats,params} ) {
     }
 
     new WOW.WOW().init();
-  }, []);
+  }, [params.catSlug]);
 
   const portsTitle = params.catSlug.replace(
     /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,

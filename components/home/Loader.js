@@ -2,6 +2,7 @@ import React from "react";
 import style from "../../styles/Loader.module.css";
 import logo from "./main logo_1.gif";
 import Image from "next/image";
+
 export default function Loader() {
   return (
     <>

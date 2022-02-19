@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Style from "../../styles/singleService.module.css";
 
 import { BsArrowRightCircleFill } from "react-icons/bs";

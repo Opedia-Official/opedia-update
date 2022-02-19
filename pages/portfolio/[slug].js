@@ -16,7 +16,6 @@ let AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 
 export default function Portfolio({portfolios}) {
     const portfolio = portfolios[0]
-    console.log(portfolio)
     
     const [modalShow, setModalShow] = useState(false);
   return <>

@@ -39,7 +39,7 @@ export default function Portfolio({categories} ) {
             {
               categories.map(category=>{
                 return (
-                  <div className="col-lg-4 col-sm-6">
+                  <div key={category.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">
                     <Card>
                       <Card.Img src={`${server}/${category.img}`} />

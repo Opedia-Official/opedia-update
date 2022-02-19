@@ -5,14 +5,11 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "../styles/Navbar.module.css";
 import logo from "../public/logo/logo-blue.png";
 import {
-  FaSearch,
-  FaMapMarkerAlt,
   FaRegEnvelope,
   FaFacebookF,
   FaTwitter,
@@ -27,7 +24,7 @@ import { MdOutlineEmail } from "react-icons/Md";
 
 import Modal from "react-modal";
 
-import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
+
 import { ClientURL, server } from "../config/index";
 
 const customStyles = {
@@ -76,35 +73,31 @@ export default function Navbar() {
     service: service,
   };
 
-  const Contacthandler = async () => {
-    // console.log(lastName, "name");
-    // console.log(email, "email");
-    // console.log(phone, "phone");
-    // console.log(text, "text");
-    // console.log(service, "service");
+  const Contacthandler = () => {}
+  // const Contacthandler = async () => {
 
-    const posted = await axios.post(
-      "http://admin.opediatech.com/api/message",
-      {
-        body: contactData,
-      },
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    // console.log(posted, "posted");
-    if (posted.status === 200) {
-      alert("ok");
-      toast("Wow so easy!");
-      // closeModal();
-    } else {
-      alert("error");
-      toast("Wow so easy!");
-      // closeModal();
-    }
-  };
+
+  //   const posted = await axios.post(
+  //     "http://admin.opediatech.com/api/message",
+  //     {
+  //       body: contactData,
+  //     },
+  //     {
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     }
+  //   );
+  //   if (posted.status === 200) {
+  //     alert("ok");
+  //     toast("Wow so easy!");
+    
+  //   } else {
+  //     alert("error");
+  //     toast("Wow so easy!");
+
+  //   }
+  // };
 
   // api post
 
@@ -124,16 +117,7 @@ export default function Navbar() {
   function closeModal() {
     setIsOpenModal(false);
   }
-  // modal
 
-  const SearchHandler = (event) => {
-    setIsSearch(!isSearch);
-    textInput.current.focus();
-  };
-
-  const resetHandler = (event) => {
-    setIsSearch(!isSearch);
-  };
 
   const [isLink, setLink] = useState(false);
 
@@ -326,7 +310,7 @@ export default function Navbar() {
                   <div className="containerr">
                     <div className="row justify-content-center">
                       {allCategory.map((singleCategory) => (
-                        <div className="col-md borderLeft col-xl mb-4 mb-xl-0">
+                        <div key ={singleCategory.id} className="col-md borderLeft col-xl mb-4 mb-xl-0">
                           <div className={styles.dropdown__inner}>
                             <Link
                               href={`${ClientURL}service/category/${singleCategory.category_slug}`}
@@ -685,7 +669,7 @@ function SingleServiceCompo({ singleCategory }) {
   return (
     <ul className={styles.dropdown__list}>
       {marketing.map((item) => (
-        <li className={styles.dropdown__item}>
+        <li key = {item.id} className={styles.dropdown__item}>
           <Link href={`${ClientURL}service/${item.service_slug}`}>
             <a className={styles.dropdown__link}>{item.service_title}</a>
           </Link>

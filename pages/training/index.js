@@ -38,7 +38,7 @@ export default function Portfolio({courses} ) {
             {
               courses.map(course=>{
                 return (
-                  <div className="col-lg-4 col-sm-6">
+                  <div key={course.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">
                     <Card>
                       <Card.Img src={`${server}/${course.Featured_img}`} />
