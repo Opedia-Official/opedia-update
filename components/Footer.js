@@ -219,7 +219,7 @@ export default function Footer() {
               <div className="col-md-12">
                 <div className="footer-bottom-wrap d-flex align-items-center justify-content-between">
                   <p className="copyright">
-                    © Dream-It 2021 All rights reserved.
+                    © Opedia Technologies 2022 All rights reserved.
                   </p>
                   <div className="terms-and-condition">
                     <a href="#"> Terms of Use</a>
