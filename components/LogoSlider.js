@@ -6,7 +6,15 @@ import Meta from "./Meta";
 
 // logos
 
-const reactJS = "https://image.pngaaa.com/930/2507930-middle.png";
+// import reactJS from "../public/webLogo/django.png";
+
+const reactJS = "./webLogo/react.png";
+const nextJS = "./webLogo/Nextjs.png";
+const nodeJS = "./webLogo/nodejs.png";
+const djaongo = "./webLogo/django.png";
+const expreeejs = "./webLogo/Express.png";
+const mongodb = "./webLogo/MongoDB.png";
+const larabel = "./webLogo/Laravel.png";
 
 const responsive = {
   superLargeDesktop: {
@@ -44,23 +52,27 @@ function LogoSlider() {
         customTransition="1300ms ease-in-out"
         // duration={300}
       >
-        {[reactJS, reactJS, reactJS, reactJS, reactJS, reactJS].map((item) => (
-          <div className="logoLiderDiv">
-            {/* {item} */}
-            <div
-              style={{
-                height: "100%",
-                objectFit: "cover",
-                backgroundImage: `url(${item})`,
-                width: "100%",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-              }}
-              className="img"
-            ></div>
-          </div>
-        ))}
+        {[reactJS, nextJS, djaongo, nodeJS, expreeejs, mongodb, larabel].map(
+          (item) => (
+            <div className="logoLiderDiv">
+              {/* {item} */}
+              <div
+                style={{
+                  height: "100%",
+                  objectFit: "cover",
+                  backgroundImage: `url(${item})`,
+                  width: "100%",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                }}
+                className="img"
+              >
+                {/* <img src={item} alt="" /> */}
+              </div>
+            </div>
+          )
+        )}
       </Carousel>
     </div>
   );
