@@ -3,6 +3,8 @@ import { BiRightArrowAlt } from "react-icons/bi";
 import InnerHead from "../../components/innerHead";
 import Link from "next/link";
 import { useEffect } from "react";
+import WhatsappChat from "../../components/whatsappChat";
+import AnimatedCursor from "react-animated-cursor";
 export default function Portfolio() {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -13,6 +15,7 @@ export default function Portfolio() {
   }, []);
   return (
     <>
+    <WhatsappChat/>
       <InnerHead title="Portfolio" />
       <div className="portfolio-area">
         <div className="container">
@@ -157,6 +160,17 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+
+
+      <AnimatedCursor
+      innerSize={8}
+      outerSize={8}
+      color='251, 129, 0'
+      outerAlpha={0.2}
+      innerScale={0.7}
+      outerScale={5}
+    />
+
     </>
   );
 }
