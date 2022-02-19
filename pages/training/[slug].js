@@ -141,6 +141,7 @@ export async function getStaticProps(context) {
     return {
       props:{
         training
-      }
+      },
+      revalidate: 10,
     }
   }
