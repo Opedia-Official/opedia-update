@@ -6,6 +6,8 @@ import { useEffect } from "react";
 import WhatsappChat from "../../components/whatsappChat";
 import AnimatedCursor from "react-animated-cursor";
 import { server } from "../../config";
+import Meta from "../../components/Meta";
+
 export default function Portfolio({categories} ) {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -16,6 +18,7 @@ export default function Portfolio({categories} ) {
   }, []);
   return (
     <>
+    <Meta title='Our Portfolio' />
     <WhatsappChat/>
       <InnerHead title="Portfolio" />
       <div className="portfolio-area">
@@ -23,8 +26,8 @@ export default function Portfolio({categories} ) {
           <div className="row justify-content-center">
             <div className="col-md-6">
               <div className="section-title text-center mb-50">
-                <h5>Expert Worker2</h5>
-                <h3>Our Expert Worker.</h3>
+                <h5>Best Efforts from us </h5>
+                <h3>Our Portfolios</h3>
               </div>
             </div>
           </div>

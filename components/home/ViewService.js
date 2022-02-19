@@ -31,7 +31,7 @@ export default function ViewService({ ViewServices }) {
               </p>
               <SectionTitle description="Our professional services include Web & Software Solutions, E-commerce Development, User Experience (UI/UX) Design, Digital Marketing, Multimedia and Printing. Using our experienced professionals, we help businesses grow and prosper. " />
               <Link href="/service">
-                <a className="btn-two mt-35">View Service</a>
+                <a className="btn-two mt-35">View Services</a>
               </Link>
             </div>
           </div>
@@ -46,13 +46,13 @@ export default function ViewService({ ViewServices }) {
               }
             >
               <div className="row">
-                {Services.map((service) => {
+                {Services.map((service, index) => {
                   return (
                     <div
                       className="col-lg-6 col-sm-6 "
                       style={{
                         marginTop:
-                          service.id === 2 || service.id === 4 ? "3.5%" : "0px",
+                          index === 1 ? "4.5%" : index === 2 ? "-4.5%" : "0px",
                       }}
                       data-wow-duration="1s"
                       data-wow-delay="1s"
@@ -62,8 +62,8 @@ export default function ViewService({ ViewServices }) {
                         <Card.Body>
                           <FaCloud />
                           <Card.Title>{service.title}</Card.Title>
+                          <Card.Text>{service.desc}</Card.Text>
                           <Card.Text>
-                            {service.desc}
                             <div>
                               <Link href={`/service/category/${service.id}`}>
                                 <a>

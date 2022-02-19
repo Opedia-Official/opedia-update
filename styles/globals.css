@@ -8,7 +8,9 @@
 
 /* 1. Theme default css */
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap"); */
+
 
 /* custome fonts:  */
 
@@ -21,7 +23,7 @@
 }
 
 * {
-    /* font-family: Axiforma; */
+    font-family: Axiforma;
     /* src: url("../public/font/Kastelov\ -\ Axiforma\ Regular.otf"); */
 }
 
@@ -112,7 +114,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Rajdhani", sans-serif;
+    /* font-family: "Rajdhani", sans-serif; */
     font-weight: normal;
     color: #14212b;
     margin-top: 0px;
@@ -128,7 +130,7 @@ h4 a,
 h5 a,
 h6 a {
     color: inherit;
-    font-family: "Nunito", sans-serif;
+    /* font-family: "Nunito", sans-serif; */
 }
 
 h1 {
@@ -166,7 +168,7 @@ li {
 }
 
 p {
-    font-family: "Nunito", sans-serif;
+    /* font-family: "Nunito", sans-serif; */
     font-size: 16px;
     font-weight: normal;
     line-height: 20px;
@@ -182,7 +184,7 @@ hr {
 }
 
 label {
-    font-family: "Nunito", sans-serif;
+    /* font-family: "Nunito", sans-serif; */
     color: #5c727d;
     cursor: pointer;
     font-size: 14px;
@@ -191,7 +193,7 @@ label {
 
 .logoLiderDiv {
     background-color: rgb(255, 255, 255);
-    border: 1px solid #666;
+    border: 1px solid #f3f3f3;
     color: rgb(17, 17, 17);
     font-size: 20px;
     font-weight: bold;
@@ -266,6 +268,14 @@ label {
     /* background: rgba(0, 0, 0, 0);
   border-radius: 10px;
   display: none; */
+}
+
+.Link {
+    color: #242323 !important;
+}
+
+.Link:hover {
+    color: #707070 !important;
 }
 
 
@@ -441,7 +451,7 @@ html {
     position: relative;
     margin-left: 10px;
     line-height: 28px;
-    padding-right: 20px;
+    padding-right: 0px;
     text-align: justify;
 }
 
@@ -502,6 +512,7 @@ html {
     color: #000000;
     font-weight: 700;
     line-height: 91px;
+    text-transform: capitalize;
 }
 
 li.breadcrumb-item a {
@@ -1064,7 +1075,7 @@ ul.social {
 
 .view-service-section {
     padding: 100px 0;
-    margin: 100px 0;
+    margin: 0px 0 100px;
 }
 
 
@@ -1078,6 +1089,8 @@ ul.social {
     width: 100%;
     height: 613px;
     object-fit: cover;
+    max-height: 613px;
+    width: 100%;
 }
 
 .showCase-wrap {
@@ -1166,6 +1179,10 @@ ul.social {
 }
 
 .show-case-child img {
+    width: 100%;
+    max-height: 297px;
+    height: 297px;
+    object-fit: cover;
     width: 100%;
     max-height: 297px;
     height: 297px;
@@ -2056,7 +2073,7 @@ ul.link-items li svg {
 .portfolio-items .card img {
     width: 100%;
     height: 367px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .portfolio-info>span {

@@ -7,9 +7,11 @@ import WhatsappChat from "../../components/whatsappChat";
 
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { server } from "../../config";
+import { ClientURL, server } from "../../config";
 import axios from "axios";
 import { useState } from "react";
+import Meta from "../../components/Meta";
+import Link from "next/link";
 
 let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -21,7 +23,15 @@ function SinglePage() {
   return (
     <div className="container my-5 py-5">
       <WhatsappChat />
-
+      <AnimatedCursor
+        innerSize={8}
+        outerSize={8}
+        color="251, 129, 0"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={5}
+      />
+      <Meta title={id} />
       <div className={"row"}>
         <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 ">
           <div className="">
@@ -40,10 +50,30 @@ function SinglePage() {
 
             <div className={Style.service}>
               <ul>
-                <li>graphics desiginig</li>
-                <li>graphics desiginig</li>
-                <li>graphics desiginig</li>
-                <li>graphics desiginig</li>
+                <li>
+                  <Link
+                    href={`${ClientURL}/service/category/multimedia-printing`}
+                  >
+                    <a className="Link"> Graphics Desiginig </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${ClientURL}/service/category/web-software`}>
+                    <a className="Link"> Web Desiginig & Development </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`${ClientURL}/service/category/product-design`}>
+                    <a className="Link"> Product Desiginig </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href={`${ClientURL}/service/category/digital-marketing`}
+                  >
+                    <a className="Link"> Digital Marketing </a>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -111,6 +141,7 @@ function ServiceDetails({ slug }) {
   }, [slug]);
   return (
     <>
+      <Meta title={content?.service_title} />
       <h2 className={Style.title}>{content?.service_title}</h2>
 
       <p

@@ -10,6 +10,7 @@ import WhatsappChat from "../../components/whatsappChat";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import ServiceItem from "./serviceItem";
+import Meta from "../../components/Meta";
 
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -29,7 +30,7 @@ export default function Home({ services }) {
   return (
     <>
       <InnerHead title="Service" />
-
+      <Meta title="Service" />
       <WhatsappChat />
       {/* VIEW SERVICE AREA */}
       <div className="view-service-page mb-100 mt-50">
@@ -50,7 +51,6 @@ export default function Home({ services }) {
             >
               <div className={"view-service-right-wrapper service"}>
                 <div className="row">
-                  <p>{services.length}</p>
                   {services.length > 0
                     ? services.map((item) => (
                         <div

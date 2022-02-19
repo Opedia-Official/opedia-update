@@ -16,10 +16,12 @@ let AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 
 export default function Portfolio({portfolios}) {
     const portfolio = portfolios[0]
+    console.log(portfolio)
+    
     const [modalShow, setModalShow] = useState(false);
   return <>
-        <Meta title = {portfolio.title} />
-        <InnerHead title={portfolio.title}/>
+        <Meta title = {portfolio.portfolio_title} />
+        <InnerHead title={portfolio.portfolio_title}/>
         <WhatsappChat/>
         <div className="portfolio-details mb-100">
             <div className="container">

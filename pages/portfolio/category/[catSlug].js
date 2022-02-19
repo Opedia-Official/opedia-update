@@ -7,8 +7,8 @@ import WhatsappChat from "../../../components/whatsappChat";
 import AnimatedCursor from "react-animated-cursor";
 
 import { server } from "../../../config";
-
-export default function Portfolio({ cats} ) {
+import Meta from '../../../components/Meta'
+export default function Portfolio({ cats,params} ) {
   useEffect(() => {
       console.log(  cats)
     if (typeof window !== "undefined") {
@@ -19,18 +19,12 @@ export default function Portfolio({ cats} ) {
   }, []);
   return (
     <>
+
+ <Meta title = {params.catSlug} />
     <WhatsappChat/>
       <InnerHead title="Portfolio" />
       <div className="portfolio-area">
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-md-6">
-              <div className="section-title text-center mb-50">
-                <h5>Expert Worker2</h5>
-                <h3>Our Expert Worker.</h3>
-              </div>
-            </div>
-          </div>
           <div
             className="row   wow fadeIn"
             data-wow-duration="1s"
@@ -111,7 +105,8 @@ export async function getStaticProps(context) {
     
     return {
       props:{
-        cats
+        cats,
+        params
       },
       revalidate: 10,
     }

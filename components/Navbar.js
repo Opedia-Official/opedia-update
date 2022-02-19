@@ -575,12 +575,21 @@ export default function Navbar() {
                                 id=""
                                 onChange={(e) => setService(e.target.value)}
                               >
+                                <option value="" disabled selected hidden>
+                                  Select Your Services
+                                </option>
                                 <option value="Web Development">
                                   Web Development
                                 </option>
                                 <option value="Web Design">Web Design</option>
                                 <option value="Web Graphics Design">
-                                  Web Graphics Design
+                                  E-Commerce Solution
+                                </option>
+                                <option value="Web Graphics Design">
+                                  Product Desiginig
+                                </option>
+                                <option value="Web Graphics Design">
+                                  Multimedia & printing
                                 </option>
                               </select>
                               <span></span>
