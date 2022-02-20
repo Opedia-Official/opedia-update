@@ -33,23 +33,20 @@ export default function Home({ services }) {
   }, []);
 
   const [service, setService] = useState(null);
+  const [descriptionCat, setDescriptionCat] = useState("");
 
   useEffect(() => {
-    const marketingData = axios
-      .get(`${server}/api/service-category/${id}`)
-      // .get(`${server}/api/serviceAllCategory/${id}`)
-      .then((res) => {
-        console.log("allData Single compornent single data ", res.data);
-        setService(res.data);
-      });
+    axios.get(`${server}/api/service-category/${id}`).then((res) => {
+      console.log("allData Single compornent single data ", res.data.data);
+      setService(res.data.data);
+      setDescriptionCat(res.data.desc);
+    });
   }, [id]);
 
-  console.log("services", service);
+  console.log("services id: ", id);
 
-  const servicesTitle = id.replace(
-    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-    " "
-  );
+  const servicesTitle =
+    id && id.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, " ");
 
   return (
     <>
@@ -64,6 +61,11 @@ export default function Home({ services }) {
               <div className="section-title text-center mb-50">
                 <h5>Expert Worker</h5>
                 <h3>Our Expert Worker.</h3>
+                <br />
+                <br />
+                <p style={{ textAlign: "center" }}>
+                  {descriptionCat.length && descriptionCat}
+                </p>
               </div>
             </div>
           </div>
@@ -75,8 +77,9 @@ export default function Home({ services }) {
             >
               <div className={"view-service-right-wrapper service"}>
                 <div className="row">
-                  {service?.length > 0
-                    ? service.map((item) => (
+                  {service?.length > 0 ? (
+                    service ? (
+                      service?.map((item) => (
                         <div
                           key={item.id}
                           className="col-lg-4 col-sm-6 mb-5 wow fadeIn wow fadeIn"
@@ -84,7 +87,19 @@ export default function Home({ services }) {
                           <ServiceItem item={item} />
                         </div>
                       ))
-                    : "Loading "}
+                    ) : (
+                      " Loading"
+                    )
+                  ) : (
+                    <div>
+                      <br />
+                      <br />
+                      <br />
+                      <p style={{ textAlign: "center" }}>
+                        No Service available
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

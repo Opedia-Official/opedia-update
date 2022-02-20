@@ -52,7 +52,7 @@ function LogoSlider() {
         // duration={300}
       >
         {[reactJS, nextJS, djaongo, nodeJS, expreeejs, mongodb, larabel].map(
-          (item,index) => (
+          (item, index) => (
             <div key={index} className="logoLiderDiv">
               {/* {item} */}
               <div

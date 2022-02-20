@@ -47,7 +47,6 @@ export default function Home({portCats}) {
       <ExpTeam />
 
       <LogoSlider />
-
       <ViewService />
 
       {/* <ShowCase posts={posts} /> */}
