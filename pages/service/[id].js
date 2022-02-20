@@ -113,10 +113,12 @@ function SinglePage() {
               <p>9.00 - 20.00</p>
             </div>
             <div className={Style.serviceBtn}>
-              Service Details <BsArrowRightCircleFill />{" "}
+                <Link href='/service'>
+                   <a >Service Details <BsArrowRightCircleFill />{" "}</a>
+                </Link>
             </div>
           </div>
-          <div className="mt-5">
+          {/* <div className="mt-5">
             <h2 className={Style.title}>Image Gallery</h2>
             <img
               className={Style.imgGalery}
@@ -130,7 +132,7 @@ function SinglePage() {
               Lorem ipsum dolor sit amet consect sit amet consect sit amet
               consect
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 

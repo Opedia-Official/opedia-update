@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { FaCloud } from "react-icons/fa";
 import Meta from "../../components/Meta";
+import {ClientURL} from '../../config/index'
 
 function ServiceItem({ item }) {
   const slug = item.service_title
