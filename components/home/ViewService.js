@@ -8,7 +8,7 @@ import SectionTitle from "../SectionTitle";
 
 import Link from "next/link";
 import { Services } from "../../Utils/fakeData";
-export default function ViewService({ ViewServices }) {
+export default function ViewService() {
   // const {Section, Services} = ViewServices
   return (
     <div className="view-service-section">
