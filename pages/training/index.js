@@ -36,7 +36,7 @@ export default function Portfolio({courses} ) {
             data-wow-delay="1s"
           >
             {
-              courses.map(course=>{
+              courses?.map(course=>{
                 return (
                   <div key={course.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">

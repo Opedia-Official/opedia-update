@@ -11,7 +11,6 @@ import Meta from '../../../components/Meta'
 
 export default function Portfolio({ cats,params} ) {
   useEffect(() => {
-      console.log(  cats)
     if (typeof window !== "undefined") {
       window.WOW = require("wowjs");
     }
@@ -37,7 +36,7 @@ export default function Portfolio({ cats,params} ) {
             data-wow-delay="1s"
           >
             {
-              cats.map(cat=>{
+              cats?.map(cat=>{
                 return (
                   <div key={cat.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">

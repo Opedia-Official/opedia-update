@@ -37,7 +37,7 @@ export default function Portfolio({categories} ) {
             data-wow-delay="1s"
           >
             {
-              categories.map(category=>{
+              categories?.map(category=>{
                 return (
                   <div key={category.id} className="col-lg-4 col-sm-6">
                   <div className="portfolio-items mb-100">

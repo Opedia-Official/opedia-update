@@ -31,7 +31,7 @@ function ServiceItem({ item }) {
           ></p>
 
           <div>
-            <Link href={`${ClientURL}/${item.service_slug}`}>
+            <Link href={`${ClientURL}/service/${item.service_slug}`}>
               <a>
                 Service Details <BiRightArrowAlt />
               </a>

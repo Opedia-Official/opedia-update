@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import HeroSlide from "../components/HeroSlide";
 import ExpTeam from "../components/ExpTeam";
 
@@ -22,7 +22,6 @@ import { server } from "../config/index";
 import dynamic from "next/dynamic";
 
 import WorkingProcess from "../components/WorkingProcess";
-import { useEffect } from "react";
 import WhatsappChat from "../components/whatsappChat";
 import LogoSlider from "../components/LogoSlider";
 

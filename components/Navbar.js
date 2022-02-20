@@ -73,31 +73,31 @@ export default function Navbar() {
     service: service,
   };
 
-  const Contacthandler = () => {}
-  // const Contacthandler = async () => {
+
+  const Contacthandler = async () => {
 
 
-  //   const posted = await axios.post(
-  //     "http://admin.opediatech.com/api/message",
-  //     {
-  //       body: contactData,
-  //     },
-  //     {
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     }
-  //   );
-  //   if (posted.status === 200) {
-  //     alert("ok");
-  //     toast("Wow so easy!");
+    const posted = await axios.post(
+      "http://admin.opediatech.com/api/message",
+      {
+        body: contactData,
+      },
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (posted.status === 200) {
+      alert("ok");
+      toast("Wow so easy!");
     
-  //   } else {
-  //     alert("error");
-  //     toast("Wow so easy!");
+    } else {
+      alert("error");
+      toast("Wow so easy!");
 
-  //   }
-  // };
+    }
+  };
 
   // api post
 
