@@ -1,7 +1,9 @@
 import React from "react";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus,FaPeopleArrows} from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import { BsArrowRight } from "react-icons/Bs";
+import { BiDonateBlood } from "react-icons/Bi";
+import { GiStairsGoal } from "react-icons/Gi";
 import style from "../styles/workingProcess.module.css";
 import CountUp from "react-countup";
 
@@ -68,7 +70,7 @@ export default function WorkingProcess() {
               <div className={style.workingProgressStepsWrap}>
                 <div className={style.workingProgressItems}>
                   <span className={style.wpIcon}>
-                    <FiSettings />
+                    <FaPeopleArrows />
                   </span>
                   <h3>Request Meeting</h3>
                   {/* <span className={style.wpArrow}>
@@ -84,7 +86,7 @@ export default function WorkingProcess() {
               <div className={style.workingProgressStepsWrap}>
                 <div className={style.workingProgressItems}>
                   <span className={style.wpIcon}>
-                    <FiSettings />
+                    <GiStairsGoal />
                   </span>
                   <h3>Custom Plan</h3>
                   {/* <span className={style.wpArrow}>
@@ -100,7 +102,7 @@ export default function WorkingProcess() {
               <div className={style.workingProgressStepsWrap}>
                 <div className={style.workingProgressItems}>
                   <span className={style.wpIcon}>
-                    <FiSettings />
+                    <BiDonateBlood />
                   </span>
                   <h3>Make Final Work</h3>
                   {/* <span className={style.wpArrow}>
