@@ -22,11 +22,7 @@ import "swiper/css";
 import { dataPricing } from "../../Utils/fakeData";
 import PricingCard from "../PricingCard";
 
-export default function Pricing({pricingData}) {
-
-       
-      
- 
+export default function Pricing({ pricingData }) {
   return (
     <div className="our-pricing-area">
       <div className="container">
@@ -39,9 +35,11 @@ export default function Pricing({pricingData}) {
           </div>
         </div>
         <div className="row justify-content-center">
-          {
-            dataPricing?.length > 0 ? dataPricing?.map(item =>   <PricingCard key={item} item={item}/>) : <p>Loading </p> 
-          }
+          {dataPricing?.length > 0 ? (
+            dataPricing?.map((item) => <PricingCard key={item} item={item} />)
+          ) : (
+            <p>Loading </p>
+          )}
         </div>
       </div>
     </div>

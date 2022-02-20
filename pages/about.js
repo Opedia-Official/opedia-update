@@ -127,103 +127,6 @@ export default function About({ services }) {
                   {expertWorker.map((item) => (
                     <ExpertWorker key={item} item={item} />
                   ))}
-
-                  {/* <div className="col-lg-4 col-sm-6 mb-5">
-                        <Card >
-                          <Card.Body>
-                          <FaCloud/>
-                            <Card.Title>Cloud Computing</Card.Title>
-                            <Card.Text>
-                                    Construction is a general term
-                                  the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div>
-                        <div className="col-lg-4 col-md-6  col-sm-6 mb-5 ">
-                        <Card >
-                          <Card.Body>
-                            <SiSimpleanalytics/>
-                            <Card.Title>Analytic Solutions</Card.Title>
-                            <Card.Text>
-                            Construction is a general term
-                          the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5 ">
-                        <Card >
-                          <Card.Body>
-                            
-                            <Card.Title>product & Design</Card.Title>
-                            <Card.Text>
-                                    Construction is a general term
-                                  the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
-                        <Card >
-                          <Card.Body>
-                            <FaDatabase/>
-                            <Card.Title>Data Centers</Card.Title>
-                            <Card.Text>
-                                    Construction is a general term
-                                  the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
-                        <Card >
-                          <Card.Body>
-                            <FaDatabase/>
-                            <Card.Title>Data Centers</Card.Title>
-                            <Card.Text>
-                                    Construction is a general term
-                                  the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-6 mb-5">
-                        <Card >
-                          <Card.Body>
-                            <FaDatabase/>
-                            <Card.Title>Data Centers</Card.Title>
-                            <Card.Text>
-                                    Construction is a general term
-                                  the art and science to form 
-                                <div>
-                                <a href="#"> Service Details <BiRightArrowAlt/></a>
-                                </div>
-                            </Card.Text>
-                          
-                          </Card.Body>
-                        </Card>
-                        </div> */}
                 </div>
               </div>
             </div>
@@ -412,42 +315,6 @@ export default function About({ services }) {
               </div>
             </SwiperSlide>
           </Swiper>
-
-          {/* <div className="row">
-                    <div className="col-lg-6">
-                            <div className="client-feedback-wrap">
-                            <Card >
-                            <Card.Body>
-                                    <div className="client-info-wrap">
-                                        <div className="client-info">
-                                                <img src="./blog/pic-3.png" alt="" />
-                                                <div className="client-info-text">
-                                                        <h2>Hanson Deck</h2>
-                                                        <p>UI/UX designer</p>
-                                                </div>
-                                        </div>
-                                        <div className="client-review">
-                                            <div class="product-review-stars">
-                                                <input type="radio" id="star5" name="rating" value="5" class="visuallyhidden" /><label for="star5" title="Rocks!">★</label>
-                                                <input type="radio" id="star4" name="rating" value="4" class="visuallyhidden" /><label for="star4" title="Pretty good">★</label>
-                                                <input type="radio" id="star3" name="rating" value="3" class="visuallyhidden" /><label for="star3" title="Meh">★</label>
-                                                <input type="radio" id="star2" name="rating" value="2" class="visuallyhidden" /><label for="star2" title="Kinda bad">★</label>
-                                                <input type="radio" id="star1" name="rating" value="1" class="visuallyhidden" /><label for="star1" title="Sucks big time">★</label>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <p>Show off show off pick your nose and blow off up the duff 
-                                        chimney pot Why chap lost the plot, buggered wellies 
-                                        blatant bender well blimey, what a load of rubbish bodge 
-                                        Richard tosser gutted mate chinwag.</p>
-                            
-                            
-                            
-                            </Card.Body>
-                          </Card>
-                            </div>
-                    </div>
-                </div> */}
         </div>
       </div>
 
@@ -461,7 +328,6 @@ export default function About({ services }) {
       />
 
       <TeamExpert services={services} />
-      {/* CLIENTS FEEDBACK */}
     </>
   );
 }

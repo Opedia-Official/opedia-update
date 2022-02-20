@@ -48,7 +48,6 @@ export default function Home({ posts }) {
       <ExpTeam />
 
       <LogoSlider />
-
       <ViewService />
 
       {/* <ShowCase posts={posts} /> */}

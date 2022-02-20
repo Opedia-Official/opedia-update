@@ -5,14 +5,12 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import styles from "../styles/Navbar.module.css";
 import logo from "../public/logo/logo-blue.png";
 import {
-  FaSearch,
-  FaMapMarkerAlt,
   FaRegEnvelope,
   FaFacebookF,
   FaTwitter,
@@ -27,7 +25,6 @@ import { MdOutlineEmail } from "react-icons/Md";
 
 import Modal from "react-modal";
 
-import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
 import { ClientURL, server } from "../config/index";
 
 const customStyles = {
@@ -53,8 +50,6 @@ export default function Navbar() {
   const [isMore, setIsMore] = useState(false);
   const [navChange, setNavChange] = useState(true);
   const textInput = useRef(null);
-
-  // api post
 
   // all states
   const [fistName, setFirstName] = useState("");
@@ -325,7 +320,10 @@ export default function Navbar() {
                   <div className="containerr">
                     <div className="row justify-content-center">
                       {allCategory.map((singleCategory) => (
-                        <div className="col-md borderLeft col-xl mb-4 mb-xl-0">
+                        <div
+                          key={singleCategory.id}
+                          className="col-md borderLeft col-xl mb-4 mb-xl-0"
+                        >
                           <div className={styles.dropdown__inner}>
                             <Link
                               href={`${ClientURL}service/category/${singleCategory.category_slug}`}
@@ -674,17 +672,17 @@ function SingleServiceCompo({ singleCategory }) {
   const [marketing, setMarketing] = useState([]);
 
   useEffect(() => {
-    const marketingData = axios
+    axios
       .get(`${server}/api/service-category/${singleCategory.category_slug}`)
       .then((res) => {
-        setMarketing(res.data);
+        setMarketing(res.data.data);
       });
   }, []);
 
   return (
     <ul className={styles.dropdown__list}>
       {marketing.map((item) => (
-        <li className={styles.dropdown__item}>
+        <li key={item.id} className={styles.dropdown__item}>
           <Link href={`${ClientURL}service/${item.service_slug}`}>
             <a className={styles.dropdown__link}>{item.service_title}</a>
           </Link>

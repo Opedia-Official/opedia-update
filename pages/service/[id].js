@@ -20,6 +20,24 @@ const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 function SinglePage() {
   const router = useRouter();
   const { id } = router.query;
+
+  const [leftCategory, setLeftCategory] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${server}/api/service-category/${id}`).then((res) => {
+      console.log("allData Single compornent single data ", res.data.data);
+      setService(res.data.data);
+      setDescriptionCat(res.data.desc);
+    });
+
+    axios.get(`${server}/api/releted-service/${id}`).then((res) => {
+      console.log("all left categories: ", res.data);
+      setLeftCategory(res.data);
+    });
+  }, [id]);
+
+  console.log("leftCategory", leftCategory);
+
   return (
     <div className="container my-5 py-5">
       <WhatsappChat />
@@ -32,8 +50,9 @@ function SinglePage() {
         outerScale={5}
       />
       <Meta title={id} />
+      <p>Service sategory: {id} </p>
       <div className={"row"}>
-        <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12 ">
+        <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12">
           <div className="">
             <img
               className={Style.img}
@@ -50,14 +69,15 @@ function SinglePage() {
 
             <div className={Style.service}>
               <ul>
-                <li>
-                  <Link
-                    href={`${ClientURL}/service/category/multimedia-printing`}
-                  >
-                    <a className="Link"> Graphics Desiginig </a>
-                  </Link>
-                </li>
-                <li>
+                {leftCategory &&
+                  leftCategory.map((item) => (
+                    <li key={item.id}>
+                      <Link href={`${ClientURL}/service/${item.service_slug}`}>
+                        <a className="Link"> {item.service_title} </a>
+                      </Link>
+                    </li>
+                  ))}
+                {/* <li>
                   <Link href={`${ClientURL}/service/category/web-software`}>
                     <a className="Link"> Web Desiginig & Development </a>
                   </Link>
@@ -73,7 +93,7 @@ function SinglePage() {
                   >
                     <a className="Link"> Digital Marketing </a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -135,7 +155,7 @@ function ServiceDetails({ slug }) {
     const marketingData = axios
       .get(`${server}/api/service/${slug}`)
       .then((res) => {
-        console.log("allData Single compornent single data ", res.data);
+        // console.log("allData Single compornent single data ", res.data);
         setContent(res.data);
       });
   }, [slug]);
