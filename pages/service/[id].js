@@ -22,6 +22,7 @@ function SinglePage() {
   const { id } = router.query;
 
   const [leftCategory, setLeftCategory] = useState([]);
+  const [featureImage, setFeatureImage] = useState(null);
 
   useEffect(() => {
     axios.get(`${server}/api/service-category/${id}`).then((res) => {
@@ -50,17 +51,19 @@ function SinglePage() {
         outerScale={5}
       />
       <Meta title={id} />
-      <p>Service sategory: {id} </p>
+      {/* <p>Service sategory: {id} </p> */}
       <div className={"row"}>
         <div className="col-lg-8 col-md-6 col-sm-12 col-xs-12">
           <div className="">
-            <img
-              className={Style.img}
-              src="https://images.unsplash.com/photo-1640622661329-67f406a77d53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              alt=""
-            />
+            {featureImage && (
+              <img
+                className={Style.img}
+                src={`${server}/${featureImage}`}
+                alt=""
+              />
+            )}
 
-            <ServiceDetails slug={id} />
+            <ServiceDetails setFeatureImage={setFeatureImage} slug={id} />
           </div>
         </div>
         <div className={"col-lg-4 col-md-6 col-sm-12 col-xs-12 px-5"}>
@@ -150,14 +153,16 @@ function SinglePage() {
 
 export default SinglePage;
 
-function ServiceDetails({ slug }) {
+function ServiceDetails({ slug, setFeatureImage }) {
   const [content, setContent] = useState(null);
 
   useEffect(() => {
     const marketingData = axios
       .get(`${server}/api/service/${slug}`)
       .then((res) => {
-        // console.log("allData Single compornent single data ", res.data);
+        console.log("allData setContent ", res.data.featured_img);
+
+        setFeatureImage(res.data.featured_img);
         setContent(res.data);
       });
   }, [slug]);
