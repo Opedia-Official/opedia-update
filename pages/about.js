@@ -19,13 +19,13 @@ import { expertWorker } from "../Utils/fakeData";
 import TeamExpert from "../components/TeamExpert";
 import WhatsappChat from "../components/whatsappChat";
 
-import Card3D from "react-animated-3d-card";
+
 
 let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
 
-export default function About({ services }) {
+export default function Abouta({ services }) {
   const [modalShow, setModalShow] = useState(false);
 
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function About({ services }) {
       <WhatsappChat />
       <InnerHead title="About Us" />
       {/* Youtube section */}
-      <div className="about-us-area">
+       <div className="about-us-area">
         <div className="container">
           <div className="row">
             <div className="col-lg-6  wow slideInLeft" data-wow-duration="1s">
@@ -107,7 +107,7 @@ export default function About({ services }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       {/* Youtube section */}
       {/* VIEW SERVICE AREA */}
       <div className="view-service-page mb-100 mt-120">
@@ -135,7 +135,7 @@ export default function About({ services }) {
       </div>
       {/* VIEW SERVICE AREA */}
 
-      <div className="about-youtube-section-area about-bg">
+       <div className="about-youtube-section-area about-bg">
         <div className="about-youtube-wrap">
           <MyVerticallyCentredModal
             url="https://youtu.be/iO40U7nP6mY"
@@ -149,7 +149,7 @@ export default function About({ services }) {
             </span>
           </div>
         </div>
-      </div>
+      </div> 
 
       {/* CLIENTS FEEDBACK */}
       <div
@@ -316,7 +316,7 @@ export default function About({ services }) {
             </SwiperSlide>
           </Swiper>
         </div>
-      </div>
+      </div> 
 
       <AnimatedCursor
         innerSize={8}
@@ -325,9 +325,9 @@ export default function About({ services }) {
         outerAlpha={0.2}
         innerScale={0.7}
         outerScale={5}
-      />
+      /> 
 
-      <TeamExpert services={services} />
+   <TeamExpert services={services} /> 
     </>
   );
 }

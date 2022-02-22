@@ -97,7 +97,7 @@ export default function Portfolio({ posts }) {
                               </div>
                               <div className="contact-info-text">
                                 <h4>Phone Number:</h4>
-                                <p>Head office: (210) 123 451</p>
+                                <p>+880 01978159172</p>
                               </div>
                             </li>
                             <li>
@@ -109,7 +109,7 @@ export default function Portfolio({ posts }) {
                               </div>
                               <div className="contact-info-text">
                                 <h4>Mail Address:</h4>
-                                <p>webecyenvato12@gmail.com</p>
+                                <p>opedia.technologies@gmail.com</p>
                               </div>
                             </li>
                             <li>
@@ -121,7 +121,7 @@ export default function Portfolio({ posts }) {
                               </div>
                               <div className="contact-info-text">
                                 <h4>Office Address:</h4>
-                                <p>254 Lillian Blvd, Holbrook</p>
+                                <p>Shyamoli Square Complex Dhaka 1207</p>
                               </div>
                             </li>
                           </ul>

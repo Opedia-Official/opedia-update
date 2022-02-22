@@ -9,7 +9,7 @@ import AnimatedCursor from "react-animated-cursor";
 import { server } from "../../../config";
 import Meta from '../../../components/Meta'
 
-export default function Portfolio({ cats,params} ) {
+export default function PortfolioCategtoryDetails({ cats,params} ) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.WOW = require("wowjs");

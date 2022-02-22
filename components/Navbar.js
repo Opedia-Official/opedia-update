@@ -164,7 +164,7 @@ export default function Navbar() {
         setAllCategory(res.data);
         // console.log("allCategory", res.data);
       });
-  }, [window.location.href]);
+  }, [router.pathname]);
 
   // console.log(allCategory, "allCategory");
 

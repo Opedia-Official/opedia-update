@@ -13,7 +13,7 @@ let AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   });
 
 
-export default function Portfolio() {
+export default function PortfolioDDetails() {
     const [modalShow, setModalShow] = useState(false);
   return <>
         <InnerHead title="Portfolio Details"/>

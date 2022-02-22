@@ -9,11 +9,12 @@ import dynamic from 'next/dynamic'
 
 import {server} from "../../config/index"
 
-const AnimatedCursors = dynamic(() => import('react-animated-cursor'), {
+let AnimatedCursors = dynamic(() => import('react-animated-cursor'), {
     ssr: false
   });
 
-import Meta from '../../components/Meta'
+import Meta from '../../components/Meta';
+
 export default function TrainingDetails({training}) {
 
     const [modalShow, setModalShow] = useState(false);
@@ -126,18 +127,12 @@ export async function getStaticPaths() {
       paths,
       fallback:false
   }
-
-
-
   }
 
 export async function getStaticProps(context) {
     const { params } = context
-    
     const res = await fetch( `${server}/api/course/${params.slug}`);
     const training = await res.json();
-
-    
     return {
       props:{
         training
