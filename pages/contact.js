@@ -14,6 +14,7 @@ import InnerHead from "../components/innerHead";
 import Meta from "../components/Meta";
 import WhatsappChat from "../components/whatsappChat";
 import dynamic from "next/dynamic";
+import {server} from '../config/index'
 
 let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
@@ -45,7 +46,7 @@ export default function Portfolio({ posts }) {
     console.log(service, "service");
 
     const posted = await axios.post(
-      "http://admin.opediatech.com/api/message",
+      `${server}/api/message`,
       {
         fname: fistName,
         lname: lastName,

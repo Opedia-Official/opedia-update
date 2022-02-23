@@ -8,7 +8,7 @@ import MyVerticallyCentredModal from "../components/MyVerticallyCentredModal";
 import { FaStar } from "react-icons/Fa";
 import { BsPlayFill } from "react-icons/Bs";
 import dynamic from "next/dynamic";
-
+import {server} from '../config/index'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -333,7 +333,8 @@ export default function Abouta({ services }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("http://admin.opediatech.com/api/team");
+  const res = await fetch(`${server}/api/team`);
+
 
   const services = await res.json();
 

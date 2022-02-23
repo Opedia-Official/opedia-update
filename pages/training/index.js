@@ -67,14 +67,14 @@ export default function Training({courses} ) {
       </div>
 
 
-      {/* <AnimatedCursor
+      <AnimatedCursor
       innerSize={8}
       outerSize={8}
       color='251, 129, 0'
       outerAlpha={0.2}
       innerScale={0.7}
       outerScale={5}
-    /> */}
+    />
 
     </>
   );

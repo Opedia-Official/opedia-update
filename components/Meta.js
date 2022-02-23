@@ -8,7 +8,7 @@ const Meta = ({title,description})=>{
             <meta name="description" content={description} />
             {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"/>
-            
+            <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
             <link rel="shortcut icon" type="image/png" sizes="32x32" href="/opedia.ico" />
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
