@@ -314,7 +314,7 @@ export default function Navbar() {
                         >
                           <div className={styles.dropdown__inner}>
                             <Link
-                              href={`${ClientURL}service/category/${singleCategory.category_slug}`}
+                              href={`/service/category/${singleCategory.category_slug}`}
                             >
                               <h2 className={styles.dropdown__title}>
                                 {singleCategory.category_name}
