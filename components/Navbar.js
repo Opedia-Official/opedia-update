@@ -25,7 +25,7 @@ import { MdOutlineEmail } from "react-icons/Md";
 
 import Modal from "react-modal";
 
-import { ClientURL, server } from "../config/index";
+import { server } from "../config/index";
 
 const customStyles = {
   content: {
@@ -671,7 +671,7 @@ function SingleServiceCompo({ singleCategory }) {
     <ul className={styles.dropdown__list}>
       {marketing.map((item) => (
         <li key={item.id} className={styles.dropdown__item}>
-          <Link href={`${ClientURL}service/${item.service_slug}`}>
+          <Link href={`/service/${item.service_slug}`}>
             <a className={styles.dropdown__link}>{item.service_title}</a>
           </Link>
         </li>

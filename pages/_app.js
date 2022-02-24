@@ -9,13 +9,13 @@ import { useEffect, useState } from "react";
 import Loader from "../components/home/Loader";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    window.addEventListener("load", () => {
-      setLoading(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener("load", () => {
+  //     setLoading(false);
+  //   });
+  // }, []);
 
   const handleScroll = (e) => {
     let element = e.target;
@@ -27,13 +27,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div onScroll={() => handleScroll()}>
-      {loading ? (
-        <Loader />
-      ) : (
-        <Layout>
+       <Layout>
           <Component {...pageProps} />
         </Layout>
-      )}
     </div>
   );
 }
