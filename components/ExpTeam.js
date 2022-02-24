@@ -17,13 +17,12 @@ export default function ExpTeam({ expertTeams }) {
           <div className="row align-items-center">
             <div className="col-md-6 wow fadeIn" data-wow-duration="2s">
               <div className="expTeam-left ">
-             
-                <img
-                  className="parent-pic"
-                  src="./experienceTeam/pic-1.png"
-                  alt=""
-                />
+                
+                <img className="parent-pic" src="/experienceTeam/pic-1.png" alt="" />
+              
+                
                 <div className="child d-none d-xl-block">
+                    
                   <img src="./experienceTeam/pic-2.png" alt="" />
                 </div>
                 <img

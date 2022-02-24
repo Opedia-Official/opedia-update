@@ -4,7 +4,7 @@ import Link from "next/link";
 import { BiRightArrowAlt } from "react-icons/bi";
 import { FaCloud } from "react-icons/fa";
 import Meta from "../../components/Meta";
-import {ClientURL} from '../../config/index'
+import {server} from '../../config/index'
 
 function ServiceItem({ item }) {
   const slug = item.service_title
@@ -27,7 +27,7 @@ function ServiceItem({ item }) {
           ></p>
 
           <div>
-            <Link href={`${ClientURL}/service/${item.service_slug}`}>
+            <Link href={`/service/${item.service_slug}`}>
               <a>
                 Service Details <BiRightArrowAlt />
               </a>

@@ -30,7 +30,7 @@ let AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
 });
 
 export default function Home({portCats}) {
-  const [isReact, setIsReact] = useState(false);
+
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -75,19 +75,7 @@ export default function Home({portCats}) {
 
       <Testimonial />
 
-      {/* <div className="cursor">
-
-      <AnimatedCursor
-      innerSize={8}
-      outerSize={8}
-      color='251, 129, 0'
-      outerAlpha={0.2}
-      innerScale={0.7}
-      outerScale={5}
-    />
- </div> */}
-
-      {/* <div class="elfsight-app-666896e2-7e9c-436a-a84b-1070ceca6e89"></div> */}
+     
 
       <AnimatedCursor
         innerSize={8}

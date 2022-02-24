@@ -7,7 +7,7 @@ import WhatsappChat from "../../components/whatsappChat";
 
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { ClientURL, server } from "../../config";
+import { server } from "../../config";
 import axios from "axios";
 import { useState } from "react";
 import Meta from "../../components/Meta";
@@ -75,7 +75,7 @@ function SinglePage() {
                 {leftCategory &&
                   leftCategory.map((item) => (
                     <li key={item.id}>
-                      <Link href={`${ClientURL}/service/${item.service_slug}`}>
+                      <Link href={`/service/${item.service_slug}`}>
                         <a className="Link"> {item.service_title} </a>
                       </Link>
                     </li>

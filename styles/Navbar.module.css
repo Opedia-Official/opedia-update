@@ -42,7 +42,7 @@
     text-decoration: none;
     transition: 0.3s;
     position: relative;
-    padding: 100% 0;
+    padding: 100% 0 !important;
 }
 
 .navlink:hover,
